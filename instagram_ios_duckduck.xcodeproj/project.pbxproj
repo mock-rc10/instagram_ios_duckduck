@@ -22,6 +22,8 @@
 		C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8EB290F0E6800503A6F /* IndicatorView.swift */; };
 		C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8ED290F16BA00503A6F /* meta_logo.png */; };
 		C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8EE290F16BA00503A6F /* istagram_logo.png */; };
+		C783E8F2290F189500503A6F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8F1290F189500503A6F /* SignUpViewController.swift */; };
+		C783E8F5290F1A6200503A6F /* SignInViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8F4290F1A6200503A6F /* SignInViewController copy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		C783E8EB290F0E6800503A6F /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		C783E8ED290F16BA00503A6F /* meta_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_logo.png; sourceTree = "<group>"; };
 		C783E8EE290F16BA00503A6F /* istagram_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = istagram_logo.png; sourceTree = "<group>"; };
+		C783E8F1290F189500503A6F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C783E8F4290F1A6200503A6F /* SignInViewController copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignInViewController copy.swift"; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,6 +82,7 @@
 		C70FE11F290EFB4F003AB632 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				C783E8F1290F189500503A6F /* SignUpViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 		C70FE120290EFB63003AB632 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				C783E8F4290F1A6200503A6F /* SignInViewController copy.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -348,8 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C783E8EA290F0DD100503A6F /* BaseViewController.swift in Sources */,
+				C783E8F2290F189500503A6F /* SignUpViewController.swift in Sources */,
 				C7552939290CDE5C008B370A /* ViewController.swift in Sources */,
 				C7552935290CDE5C008B370A /* AppDelegate.swift in Sources */,
+				C783E8F5290F1A6200503A6F /* SignInViewController copy.swift in Sources */,
 				C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */,
 				C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */,
 				C7552937290CDE5C008B370A /* SceneDelegate.swift in Sources */,
