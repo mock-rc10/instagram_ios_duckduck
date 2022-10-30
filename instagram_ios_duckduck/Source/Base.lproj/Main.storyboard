@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Hk-ae-6eE">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21501.1"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,9 +19,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsz-IZ-lNx">
                                 <rect key="frame" x="0.0" y="331.66666666666669" width="390" height="181.00000000000006"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jDn-mJ-UOP">
-                                        <rect key="frame" x="108" y="0.0" width="174" height="54"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieB-f0-Nlh">
                                         <rect key="frame" x="50" y="99" width="290" height="40"/>
                                         <constraints>
@@ -33,24 +30,37 @@
                                         <buttonConfiguration key="configuration" style="filled" title="새 계정 만들기">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xaC-Mm-pYR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRe-os-4vM">
                                         <rect key="frame" x="179" y="159" width="32" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="로그인"/>
+                                        <connections>
+                                            <action selector="signInButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xE-7n-MDz"/>
+                                        </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IOH-CG-N2O">
+                                        <rect key="frame" x="108" y="0.0" width="174" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="174" id="2Hs-rK-BY8"/>
+                                            <constraint firstAttribute="height" constant="54" id="Jdw-Iy-RqX"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="ieB-f0-Nlh" firstAttribute="top" secondItem="jDn-mJ-UOP" secondAttribute="bottom" constant="45" id="2Hd-T8-YtU"/>
-                                    <constraint firstItem="jDn-mJ-UOP" firstAttribute="centerX" secondItem="vsz-IZ-lNx" secondAttribute="centerX" id="4yS-B0-UVB"/>
                                     <constraint firstItem="ieB-f0-Nlh" firstAttribute="leading" secondItem="vsz-IZ-lNx" secondAttribute="leading" constant="50" id="7oB-bc-9GB"/>
                                     <constraint firstAttribute="trailing" secondItem="ieB-f0-Nlh" secondAttribute="trailing" constant="50" id="HIU-dV-EKg"/>
                                     <constraint firstAttribute="height" constant="181" id="SWL-YP-zZA"/>
                                     <constraint firstItem="pRe-os-4vM" firstAttribute="top" secondItem="ieB-f0-Nlh" secondAttribute="bottom" constant="20" id="TeN-YZ-saV"/>
+                                    <constraint firstItem="ieB-f0-Nlh" firstAttribute="top" secondItem="IOH-CG-N2O" secondAttribute="bottom" constant="45" id="U0M-Mf-xEB"/>
+                                    <constraint firstItem="IOH-CG-N2O" firstAttribute="centerX" secondItem="vsz-IZ-lNx" secondAttribute="centerX" id="XFW-7w-kAc"/>
                                     <constraint firstItem="ieB-f0-Nlh" firstAttribute="centerX" secondItem="vsz-IZ-lNx" secondAttribute="centerX" id="nFe-aB-H5o"/>
-                                    <constraint firstItem="jDn-mJ-UOP" firstAttribute="top" secondItem="vsz-IZ-lNx" secondAttribute="top" id="nfe-JZ-jBP"/>
+                                    <constraint firstItem="IOH-CG-N2O" firstAttribute="top" secondItem="vsz-IZ-lNx" secondAttribute="top" id="sjm-53-W7a"/>
                                     <constraint firstItem="pRe-os-4vM" firstAttribute="centerX" secondItem="vsz-IZ-lNx" secondAttribute="centerX" id="w2h-kh-aAO"/>
                                 </constraints>
                             </view>
@@ -64,8 +74,27 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vsz-IZ-lNx" secondAttribute="trailing" id="UDx-YB-WoG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tBO-3i-f9i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449.2307692307691" y="-213.27014218009478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dYr-ck-F4s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Hk-ae-6eE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SaS-Ac-faG">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NAy-ou-eU0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vce-1C-psL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1520" y="-213.27014218009478"/>
         </scene>
