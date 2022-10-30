@@ -20,6 +20,8 @@
 		C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8E7290F0D4600503A6F /* UIVIewController.swift */; };
 		C783E8EA290F0DD100503A6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8E9290F0DD100503A6F /* BaseViewController.swift */; };
 		C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8EB290F0E6800503A6F /* IndicatorView.swift */; };
+		C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8ED290F16BA00503A6F /* meta_logo.png */; };
+		C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8EE290F16BA00503A6F /* istagram_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		C783E8E7290F0D4600503A6F /* UIVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewController.swift; sourceTree = "<group>"; };
 		C783E8E9290F0DD100503A6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C783E8EB290F0E6800503A6F /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		C783E8ED290F16BA00503A6F /* meta_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_logo.png; sourceTree = "<group>"; };
+		C783E8EE290F16BA00503A6F /* istagram_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = istagram_logo.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,6 +194,8 @@
 		C7552950290EEDF5008B370A /* Logo */ = {
 			isa = PBXGroup;
 			children = (
+				C783E8EE290F16BA00503A6F /* istagram_logo.png */,
+				C783E8ED290F16BA00503A6F /* meta_logo.png */,
 				C7552952290EEE03008B370A /* facebook_logo.png */,
 				C7552956290EEECF008B370A /* Instagram_logo.png */,
 			);
@@ -283,7 +289,9 @@
 			files = (
 				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
+				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
+				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 				C70FE122290F0200003AB632 /* SignInStoryboard.storyboard in Resources */,
