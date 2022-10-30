@@ -14,6 +14,8 @@
 		C755293C290CDE5C008B370A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C755293A290CDE5C008B370A /* Main.storyboard */; };
 		C755293E290CDE5F008B370A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C755293D290CDE5F008B370A /* Assets.xcassets */; };
 		C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C755293F290CDE5F008B370A /* LaunchScreen.storyboard */; };
+		C7552954290EEE03008B370A /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C7552952290EEE03008B370A /* facebook_logo.png */; };
+		C7552957290EEECF008B370A /* Instagram_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C7552956290EEECF008B370A /* Instagram_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		C755293D290CDE5F008B370A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7552940290CDE5F008B370A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7552942290CDE5F008B370A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7552952290EEE03008B370A /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_logo.png; sourceTree = "<group>"; };
+		C7552956290EEECF008B370A /* Instagram_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instagram_logo.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +60,6 @@
 				A75A61C3872F6167B87461F7 /* Pods-instagram_ios_duckduck.debug.xcconfig */,
 				ACD47EE4DBBECFEC3A310278 /* Pods-instagram_ios_duckduck.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,113 @@
 		C7552933290CDE5C008B370A /* instagram_ios_duckduck */ = {
 			isa = PBXGroup;
 			children = (
+				C755294E290EEDBE008B370A /* Configuration */,
+				C7552958290EF2A9008B370A /* Util */,
+				C7552948290EDEF9008B370A /* Source */,
 				C7552934290CDE5C008B370A /* AppDelegate.swift */,
 				C7552936290CDE5C008B370A /* SceneDelegate.swift */,
-				C7552938290CDE5C008B370A /* ViewController.swift */,
-				C755293A290CDE5C008B370A /* Main.storyboard */,
 				C755293D290CDE5F008B370A /* Assets.xcassets */,
 				C755293F290CDE5F008B370A /* LaunchScreen.storyboard */,
 				C7552942290CDE5F008B370A /* Info.plist */,
 			);
 			path = instagram_ios_duckduck;
+			sourceTree = "<group>";
+		};
+		C7552948290EDEF9008B370A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C755293A290CDE5C008B370A /* Main.storyboard */,
+				C7552938290CDE5C008B370A /* ViewController.swift */,
+				C7552949290EDFD9008B370A /* Main */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C7552949290EDFD9008B370A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C755294B290EE332008B370A /* Action */,
+				C755294A290EDFF9008B370A /* Network */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C755294A290EDFF9008B370A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C755294B290EE332008B370A /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				C755294D290EE88C008B370A /* Transition */,
+				C755294C290EE345008B370A /* Alert */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		C755294C290EE345008B370A /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		C755294D290EE88C008B370A /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		C755294E290EEDBE008B370A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C755294F290EEDD8008B370A /* Images */,
+				C7552955290EEE24008B370A /* Base */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C755294F290EEDD8008B370A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C7552950290EEDF5008B370A /* Logo */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C7552950290EEDF5008B370A /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				C7552952290EEE03008B370A /* facebook_logo.png */,
+				C7552956290EEECF008B370A /* Instagram_logo.png */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		C7552955290EEE24008B370A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C7552958290EF2A9008B370A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C7552959290EF2D4008B370A /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C7552959290EF2D4008B370A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
+				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 			);
