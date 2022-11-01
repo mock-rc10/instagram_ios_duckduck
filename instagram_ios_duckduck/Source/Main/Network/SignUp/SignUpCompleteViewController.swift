@@ -7,12 +7,22 @@
 
 import UIKit
 
-class SignUpCompleteViewController: UIViewController {
+class SignUpCompleteViewController: BaseViewController {
 
+    private var userDataModel: SignUpUser = SignUpUser.shared
+    
+    @IBOutlet weak var uniqueNameConfirmLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        uniqueNameConfirmLabel.text = userDataModel.uniqueName
+    }
+    
+    
+    @IBAction func SignUpCompleteButtonTouchUpInside(_ sender: UIButton) {
+        userDataModel.addUser()
+        print(userDataModel.userList)
     }
     
     @IBAction func SignInButtonTouchUpInside_SignUpComplete(_ sender: UIButton) {

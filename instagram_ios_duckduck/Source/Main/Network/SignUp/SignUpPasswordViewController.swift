@@ -7,15 +7,25 @@
 
 import UIKit
 
-class SignUpPasswordViewController: UIViewController {
+class SignUpPasswordViewController: BaseViewController {
 
+    private var userDataModel: SignUpUser = SignUpUser.shared
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func SignInButtonTouchUpInside_SignUpPass(_ sender: UIButton) {
+    @IBAction func nextButtonTouchUpInside_SignUpPass(_ sender: UIButton) {
+        userDataModel.addPassword(password: self.passwordTextField.text ?? "") 
+    }
+    
+    
+    @IBAction func signInButtonTouchUpInside_SignUpPass(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
         //self.navigationController?.pushViewController(signInViewController, animated: true)
         self.changeRootViewController(signInViewController)

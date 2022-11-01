@@ -7,16 +7,25 @@
 
 import UIKit
 
-class SignUpNameViewController: UIViewController {
+class SignUpNameViewController: BaseViewController {
 
+    private var userDataModel: SignUpUser = SignUpUser.shared
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func SignInButtonTouchUpInside_SignUpName(_ sender: UIButton) {
+    
+    @IBAction func nextButtonTouchUpInside_SignUpName(_ sender: UIButton) {
+        userDataModel.addName(name: nameTextField.text ?? "") 
+    }
+    
+    @IBAction func signInButtonTouchUpInside_SignUpName(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
         //self.navigationController?.pushViewController(signInViewController, animated: true)
         self.changeRootViewController(signInViewController)

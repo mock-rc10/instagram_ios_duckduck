@@ -7,15 +7,23 @@
 
 import UIKit
 
-class SignUpUniqueNameViewController: UIViewController {
+class SignUpUniqueNameViewController: BaseViewController {
 
+    private var userDataModel: SignUpUser = SignUpUser.shared
+    
+    @IBOutlet weak var uniqueTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func SignInButtonTouchUpInside_SignUpUnique(_ sender: UIButton) {
+    @IBAction func nextButtonTouchUpInside_SignUpUnique(_ sender: UIButton) {
+        userDataModel.addUniqueName(unique: uniqueTextField.text ?? "") 
+    }
+    
+    @IBAction func signInButtonTouchUpInside_SignUpUnique(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
         //self.navigationController?.pushViewController(signInViewController, animated: true)
         self.changeRootViewController(signInViewController)

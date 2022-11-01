@@ -17,7 +17,7 @@ class ViewController: BaseViewController {
     @IBAction func signInButtonTouchUpInside_main(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
         //self.navigationController?.pushViewController(signInViewController, animated: true)
-        self.changeRootViewController(signInViewController)
+        self.navigationController?.pushViewController(signInViewController, animated: false)
     }
     
     @IBAction func signUpButtonTouchUpInside_main(_ sender: UIButton) {

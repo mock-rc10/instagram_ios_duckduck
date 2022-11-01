@@ -8,19 +8,29 @@
 import UIKit
 
 class SignUpEmailViewController: BaseViewController {
-
+    
+    private var userDataModel: SignUpUser = SignUpUser.shared
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-   
-    @IBAction func SignInButtonTouchUpInside_SignUpEmail(_ sender: UIButton) {
+    @IBAction func nextButtonTouchUpInside_SignUpEmail(_ sender: UIButton) {
+        //텍스트 필드 값 없을경우 에러처리 
+        userDataModel.addEmail(email: emailTextField.text ?? "") 
+    }
+    
+    
+    @IBAction func signInButtonTouchUpInside_SignUpEmail(_ sender: UIButton) {
+        /*
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
         //self.navigationController?.pushViewController(signInViewController, animated: true)
         self.changeRootViewController(signInViewController)
+         */
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
 }

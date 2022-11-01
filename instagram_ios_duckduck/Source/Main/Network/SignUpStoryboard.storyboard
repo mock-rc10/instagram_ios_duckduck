@@ -22,9 +22,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="이메일 주소" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jj-W6-AJG">
+                            <textField opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jj-W6-AJG">
                                 <rect key="frame" x="50" y="142.33333333333334" width="290" height="40"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="qiV-5K-FYt"/>
                                 </constraints>
@@ -44,7 +44,8 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fO6-gl-BFZ" kind="show" id="NKi-BI-aS4"/>
+                                    <action selector="nextButtonTouchUpInside_SignUpEmail:" destination="fp7-7T-TB6" eventType="touchUpInside" id="pPO-Vo-k6r"/>
+                                    <segue destination="fO6-gl-BFZ" kind="show" id="kUV-fT-p5U"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-Lz-Dga">
@@ -68,7 +69,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="로그인"/>
                                                 <connections>
-                                                    <action selector="SignInButtonTouchUpInside:" destination="fp7-7T-TB6" eventType="touchUpInside" id="8Nl-Pz-YXK"/>
+                                                    <action selector="signInButtonTouchUpInside_SignUpEmail:" destination="fp7-7T-TB6" eventType="touchUpInside" id="N1O-At-vtL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -101,10 +102,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="srw-IJ-Rpl"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="8Jj-W6-AJG" id="VUy-6Q-Eqc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPe-Zd-3IA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-2"/>
+            <point key="canvasLocation" x="2813.8461538461538" y="-2.1327014218009479"/>
         </scene>
         <!--Sign Up Name View Controller-->
         <scene sceneID="LWO-c9-3HV">
@@ -146,6 +150,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="nextButtonTouchUpInside_SignUpName:" destination="fO6-gl-BFZ" eventType="touchUpInside" id="j1x-NP-OFd"/>
                                     <segue destination="KY6-au-Ghg" kind="show" id="K8m-Sh-Srg"/>
                                 </connections>
                             </button>
@@ -170,8 +175,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="로그인"/>
                                                 <connections>
-                                                    <action selector="SignInButtonTouchUpInside:" destination="fp7-7T-TB6" eventType="touchUpInside" id="enM-qt-fPZ"/>
-                                                    <action selector="SignInTouchUpInside_SignUpName:" destination="fO6-gl-BFZ" eventType="touchUpInside" id="RRa-5N-XWR"/>
+                                                    <action selector="signInButtonTouchUpInside_SignUpName:" destination="fO6-gl-BFZ" eventType="touchUpInside" id="kTN-CL-Znw"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -206,10 +210,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="HoF-fr-uk5"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Ezp-Vj-8Ne" id="Tvi-3E-prA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGR-In-Elo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688" y="-2"/>
+            <point key="canvasLocation" x="3616.9230769230767" y="-2.1327014218009479"/>
         </scene>
         <!--Sign Up Password View Controller-->
         <scene sceneID="tVk-0l-JlI">
@@ -254,6 +261,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="nextButtonTouchUpInside_SignUpPass:" destination="KY6-au-Ghg" eventType="touchUpInside" id="bzM-6r-Xpc"/>
                                     <segue destination="m3u-hB-gwA" kind="show" id="f71-Oe-fw1"/>
                                 </connections>
                             </button>
@@ -298,8 +306,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="로그인"/>
                                                 <connections>
-                                                    <action selector="SignInButtonTouchUpInside:" destination="fp7-7T-TB6" eventType="touchUpInside" id="Bns-JN-vc9"/>
-                                                    <action selector="SignInTouchUpInside_SignUpPass:" destination="KY6-au-Ghg" eventType="touchUpInside" id="fwt-4N-IP5"/>
+                                                    <action selector="signInButtonTouchUpInside_SignUpPass:" destination="KY6-au-Ghg" eventType="touchUpInside" id="rbj-6R-p7m"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -337,10 +344,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="SKA-Ml-lhy"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="DPz-tn-Iil" id="NYL-No-1sM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4X-Tp-IlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3635" y="-2"/>
+            <point key="canvasLocation" x="4563.0769230769229" y="-2.1327014218009479"/>
         </scene>
         <!--Sign Up Unique Name View Controller-->
         <scene sceneID="hEG-aI-fwK">
@@ -382,6 +392,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="nextButtonTouchUpInside_SignUpUnique:" destination="m3u-hB-gwA" eventType="touchUpInside" id="tUZ-Sh-wk8"/>
                                     <segue destination="oZp-Oa-fCy" kind="show" id="OLj-5P-bVR"/>
                                 </connections>
                             </button>
@@ -406,8 +417,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="로그인"/>
                                                 <connections>
-                                                    <action selector="SignInButtonTouchUpInside:" destination="fp7-7T-TB6" eventType="touchUpInside" id="48N-or-lef"/>
-                                                    <action selector="SignInButtonTouchUpInside_SignUpUnique:" destination="m3u-hB-gwA" eventType="touchUpInside" id="gAo-ct-eFh"/>
+                                                    <action selector="signInButtonTouchUpInside_SignUpUnique:" destination="m3u-hB-gwA" eventType="touchUpInside" id="yNS-kg-DlA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -443,10 +453,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ixW-7F-1bG"/>
+                    <connections>
+                        <outlet property="uniqueTextField" destination="dZ9-KF-ia0" id="EXp-nf-CeV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvi-Fh-biZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4538" y="-2"/>
+            <point key="canvasLocation" x="5466.1538461538457" y="-2.1327014218009479"/>
         </scene>
         <!--Sign Up Complete View Controller-->
         <scene sceneID="Sku-BF-wdU">
@@ -483,8 +496,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="로그인"/>
                                                 <connections>
-                                                    <action selector="SignInButtonTouchUpInside:" destination="fp7-7T-TB6" eventType="touchUpInside" id="aQZ-iw-hcp"/>
-                                                    <action selector="SignInButtonTouchUpInside_SignUpComplete:" destination="oZp-Oa-fCy" eventType="touchUpInside" id="SIa-w7-YtN"/>
+                                                    <action selector="SignInButtonTouchUpInside_SignUpComplete:" destination="oZp-Oa-fCy" eventType="touchUpInside" id="Fpz-HV-Nki"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -500,6 +512,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="가입하기">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SignUpCompleteButtonTouchUpInside:" destination="oZp-Oa-fCy" eventType="touchUpInside" id="Wk2-mV-fSw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -542,10 +557,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QdE-AA-XGt"/>
+                    <connections>
+                        <outlet property="uniqueNameConfirmLabel" destination="1Xp-sf-hbo" id="0h7-vD-Bpv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfC-5d-3cf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5426" y="-2"/>
+            <point key="canvasLocation" x="6353.8461538461534" y="-2.1327014218009479"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="bhn-SC-SDw">
@@ -553,13 +571,16 @@
                 <viewControllerPlaceholder id="eej-1z-vPh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dB0-Gz-CDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6199" y="16"/>
+            <point key="canvasLocation" x="7126.9230769230771" y="15.639810426540283"/>
         </scene>
     </scenes>
     <resources>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
