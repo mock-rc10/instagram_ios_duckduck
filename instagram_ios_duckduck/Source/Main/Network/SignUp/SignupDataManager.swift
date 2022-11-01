@@ -1,14 +1,16 @@
 //
-//  SignInDataManager.swift
+//  SignupDataManager.swift
 //  instagram_ios_duckduck
 //
 //  Created by 권유정 on 2022/11/01.
 //
 
+
 import Alamofire
 
-class SignInDataManager{
-    func postSignIn(_ parameters: SignInRequest, delegate: SignInViewController) {
+class SignUpDataManager{
+    /*
+    func postSignUp(_ parameters: SignInRequest, delegate: SignInViewController) {
         AF.request("\(Constant.BASE_URL)/api/auth/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: SignInResponse.self) { response in
@@ -34,4 +36,5 @@ class SignInDataManager{
                 }
             }
     }
+     */
 }

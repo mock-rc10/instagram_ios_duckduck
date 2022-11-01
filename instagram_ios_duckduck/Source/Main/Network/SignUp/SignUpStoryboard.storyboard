@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fp7-7T-TB6">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21501.1"/>
@@ -11,7 +11,7 @@
         <!--Sign Up Email View Controller-->
         <scene sceneID="eX9-o9-6Hp">
             <objects>
-                <viewController storyboardIdentifier="SignUpEmailVC" id="fp7-7T-TB6" customClass="SignUpEmailViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpEmailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fp7-7T-TB6" customClass="SignUpEmailViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="54H-7D-leh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +113,7 @@
         <!--Sign Up Name View Controller-->
         <scene sceneID="LWO-c9-3HV">
             <objects>
-                <viewController storyboardIdentifier="SignUpNameVC" modalPresentationStyle="fullScreen" id="fO6-gl-BFZ" customClass="SignUpNameViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpNameVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fO6-gl-BFZ" customClass="SignUpNameViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ro-d1-zzt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,7 +221,7 @@
         <!--Sign Up Password View Controller-->
         <scene sceneID="tVk-0l-JlI">
             <objects>
-                <viewController storyboardIdentifier="SignUpPasswordVC" modalPresentationStyle="fullScreen" id="KY6-au-Ghg" customClass="SignUpPasswordViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpPasswordVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KY6-au-Ghg" customClass="SignUpPasswordViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xlr-ob-GgX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,7 +355,7 @@
         <!--Sign Up Unique Name View Controller-->
         <scene sceneID="hEG-aI-fwK">
             <objects>
-                <viewController storyboardIdentifier="SignUPUniqueNameVC" modalPresentationStyle="fullScreen" id="m3u-hB-gwA" customClass="SignUpUniqueNameViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUPUniqueNameVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m3u-hB-gwA" customClass="SignUpUniqueNameViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJ1-ok-VbA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,7 +464,7 @@
         <!--Sign Up Complete View Controller-->
         <scene sceneID="Sku-BF-wdU">
             <objects>
-                <viewController storyboardIdentifier="SignUpCompleteVC" modalPresentationStyle="fullScreen" id="oZp-Oa-fCy" customClass="SignUpCompleteViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpCompleteVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oZp-Oa-fCy" customClass="SignUpCompleteViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PhV-4C-Z9x">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

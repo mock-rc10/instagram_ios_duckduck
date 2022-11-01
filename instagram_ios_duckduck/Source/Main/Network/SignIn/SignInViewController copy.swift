@@ -38,10 +38,10 @@ class SignInViewController: BaseViewController {
 }
 
 extension SignInViewController {
-    func didSuccessSignIn(_ result: Result){
+    func didSuccessSignIn(_ result: SignInResult){
         self.presentAlert(title: "로그인에 성공하였습니다", message: result.accessToken)
-        let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
-        //self.navigationController?.pushViewController(signInViewController, animated: true)
+        let signInViewController = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")
+        self.navigationController?.pushViewController(signInViewController, animated: true)
     }
     
     func failedToRequest(message: String) {
