@@ -40,8 +40,8 @@ class SignInViewController: BaseViewController {
 extension SignInViewController {
     func didSuccessSignIn(_ result: SignInResult){
         //self.presentAlert(title: "로그인에 성공하였습니다", message: result.accessToken)
-        let HomeViewController = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")
-        self.navigationController?.pushViewController(HomeViewController, animated: true)
+        let TabViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabVC")
+        self.navigationController?.pushViewController(TabViewController, animated: true)
         self.dismissIndicator()
         //IndicatorView.shared.dismiss()
     }
