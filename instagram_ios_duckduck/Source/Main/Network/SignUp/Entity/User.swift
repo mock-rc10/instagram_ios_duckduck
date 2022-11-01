@@ -16,7 +16,6 @@ class SignUpUser{
     var password: String = ""
     var faceBookLoginStatus: Bool = false
     
-    var userList: [User] = []
     
     public func addEmail(email: String){
         self.email = email
@@ -30,8 +29,10 @@ class SignUpUser{
     public func addPassword(password: String){
         self.password = password
     }
-    public func addUser(){
-        self.userList.append(User(email: self.email, name: self.name, uniqueName: self.uniqueName, password: self.password, faceBookLoginStatus: false))
+    public func addUser() -> User{
+        var user: User = User(email: self.email, name: self.name, uniqueName: self.uniqueName, password: self.password, faceBookLoginStatus: false)
+        
+        return user
     }
 }
         

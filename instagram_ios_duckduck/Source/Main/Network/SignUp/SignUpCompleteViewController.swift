@@ -8,21 +8,25 @@
 import UIKit
 
 class SignUpCompleteViewController: BaseViewController {
-
+    lazy var signUpDataManager: SignUpDataManager = SignUpDataManager()
     private var userDataModel: SignUpUser = SignUpUser.shared
     
     @IBOutlet weak var uniqueNameConfirmLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        uniqueNameConfirmLabel.text = userDataModel.uniqueName
+        uniqueNameConfirmLabel.text = "\(userDataModel.uniqueName) 님으로 가입하시겠어요?"
     }
     
     
     @IBAction func SignUpCompleteButtonTouchUpInside(_ sender: UIButton) {
-        userDataModel.addUser()
-        print(userDataModel.userList)
+        let user: User = userDataModel.addUser()
+    
+        self.showIndicator()
+        let signUpInput = SignUpRequest(facebook: false, email: user.email, password: user.email, name: user.name, uniqueName: user.uniqueName)
+        signUpDataManager.postSignUp(signUpInput, delegate: self)
     }
     
     @IBAction func SignInButtonTouchUpInside_SignUpComplete(_ sender: UIButton) {
@@ -30,15 +34,16 @@ class SignUpCompleteViewController: BaseViewController {
         //self.navigationController?.pushViewController(signInViewController, animated: true)
         self.changeRootViewController(signInViewController)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension SignUpCompleteViewController {
+    func didSuccessSignUp(_ result: SignUpResult){
+        //self.presentAlert(title: "로그인에 성공하였습니다", message: result.accessToken)
+        let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
+        self.navigationController?.pushViewController(signInViewController, animated: true)
+        self.dismissIndicator()
     }
-    */
-
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
 }

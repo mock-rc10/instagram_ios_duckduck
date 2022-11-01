@@ -9,16 +9,16 @@
 import Alamofire
 
 class SignUpDataManager{
-    /*
-    func postSignUp(_ parameters: SignInRequest, delegate: SignInViewController) {
-        AF.request("\(Constant.BASE_URL)/api/auth/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+    
+    func postSignUp(_ parameters: SignUpRequest, delegate: SignUpCompleteViewController) {
+        AF.request("\(Constant.BASE_URL)/api/auth/join", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
-            .responseDecodable(of: SignInResponse.self) { response in
+            .responseDecodable(of: SignUpResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     // 성공했을 때
                     if response.isSuccess, let result = response.result {
-                        delegate.didSuccessSignIn(result)
+                        delegate.didSuccessSignUp(result)
                     }
                     // 실패했을 때
                     else {
@@ -36,5 +36,5 @@ class SignUpDataManager{
                 }
             }
     }
-     */
+     
 }
