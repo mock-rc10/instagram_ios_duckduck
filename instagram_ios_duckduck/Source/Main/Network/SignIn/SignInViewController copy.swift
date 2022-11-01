@@ -17,6 +17,10 @@ class SignInViewController: BaseViewController {
     }
     
 
+    @IBAction func SignUpButtonTouchUpInside_SignIn(_ sender: UIButton) {
+        let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignUpEmailVC")
+        self.navigationController?.pushViewController(signUpViewController, animated: true)
+    }
     
 
 }

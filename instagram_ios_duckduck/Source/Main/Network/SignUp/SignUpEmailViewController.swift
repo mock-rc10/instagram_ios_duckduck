@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: BaseViewController {
+class SignUpEmailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +17,10 @@ class SignUpViewController: BaseViewController {
     
 
    
-    @IBAction func SignInButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction func SignInButtonTouchUpInside_SignUpEmail(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
-        self.navigationController?.pushViewController(signInViewController, animated: true)
+        //self.navigationController?.pushViewController(signInViewController, animated: true)
+        self.changeRootViewController(signInViewController)
     }
     
 }

@@ -14,14 +14,14 @@ class ViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func signInButtonTouchUpInside(_ sender: UIButton) {
+    @IBAction func signInButtonTouchUpInside_main(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")
-        self.navigationController?.pushViewController(signInViewController, animated: true)
-        //self.changeRootViewController(signInViewController)
+        //self.navigationController?.pushViewController(signInViewController, animated: true)
+        self.changeRootViewController(signInViewController)
     }
     
-    @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
-        let signUpViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignUpVC")
+    @IBAction func signUpButtonTouchUpInside_main(_ sender: UIButton) {
+        let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignUpEmailVC")
         self.navigationController?.pushViewController(signUpViewController, animated: true)
     }
     
