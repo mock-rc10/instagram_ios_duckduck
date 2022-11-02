@@ -9,7 +9,7 @@
 >   * 로그인/회원가입 화면UI - 100%
 >   * 뼈대 레이아웃 구성 - 15% (로그인-회원가입 간 navigation, segue구성)
 >   
->   ![1030_main](github/1030_main.png) ![1030_signIn](github/1030_signIn.png) ![1030_signUp](github/1030_signUp.png)
+>   ![1030_main](github/1030_main.png) ![1030_signIn](github/1030_signIn.png) ![1030_signUp](github/1030_signUp.png) ![1030_splash](github/1030_splash.png)
 
 > 2022-10-31
 >   * 회원가입 화면 UI 수정 - 100%
@@ -23,7 +23,7 @@
 >   * 개발 도중 이슈
 >     * 홈 화면 UI에 대한 고민 -> 질문방에 질문
 >     * 같은 방향의 스크롤 뷰를 피할 것(키워드 "nested scrollview"
->
+>   ![1031_signUp](github/1031_signUp.png)
 
 > 2022-11-1
 >   * 로그인 기능 구현(API연동) - 100%
@@ -34,3 +34,7 @@
 >     * Command LinkStoryboards failed with a nonzero exit code 에러 해결 -> 스토리보드 참조 수정
 >     * 입력 오류 검사는 "정규표현식"
 >     * 사용자 정보 유지(토큰)은 "userDefaults" 사용
+
+> 2022-11-2
+>   - 로그인 기능 수정(API) 
+>   - 회원가입 기능 구현(API연동) - 100%
