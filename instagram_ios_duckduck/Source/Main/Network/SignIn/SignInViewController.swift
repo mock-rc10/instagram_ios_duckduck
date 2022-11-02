@@ -25,7 +25,7 @@ class SignInViewController: BaseViewController {
     @IBAction func SignInButtonTouchUpInside_SignIn(_ sender: UIButton) {
         
         self.showIndicator()
-        let input = SignInRequest(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        let input = SignInRequest(identity: emailTextField.text ?? "", password: passwordTextField.text ?? "")
         signInDataManager.postSignIn(input, delegate: self)
     }
     

@@ -6,6 +6,6 @@
 //
 
 struct SignInRequest: Encodable{
-    var email: String
+    var identity: String
     var password: String
 }
