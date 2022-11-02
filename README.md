@@ -9,7 +9,7 @@
 >   * 로그인/회원가입 화면UI - 100%
 >   * 뼈대 레이아웃 구성 - 15% (로그인-회원가입 간 navigation, segue구성)
 >   
->   ![1030_main](github/1030_main.png) ![1030_signIn](github/1030_signIn.png) ![1030_signUp](github/1030_signUp.png) ![1030_splash](github/1030_splash.png)
+>   ![1030_splash](github/1030_splash.png) ![1030_main](github/1030_main.png) ![1030_signIn](github/1030_signIn.png) ![1030_signUp](github/1030_signUp.png) 
 
 > 2022-10-31
 >   * 회원가입 화면 UI 수정 - 100%
