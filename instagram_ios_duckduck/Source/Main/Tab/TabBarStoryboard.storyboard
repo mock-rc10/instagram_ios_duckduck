@@ -79,6 +79,13 @@
                     <view key="view" contentMode="scaleToFill" id="NUG-oY-OBh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-Gk-MB4">
+                                <rect key="frame" x="0.0" y="47" width="390" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LCy-oY-VVq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -86,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLi-Xo-A99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557" y="272"/>
+            <point key="canvasLocation" x="1556.9230769230769" y="271.56398104265401"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pae-ze-7HI">

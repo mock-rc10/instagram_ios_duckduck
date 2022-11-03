@@ -35,6 +35,8 @@ class SignInViewController: BaseViewController {
     }
     
 
+    @IBAction func facebookButtonTouchUpInside(_ sender: UIButton) {
+    }
 }
 
 extension SignInViewController {
