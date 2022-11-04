@@ -21,8 +21,6 @@
 		C75FEE86291122DD00CDEE37 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75FEE85291122DD00CDEE37 /* SignUpRequest.swift */; };
 		C75FEE88291122EC00CDEE37 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75FEE87291122EC00CDEE37 /* SignUpResponse.swift */; };
 		C76506BE290FD17000C1C21D /* TabBarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76506BD290FD17000C1C21D /* TabBarStoryboard.storyboard */; };
-		C76506C3290FD1F800C1C21D /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76506C2290FD1F800C1C21D /* HomeStoryboard.storyboard */; };
-		C76506C5290FD21700C1C21D /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76506C4290FD21700C1C21D /* ProfileStoryboard.storyboard */; };
 		C76506C72910E39400C1C21D /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76506C62910E39400C1C21D /* SignUpNameViewController.swift */; };
 		C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76506C82910E3A900C1C21D /* SignUpPasswordViewController.swift */; };
 		C76506CB2910E3E700C1C21D /* SignUpUniqueNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76506CA2910E3E700C1C21D /* SignUpUniqueNameViewController.swift */; };
@@ -41,9 +39,9 @@
 		C783E8F2290F189500503A6F /* SignUpEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8F1290F189500503A6F /* SignUpEmailViewController.swift */; };
 		C783E8F5290F1A6200503A6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8F4290F1A6200503A6F /* SignInViewController.swift */; };
 		C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7955DDF29114D7200C58366 /* SignUpStoryboard.storyboard */; };
-		C7955DE42911518500C58366 /* ReelsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7955DE32911518500C58366 /* ReelsStoryboard.storyboard */; };
-		C7955DE62911519500C58366 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7955DE52911519500C58366 /* SearchStoryboard.storyboard */; };
-		C7955DE8291151A200C58366 /* ShopStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7955DE7291151A200C58366 /* ShopStoryboard.storyboard */; };
+		C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7955DEA291515EF00C58366 /* HomeViewController.swift */; };
+		C7955DEE29151C0300C58366 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7955DEC29151C0300C58366 /* StoryCollectionViewCell.swift */; };
+		C7955DF229152D3D00C58366 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C7955DF129152D3D00C58366 /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +62,6 @@
 		C75FEE85291122DD00CDEE37 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		C75FEE87291122EC00CDEE37 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		C76506BD290FD17000C1C21D /* TabBarStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarStoryboard.storyboard; sourceTree = "<group>"; };
-		C76506C2290FD1F800C1C21D /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
-		C76506C4290FD21700C1C21D /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		C76506C62910E39400C1C21D /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
 		C76506C82910E3A900C1C21D /* SignUpPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewController.swift; sourceTree = "<group>"; };
 		C76506CA2910E3E700C1C21D /* SignUpUniqueNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUniqueNameViewController.swift; sourceTree = "<group>"; };
@@ -84,9 +80,9 @@
 		C783E8F1290F189500503A6F /* SignUpEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailViewController.swift; sourceTree = "<group>"; };
 		C783E8F4290F1A6200503A6F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C7955DDF29114D7200C58366 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
-		C7955DE32911518500C58366 /* ReelsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsStoryboard.storyboard; sourceTree = "<group>"; };
-		C7955DE52911519500C58366 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
-		C7955DE7291151A200C58366 /* ShopStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopStoryboard.storyboard; sourceTree = "<group>"; };
+		C7955DEA291515EF00C58366 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C7955DEC29151C0300C58366 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7955DF329152ECC00C58366 /* instagram_ios_duckduck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = instagram_ios_duckduck.entitlements; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7955DF229152D3D00C58366 /* FacebookLogin in Frameworks */,
 				068524FF1E5678F1AE3ACC65 /* Pods_instagram_ios_duckduck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +163,7 @@
 		C7552933290CDE5C008B370A /* instagram_ios_duckduck */ = {
 			isa = PBXGroup;
 			children = (
+				C7955DF329152ECC00C58366 /* instagram_ios_duckduck.entitlements */,
 				C755294E290EEDBE008B370A /* Configuration */,
 				C7552958290EF2A9008B370A /* Util */,
 				C7552948290EDEF9008B370A /* Source */,
@@ -262,30 +260,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		C76506BF290FD18800C1C21D /* Reels */ = {
-			isa = PBXGroup;
-			children = (
-				C7955DE32911518500C58366 /* ReelsStoryboard.storyboard */,
-			);
-			path = Reels;
-			sourceTree = "<group>";
-		};
-		C76506C0290FD1A900C1C21D /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				C7955DE7291151A200C58366 /* ShopStoryboard.storyboard */,
-			);
-			path = Shop;
-			sourceTree = "<group>";
-		};
-		C76506C1290FD1B100C1C21D /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				C76506C4290FD21700C1C21D /* ProfileStoryboard.storyboard */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		C76506D02910EB7300C1C21D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,29 +290,18 @@
 			isa = PBXGroup;
 			children = (
 				C76506BD290FD17000C1C21D /* TabBarStoryboard.storyboard */,
-				C783E8F9290FCFDD00503A6F /* Home */,
-				C783E8FA290FD12100503A6F /* Search */,
-				C76506BF290FD18800C1C21D /* Reels */,
-				C76506C0290FD1A900C1C21D /* Shop */,
-				C76506C1290FD1B100C1C21D /* Profile */,
+				C7955DE9291515B900C58366 /* Home */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
 		};
-		C783E8F9290FCFDD00503A6F /* Home */ = {
+		C7955DE9291515B900C58366 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C76506C2290FD1F800C1C21D /* HomeStoryboard.storyboard */,
+				C7955DEA291515EF00C58366 /* HomeViewController.swift */,
+				C7955DEC29151C0300C58366 /* StoryCollectionViewCell.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		C783E8FA290FD12100503A6F /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				C7955DE52911519500C58366 /* SearchStoryboard.storyboard */,
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +322,9 @@
 			dependencies = (
 			);
 			name = instagram_ios_duckduck;
+			packageProductDependencies = (
+				C7955DF129152D3D00C58366 /* FacebookLogin */,
+			);
 			productName = instagram_ios_duckduck;
 			productReference = C7552931290CDE5C008B370A /* instagram_ios_duckduck.app */;
 			productType = "com.apple.product-type.application";
@@ -387,6 +353,9 @@
 				Base,
 			);
 			mainGroup = C7552928290CDE5B008B370A;
+			packageReferences = (
+				C7955DF029152D3D00C58366 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = C7552932290CDE5C008B370A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -405,13 +374,8 @@
 				C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */,
 				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
-				C76506C5290FD21700C1C21D /* ProfileStoryboard.storyboard in Resources */,
-				C7955DE42911518500C58366 /* ReelsStoryboard.storyboard in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
-				C7955DE62911519500C58366 /* SearchStoryboard.storyboard in Resources */,
 				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
-				C76506C3290FD1F800C1C21D /* HomeStoryboard.storyboard in Resources */,
-				C7955DE8291151A200C58366 /* ShopStoryboard.storyboard in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
@@ -475,7 +439,9 @@
 				C783E8F2290F189500503A6F /* SignUpEmailViewController.swift in Sources */,
 				C76506D5291102B300C1C21D /* SignInDataManager.swift in Sources */,
 				C76506CD2910E42000C1C21D /* SignUpCompleteViewController.swift in Sources */,
+				C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */,
 				C76506D92911033A00C1C21D /* SignInResponse.swift in Sources */,
+				C7955DEE29151C0300C58366 /* StoryCollectionViewCell.swift in Sources */,
 				C7552939290CDE5C008B370A /* ViewController.swift in Sources */,
 				C76506C72910E39400C1C21D /* SignUpNameViewController.swift in Sources */,
 				C7552935290CDE5C008B370A /* AppDelegate.swift in Sources */,
@@ -634,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = instagram_ios_duckduck/instagram_ios_duckduck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6MUPBPQFU7;
@@ -663,6 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = instagram_ios_duckduck/instagram_ios_duckduck.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6MUPBPQFU7;
@@ -708,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7955DF029152D3D00C58366 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7955DF129152D3D00C58366 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7955DF029152D3D00C58366 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7552929290CDE5B008B370A /* Project object */;
 }
