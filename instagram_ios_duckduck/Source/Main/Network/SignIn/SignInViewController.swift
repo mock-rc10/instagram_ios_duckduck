@@ -55,6 +55,10 @@ class SignInViewController: BaseViewController {
            !token.isExpired{
             //로그인 여부 또는 액세스 토큰 확인
             print("Facebook Access Token: \(token)")
+            let TabViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabVC")
+            self.navigationController?.pushViewController(TabViewController, animated: true)
+            self.dismissIndicator()
+            
         }
         
     }

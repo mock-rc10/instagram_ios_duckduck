@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //스플래시 화면 딜레이 시간
+        ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )//Facebook loing 하기 위해 사용된 코드
+
+        FBSDKCoreKit.Settings.shared.appID = "642967074216304"
+
         sleep(1)
         return true
     }
