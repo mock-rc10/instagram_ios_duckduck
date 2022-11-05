@@ -42,6 +42,10 @@
 		C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7955DEA291515EF00C58366 /* HomeViewController.swift */; };
 		C7955DEE29151C0300C58366 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7955DEC29151C0300C58366 /* StoryCollectionViewCell.swift */; };
 		C7955DF229152D3D00C58366 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C7955DF129152D3D00C58366 /* FacebookLogin */; };
+		C7F06D2129164E2600C72CE9 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D1F29164E2600C72CE9 /* StoryTableViewCell.swift */; };
+		C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D2029164E2600C72CE9 /* StoryTableViewCell.xib */; };
+		C7F06D2729164EB200C72CE9 /* StoryUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D2529164EB200C72CE9 /* StoryUserCollectionViewCell.swift */; };
+		C7F06D2829164EB200C72CE9 /* StoryUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D2629164EB200C72CE9 /* StoryUserCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +87,10 @@
 		C7955DEA291515EF00C58366 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C7955DEC29151C0300C58366 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7955DF329152ECC00C58366 /* instagram_ios_duckduck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = instagram_ios_duckduck.entitlements; sourceTree = "<group>"; };
+		C7F06D1F29164E2600C72CE9 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06D2029164E2600C72CE9 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
+		C7F06D2529164EB200C72CE9 /* StoryUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7F06D2629164EB200C72CE9 /* StoryUserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryUserCollectionViewCell.xib; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,18 +198,18 @@
 			isa = PBXGroup;
 			children = (
 				C783E8F6290FCB5F00503A6F /* Tab */,
-				C755294A290EDFF9008B370A /* Network */,
+				C755294A290EDFF9008B370A /* User */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		C755294A290EDFF9008B370A /* Network */ = {
+		C755294A290EDFF9008B370A /* User */ = {
 			isa = PBXGroup;
 			children = (
 				C70FE120290EFB63003AB632 /* SignIn */,
 				C70FE11F290EFB4F003AB632 /* SignUp */,
 			);
-			path = Network;
+			path = User;
 			sourceTree = "<group>";
 		};
 		C755294E290EEDBE008B370A /* Configuration */ = {
@@ -300,6 +308,10 @@
 			children = (
 				C7955DEA291515EF00C58366 /* HomeViewController.swift */,
 				C7955DEC29151C0300C58366 /* StoryCollectionViewCell.swift */,
+				C7F06D1F29164E2600C72CE9 /* StoryTableViewCell.swift */,
+				C7F06D2029164E2600C72CE9 /* StoryTableViewCell.xib */,
+				C7F06D2529164EB200C72CE9 /* StoryUserCollectionViewCell.swift */,
+				C7F06D2629164EB200C72CE9 /* StoryUserCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -377,9 +389,11 @@
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
+				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 				C76506BE290FD17000C1C21D /* TabBarStoryboard.storyboard in Resources */,
+				C7F06D2829164EB200C72CE9 /* StoryUserCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,11 +464,13 @@
 				C76506DE29110CD500C1C21D /* UIColor.swift in Sources */,
 				C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */,
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,
+				C7F06D2729164EB200C72CE9 /* StoryUserCollectionViewCell.swift in Sources */,
 				C75FEE88291122EC00CDEE37 /* SignUpResponse.swift in Sources */,
 				C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */,
 				C75FEE86291122DD00CDEE37 /* SignUpRequest.swift in Sources */,
 				C75FEE842911224800CDEE37 /* SignupDataManager.swift in Sources */,
 				C7552937290CDE5C008B370A /* SceneDelegate.swift in Sources */,
+				C7F06D2129164E2600C72CE9 /* StoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

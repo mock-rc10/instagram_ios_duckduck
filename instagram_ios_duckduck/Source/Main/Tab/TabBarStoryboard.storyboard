@@ -81,6 +81,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rg3-Rm-bUX">
+                                <rect key="frame" x="0.0" y="91" width="390" height="621"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-3m-sKW">
                                 <rect key="frame" x="0.0" y="91" width="390" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -152,15 +156,21 @@
                         <viewLayoutGuide key="safeArea" id="LCy-oY-VVq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LCy-oY-VVq" firstAttribute="bottom" secondItem="Rg3-Rm-bUX" secondAttribute="bottom" id="8kS-PW-8z3"/>
                             <constraint firstItem="LCy-oY-VVq" firstAttribute="bottom" secondItem="fqE-3m-sKW" secondAttribute="bottom" constant="521" id="C2a-L9-eus"/>
+                            <constraint firstItem="Rg3-Rm-bUX" firstAttribute="leading" secondItem="LCy-oY-VVq" secondAttribute="leading" id="KgX-qi-cpR"/>
+                            <constraint firstItem="LCy-oY-VVq" firstAttribute="trailing" secondItem="Rg3-Rm-bUX" secondAttribute="trailing" id="MJF-JF-ler"/>
                             <constraint firstItem="fqE-3m-sKW" firstAttribute="leading" secondItem="LCy-oY-VVq" secondAttribute="leading" id="VlY-wf-dOc"/>
+                            <constraint firstItem="Rg3-Rm-bUX" firstAttribute="top" secondItem="LCy-oY-VVq" secondAttribute="top" id="VuO-3x-RjF"/>
                             <constraint firstItem="fqE-3m-sKW" firstAttribute="top" secondItem="LCy-oY-VVq" secondAttribute="top" id="iZ8-NS-QFx"/>
                             <constraint firstItem="LCy-oY-VVq" firstAttribute="trailing" secondItem="fqE-3m-sKW" secondAttribute="trailing" id="qdy-6l-Lw3"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VlC-0v-hDU">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="Instagram_logo.png" id="ZdL-AY-cz8"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Instagram_logo.png" id="ZdL-AY-cz8">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" id="7ci-v0-sw5"/>
                             <barButtonItem title="Item" id="w9q-An-FDx"/>

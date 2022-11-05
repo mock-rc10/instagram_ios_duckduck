@@ -25,7 +25,7 @@ class SignInViewController: BaseViewController {
     
     @IBAction func SignInButtonTouchUpInside_SignIn(_ sender: UIButton) {
         self.showIndicator()
-        let input = SignInRequest(identity: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        let input = SignInRequest(identity: emailTextField.text! ?? "", password: passwordTextField.text! ?? "")
         signInDataManager.postSignIn(input, delegate: self)
     }
     
@@ -75,6 +75,7 @@ class SignInViewController: BaseViewController {
 extension SignInViewController {
     func didSuccessSignIn(_ result: SignInResult){
         //self.presentAlert(title: "로그인에 성공하였습니다", message: result.accessToken)
+        UserDefaults.standard.set(result.accessToken, forKey: "accessToken")
         let TabViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabVC")
         self.navigationController?.pushViewController(TabViewController, animated: true)
         self.dismissIndicator()
