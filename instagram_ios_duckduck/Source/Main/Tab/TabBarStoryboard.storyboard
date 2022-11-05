@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21501.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,85 +84,14 @@
                                 <rect key="frame" x="0.0" y="91" width="390" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-3m-sKW">
-                                <rect key="frame" x="0.0" y="91" width="390" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ugs-3s-kci"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="eUS-c9-uk1">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="storyCell" id="xTN-3A-3KC" customClass="StoryCollectionViewCell" customModule="instagram_ios_duckduck" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bEW-Jk-vxb">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRl-YS-EaV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="1sX-Gf-5aY"/>
-                                                        <constraint firstAttribute="width" constant="80" id="qCM-o8-TJJ"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GaW-kj-uhq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="UIV-5w-rli"/>
-                                                        <constraint firstAttribute="width" constant="80" id="yQ2-vg-EnG"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8u-dd-QfS">
-                                                    <rect key="frame" x="0.0" y="80" width="80" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="3cn-rt-G2E"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="GaW-kj-uhq" firstAttribute="top" secondItem="bEW-Jk-vxb" secondAttribute="top" id="08N-3r-uvI"/>
-                                                <constraint firstAttribute="bottom" secondItem="N8u-dd-QfS" secondAttribute="bottom" id="2xK-Ep-zyE"/>
-                                                <constraint firstItem="GaW-kj-uhq" firstAttribute="leading" secondItem="bEW-Jk-vxb" secondAttribute="leading" id="9On-Na-2xx"/>
-                                                <constraint firstItem="N8u-dd-QfS" firstAttribute="leading" secondItem="bEW-Jk-vxb" secondAttribute="leading" id="HlO-pQ-vsK"/>
-                                                <constraint firstAttribute="trailing" secondItem="nRl-YS-EaV" secondAttribute="trailing" id="LRS-LQ-n44"/>
-                                                <constraint firstAttribute="trailing" secondItem="N8u-dd-QfS" secondAttribute="trailing" id="LUR-gf-OOQ"/>
-                                                <constraint firstItem="nRl-YS-EaV" firstAttribute="top" secondItem="bEW-Jk-vxb" secondAttribute="top" id="d7J-J1-jHV"/>
-                                                <constraint firstItem="nRl-YS-EaV" firstAttribute="leading" secondItem="bEW-Jk-vxb" secondAttribute="leading" id="mWu-qB-7j9"/>
-                                                <constraint firstAttribute="trailing" secondItem="GaW-kj-uhq" secondAttribute="trailing" id="onN-7Z-mgr"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="80" height="100"/>
-                                        <connections>
-                                            <outlet property="storyProfileImage" destination="nRl-YS-EaV" id="UCg-kb-Q0j"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="AN2-Pt-7cI" id="dCu-7r-yCT"/>
-                                    <outlet property="delegate" destination="AN2-Pt-7cI" id="mMS-U4-Un2"/>
-                                </connections>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LCy-oY-VVq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LCy-oY-VVq" firstAttribute="bottom" secondItem="Rg3-Rm-bUX" secondAttribute="bottom" id="8kS-PW-8z3"/>
-                            <constraint firstItem="LCy-oY-VVq" firstAttribute="bottom" secondItem="fqE-3m-sKW" secondAttribute="bottom" constant="521" id="C2a-L9-eus"/>
                             <constraint firstItem="Rg3-Rm-bUX" firstAttribute="leading" secondItem="LCy-oY-VVq" secondAttribute="leading" id="KgX-qi-cpR"/>
                             <constraint firstItem="LCy-oY-VVq" firstAttribute="trailing" secondItem="Rg3-Rm-bUX" secondAttribute="trailing" id="MJF-JF-ler"/>
-                            <constraint firstItem="fqE-3m-sKW" firstAttribute="leading" secondItem="LCy-oY-VVq" secondAttribute="leading" id="VlY-wf-dOc"/>
                             <constraint firstItem="Rg3-Rm-bUX" firstAttribute="top" secondItem="LCy-oY-VVq" secondAttribute="top" id="VuO-3x-RjF"/>
-                            <constraint firstItem="fqE-3m-sKW" firstAttribute="top" secondItem="LCy-oY-VVq" secondAttribute="top" id="iZ8-NS-QFx"/>
-                            <constraint firstItem="LCy-oY-VVq" firstAttribute="trailing" secondItem="fqE-3m-sKW" secondAttribute="trailing" id="qdy-6l-Lw3"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -179,7 +107,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="storyCollectionView" destination="fqE-3m-sKW" id="Y23-Gh-CjJ"/>
+                        <outlet property="homeTableView" destination="Rg3-Rm-bUX" id="hUZ-4J-ZdD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLi-Xo-A99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,7 +157,6 @@
     </scenes>
     <resources>
         <image name="Instagram_logo.png" width="174" height="54"/>
-        <image name="facebook_logo.png" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,5 +19,9 @@ class StoryUserCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    func setStory(story: StoryListResult){
+        //storyUserProfile.text = story.profileImgURL
+        storyUserUniqueName.text = story.uniqueName
+    }
 }

@@ -12,6 +12,7 @@ class StoryTableViewCell: UITableViewCell{
 
     static let storyIdentifier = "StoryTableViewCell"
     @IBOutlet weak var storyCollection: UICollectionView!
+    private var storyUserDataModel: Stories = Stories.shared
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,12 +41,13 @@ class StoryTableViewCell: UITableViewCell{
 
 extension StoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        //내가 팔로우한 사람 수
+        return (storyUserDataModel.StoryList as AnyObject).count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = storyCollection.dequeueReusableCell(withReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier, for: indexPath) as! StoryUserCollectionViewCell else { return UICollectionViewCell()}
-        cell.setData(userData: )
+        guard let cell = storyCollection.dequeueReusableCell(withReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier, for: indexPath) as? StoryUserCollectionViewCell else { return UICollectionViewCell()}
+        cell.setStory(story: storyUserDataModel.StoryList[indexPath.row])
         return cell
     }
     
