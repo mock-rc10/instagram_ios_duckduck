@@ -9,8 +9,6 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
-    @IBOutlet weak var storyCollectionView: UICollectionView!
-    //var storyProfileArray: Array = []
     @IBOutlet weak var homeTableView: UITableView!
     var accessToken: String? = ""
     lazy var storyDataManager: StoryDataManager = StoryDataManager()
@@ -25,27 +23,6 @@ class HomeViewController: BaseViewController {
     
 
 }
-/*
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as?
-                    UICollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            
-            return cell
-    }
-    
-    
-    
-}
- */
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     

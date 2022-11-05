@@ -48,6 +48,13 @@
 		C7F06D2E29165C0B00C72CE9 /* StoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D2D29165C0B00C72CE9 /* StoryListResponse.swift */; };
 		C7F06D3029165D8700C72CE9 /* StoryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D2F29165D8700C72CE9 /* StoryDataManager.swift */; };
 		C7F06D322916607500C72CE9 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D312916607500C72CE9 /* Stories.swift */; };
+		C7F06D382916760700C72CE9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D372916760700C72CE9 /* ProfileViewController.swift */; };
+		C7F06D3B2916770800C72CE9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D392916770800C72CE9 /* ProfileTableViewCell.swift */; };
+		C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D3A2916770800C72CE9 /* ProfileTableViewCell.xib */; };
+		C7F06D3E29167D6600C72CE9 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D3D29167D6600C72CE9 /* ProfileDataManager.swift */; };
+		C7F06D4029167DED00C72CE9 /* ProfileLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */; };
+		C7F06D42291680CB00C72CE9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D41291680CB00C72CE9 /* Profile.swift */; };
+		C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D442916A56200C72CE9 /* ProfilImgBack.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +102,13 @@
 		C7F06D2D29165C0B00C72CE9 /* StoryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListResponse.swift; sourceTree = "<group>"; };
 		C7F06D2F29165D8700C72CE9 /* StoryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataManager.swift; sourceTree = "<group>"; };
 		C7F06D312916607500C72CE9 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		C7F06D372916760700C72CE9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C7F06D392916770800C72CE9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06D3A2916770800C72CE9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		C7F06D3D29167D6600C72CE9 /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
+		C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLookupResponse.swift; sourceTree = "<group>"; };
+		C7F06D41291680CB00C72CE9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		C7F06D442916A56200C72CE9 /* ProfilImgBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfilImgBack.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -230,6 +244,7 @@
 		C755294F290EEDD8008B370A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06D432916A54600C72CE9 /* Profile */,
 				C7552950290EEDF5008B370A /* Logo */,
 			);
 			path = Images;
@@ -303,6 +318,7 @@
 			children = (
 				C76506BD290FD17000C1C21D /* TabBarStoryboard.storyboard */,
 				C7955DE9291515B900C58366 /* Home */,
+				C7F06D33291672BA00C72CE9 /* Profile */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -336,6 +352,51 @@
 				C7F06D312916607500C72CE9 /* Stories.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		C7F06D33291672BA00C72CE9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06D372916760700C72CE9 /* ProfileViewController.swift */,
+				C7F06D34291675B300C72CE9 /* UserProfile */,
+				C7F06D35291675C100C72CE9 /* Feed */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C7F06D34291675B300C72CE9 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06D36291675E800C72CE9 /* Entity */,
+				C7F06D3D29167D6600C72CE9 /* ProfileDataManager.swift */,
+				C7F06D392916770800C72CE9 /* ProfileTableViewCell.swift */,
+				C7F06D3A2916770800C72CE9 /* ProfileTableViewCell.xib */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		C7F06D35291675C100C72CE9 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C7F06D36291675E800C72CE9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */,
+				C7F06D41291680CB00C72CE9 /* Profile.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C7F06D432916A54600C72CE9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06D442916A56200C72CE9 /* ProfilImgBack.png */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +474,8 @@
 				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
+				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
+				C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 				C76506BE290FD17000C1C21D /* TabBarStoryboard.storyboard in Resources */,
 				C7F06D2829164EB200C72CE9 /* StoryUserCollectionViewCell.xib in Resources */,
@@ -474,6 +537,7 @@
 				C783E8EA290F0DD100503A6F /* BaseViewController.swift in Sources */,
 				C783E8F2290F189500503A6F /* SignUpEmailViewController.swift in Sources */,
 				C76506D5291102B300C1C21D /* SignInDataManager.swift in Sources */,
+				C7F06D4029167DED00C72CE9 /* ProfileLookupResponse.swift in Sources */,
 				C7F06D2E29165C0B00C72CE9 /* StoryListResponse.swift in Sources */,
 				C76506CD2910E42000C1C21D /* SignUpCompleteViewController.swift in Sources */,
 				C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */,
@@ -485,10 +549,14 @@
 				C7552935290CDE5C008B370A /* AppDelegate.swift in Sources */,
 				C76506D32910EBB200C1C21D /* User.swift in Sources */,
 				C783E8F5290F1A6200503A6F /* SignInViewController.swift in Sources */,
+				C7F06D3E29167D6600C72CE9 /* ProfileDataManager.swift in Sources */,
 				C76506DE29110CD500C1C21D /* UIColor.swift in Sources */,
+				C7F06D382916760700C72CE9 /* ProfileViewController.swift in Sources */,
 				C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */,
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,
 				C7F06D2729164EB200C72CE9 /* StoryUserCollectionViewCell.swift in Sources */,
+				C7F06D3B2916770800C72CE9 /* ProfileTableViewCell.swift in Sources */,
+				C7F06D42291680CB00C72CE9 /* Profile.swift in Sources */,
 				C75FEE88291122EC00CDEE37 /* SignUpResponse.swift in Sources */,
 				C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */,
 				C75FEE86291122DD00CDEE37 /* SignUpRequest.swift in Sources */,
