@@ -55,6 +55,12 @@
 		C7F06D4029167DED00C72CE9 /* ProfileLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */; };
 		C7F06D42291680CB00C72CE9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D41291680CB00C72CE9 /* Profile.swift */; };
 		C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D442916A56200C72CE9 /* ProfilImgBack.png */; };
+		C7F06D4729176EC200C72CE9 /* ProfileEmpty.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */; };
+		C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */; };
+		C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D50291775FF00C72CE9 /* profileListBtn.png */; };
+		C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */; };
+		C7F06D5B29178D0900C72CE9 /* ProfileFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D5929178D0900C72CE9 /* ProfileFeedTableViewCell.swift */; };
+		C7F06D5D29178F6C00C72CE9 /* ProfileFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D5A29178D0900C72CE9 /* ProfileFeedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +115,12 @@
 		C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLookupResponse.swift; sourceTree = "<group>"; };
 		C7F06D41291680CB00C72CE9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		C7F06D442916A56200C72CE9 /* ProfilImgBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfilImgBack.png; sourceTree = "<group>"; };
+		C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileEmpty.PNG; sourceTree = "<group>"; };
+		C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileAddBtn.png; path = ../../../../../../Downloads/profileAddBtn.png; sourceTree = "<group>"; };
+		C7F06D50291775FF00C72CE9 /* profileListBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileListBtn.png; path = ../../../../../../Downloads/profileListBtn.png; sourceTree = "<group>"; };
+		C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileFriendBtn.png; path = ../../../../../../Downloads/profileFriendBtn.png; sourceTree = "<group>"; };
+		C7F06D5929178D0900C72CE9 /* ProfileFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06D5A29178D0900C72CE9 /* ProfileFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedTableViewCell.xib; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -244,6 +256,7 @@
 		C755294F290EEDD8008B370A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06D48291774F100C72CE9 /* Button */,
 				C7F06D432916A54600C72CE9 /* Profile */,
 				C7552950290EEDF5008B370A /* Logo */,
 			);
@@ -378,6 +391,8 @@
 		C7F06D35291675C100C72CE9 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06D5929178D0900C72CE9 /* ProfileFeedTableViewCell.swift */,
+				C7F06D5A29178D0900C72CE9 /* ProfileFeedTableViewCell.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -395,8 +410,19 @@
 			isa = PBXGroup;
 			children = (
 				C7F06D442916A56200C72CE9 /* ProfilImgBack.png */,
+				C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		C7F06D48291774F100C72CE9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */,
+				C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */,
+				C7F06D50291775FF00C72CE9 /* profileListBtn.png */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,9 +495,14 @@
 				C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */,
 				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
+				C7F06D4729176EC200C72CE9 /* ProfileEmpty.PNG in Resources */,
+				C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */,
+				C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
+				C7F06D5D29178F6C00C72CE9 /* ProfileFeedTableViewCell.xib in Resources */,
+				C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */,
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
@@ -551,6 +582,7 @@
 				C783E8F5290F1A6200503A6F /* SignInViewController.swift in Sources */,
 				C7F06D3E29167D6600C72CE9 /* ProfileDataManager.swift in Sources */,
 				C76506DE29110CD500C1C21D /* UIColor.swift in Sources */,
+				C7F06D5B29178D0900C72CE9 /* ProfileFeedTableViewCell.swift in Sources */,
 				C7F06D382916760700C72CE9 /* ProfileViewController.swift in Sources */,
 				C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */,
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,

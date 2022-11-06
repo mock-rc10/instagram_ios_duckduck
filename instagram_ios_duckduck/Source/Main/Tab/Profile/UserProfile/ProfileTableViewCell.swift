@@ -31,8 +31,12 @@ class ProfileTableViewCell: UITableViewCell {
         feedCount.text = String(profile.postCount)
         followerCount.text = String(profile.followerCount)
         followingCount.text = String(profile.followingCount)
-        //let url = URL(string: profile.imgURL)
-        //profileImage.load(url: URL(string: profile.imgURL)! )
+        if profile.imgURL == "" {
+            profileImage.image = UIImage(named: "ProfileEmpty.PNG")
+        }else{
+            let url = URL(string: profile.imgURL)
+            profileImage.load(url: url!)
+        }
         
     }
     

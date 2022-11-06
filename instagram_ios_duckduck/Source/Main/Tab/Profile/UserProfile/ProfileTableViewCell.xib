@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="instagram_ios_duckduck" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="instagram_ios_duckduck">
             <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -39,8 +39,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31m-0v-nWK">
                                 <rect key="frame" x="110" y="0.0" width="200" height="130"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cVn-dC-c2n">
-                                        <rect key="frame" x="0.0" y="45" width="48.333333333333336" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cVn-dC-c2n">
+                                        <rect key="frame" x="-17.333333333333329" y="45" width="48.333333333333336" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게시물 수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRh-CM-X8Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="20"/>
@@ -92,7 +92,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-Tu-ABk">
-                                        <rect key="frame" x="151.66666666666669" y="45" width="48.333333333333343" height="40"/>
+                                        <rect key="frame" x="169.33333333333331" y="45" width="48.333333333333343" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔로잉 수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfe-7m-IXW">
                                                 <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="20"/>
@@ -120,13 +120,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="jJD-qZ-M6H" firstAttribute="leading" secondItem="cVn-dC-c2n" secondAttribute="trailing" constant="45" id="0jv-ig-zRi"/>
                                     <constraint firstItem="ljs-Tu-ABk" firstAttribute="centerY" secondItem="31m-0v-nWK" secondAttribute="centerY" id="1ng-vE-BKi"/>
                                     <constraint firstItem="cVn-dC-c2n" firstAttribute="centerY" secondItem="31m-0v-nWK" secondAttribute="centerY" id="73q-X5-gKp"/>
                                     <constraint firstAttribute="height" constant="130" id="F2L-i9-dvW"/>
                                     <constraint firstItem="jJD-qZ-M6H" firstAttribute="centerX" secondItem="31m-0v-nWK" secondAttribute="centerX" id="UFB-my-hgY"/>
-                                    <constraint firstItem="cVn-dC-c2n" firstAttribute="leading" secondItem="31m-0v-nWK" secondAttribute="leading" id="XQq-eO-LSg"/>
+                                    <constraint firstItem="ljs-Tu-ABk" firstAttribute="leading" secondItem="jJD-qZ-M6H" secondAttribute="trailing" constant="45" id="ZgW-G0-Wr2"/>
                                     <constraint firstItem="jJD-qZ-M6H" firstAttribute="centerY" secondItem="31m-0v-nWK" secondAttribute="centerY" id="iLp-25-aNN"/>
-                                    <constraint firstAttribute="trailing" secondItem="ljs-Tu-ABk" secondAttribute="trailing" id="yhq-mC-iyq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -169,8 +169,13 @@
                                             <constraint firstAttribute="height" constant="30" id="3kj-vB-gH2"/>
                                             <constraint firstAttribute="width" constant="30" id="WT0-BC-aAU"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="profileFriendBtn.png">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="gray" image="profileFriendBtn.png">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -205,6 +210,7 @@
     </objects>
     <resources>
         <image name="ProfilImgBack.png" width="200" height="260"/>
+        <image name="profileFriendBtn.png" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Pageboy
+import Tabman
 
-class ProfileViewController: BaseViewController {
+class ProfileViewController: TabmanViewController {
 
+    
+    @IBOutlet weak var profileUniqueName: UIBarButtonItem!
     @IBOutlet var ProfileTableView: UITableView!
     var accessToken: String? = ""
     lazy var profileDataManager: ProfileDataManager = ProfileDataManager()
@@ -22,7 +26,6 @@ class ProfileViewController: BaseViewController {
         registerDelegate()
         // Do any additional setup after loading the view.
     }
-    
     
 
 }
@@ -38,8 +41,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         if section == 0{
             return 1
         }else{
-            //피드 게시물 개수
-            return 0
+            return 1
         }
     }
     
@@ -51,8 +53,27 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
             let cellData = profileDataModel.userProfile
-            
             cell.getProfile(profile: cellData)
+            
+            return cell
+        case 1:
+            guard let cell =
+                    self.dataSource = self
+                    let bar = TMBar.ButtonBar()
+                    bar.backgroundView.style = .blur(style: .light)
+                    bar.layout.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    bar.buttons.customize{(button) in
+                        button.tintColor = .systemGray
+                        button.selectedTintColor = .black
+                        
+                    }
+                    bar.indicator.weight = .custom(value: 2)
+                    bar.indicator.tintColor = .orange
+                    addBar(bar, dataSource: self, at: .custom(view: tabView, layout: nil))
+            ProfileTableView.dequeueReusableCell(withIdentifier: ProfileFeedTableViewCell.profileFeedIdentifier, for: indexPath) as? ProfileFeedTableViewCell
+            else {
+                return UITableViewCell()
+            }
             
             return cell
         default:
@@ -70,12 +91,8 @@ extension ProfileViewController {
         
     }
     func didSuccessLookupProfile(result: ProfileLookupResult){
-        //스토리 화면 보여주기
-        print("----------------")
-        print(result)
-        
         profileDataModel.setProfile(result: result)
-        
+        profileUniqueName.title = result.uniqueName
         ProfileTableView.reloadData()
         
     }
@@ -86,9 +103,39 @@ extension ProfileViewController {
     private func registerXib(){
         let profileCell = UINib(nibName: ProfileTableViewCell.profileIdentifier, bundle: nil)
         ProfileTableView.register(profileCell, forCellReuseIdentifier: ProfileTableViewCell.profileIdentifier)
+        let profileFeedCell = UINib(nibName: "ProfileFeedTableViewCell", bundle: ProfileFeedTableViewCell.bundle)
+        ProfileTableView.register(profileFeedCell, forCellReuseIdentifier: ProfileFeedTableViewCell.profileFeedIdentifier)
         }
     private func registerDelegate(){
         ProfileTableView.delegate = self
         ProfileTableView.dataSource = self
+    }
+}
+
+extension TabViewController: PageboyViewControllerDataSource, TMBarDataSource{
+    func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
+        switch index{
+        case 0:
+            return TMBarItem(title: "경기도")
+        case 1:
+            return TMBarItem(title: "부산")
+        case 2:
+            return TMBarItem(title: "전남")
+        default:
+            let title = "Page \(index)"
+            return TMBarItem(title: title)
+        }
+    }
+    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+        return viewControllers.count
+    }
+    
+    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
+        print(index)
+        return viewControllers[index]
+    }
+    
+    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+        return .at(index: 0)
     }
 }

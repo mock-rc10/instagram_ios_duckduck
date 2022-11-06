@@ -5,6 +5,8 @@
 //  Created by 권유정 on 2022/11/05.
 //
 
+import Foundation
+
 class SettingProfile{
     static let shared = SettingProfile()
     var userProfile: ProfileLookupResult = ProfileLookupResult(uniqueName: "", name: "", imgURL: "", postCount: 0, followingCount: 0, followerCount: 0)
