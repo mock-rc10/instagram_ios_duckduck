@@ -16,8 +16,8 @@ class ProfileFeedCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func getProfileFeed(profileImgURL: String){
-        print(profileImgURL)
+    func setProfileFeedCollectionViewCell(profileImgURL: String){
+        print("%%%%%%%%")
         let url = URL(string: profileImgURL)
         profileFeedImageView.load(url: url!)
     }

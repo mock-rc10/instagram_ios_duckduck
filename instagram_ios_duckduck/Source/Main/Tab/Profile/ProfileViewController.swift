@@ -24,13 +24,22 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        requestProfileLoad(token: accessToken!)
-        requestProfileFeedLoad(token: accessToken!)
-        registerXib()
-        registerDelegate()
+        
+        requestProfile {
+            self.setup()
+        }
+        
         // Do any additional setup after loading the view.
     }
-    
+    func requestProfile(complition: @escaping() -> ()){
+        requestProfileLoad(token: accessToken!)
+        requestProfileFeedLoad(token: accessToken!)
+        complition()
+    }
+    func setup(){
+        registerXib()
+        registerDelegate()
+    }
 
 }
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
@@ -65,7 +74,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             else {
                 return UITableViewCell()
             }
-            //print(cell)
+            let cellData = profileFeedDataModel.profileFeed
+            //print("*******")
+            //print(cellData)
+            cell.getProfileFeed(profile: cellData)
             return cell
         default:
             return UITableViewCell()
@@ -81,7 +93,7 @@ extension ProfileViewController {
         profileDataManager.GetProfile(delegate: self, token: token)
         
     }
-    func didSuccessLookupProfile(result: ProfileLookupResult){
+    func didSuccessProfileLoad(result: ProfileLookupResult){
         profileDataModel.setProfile(result: result)
         profileUniqueName.title = result.uniqueName
         ProfileTableView.reloadData()
@@ -105,12 +117,10 @@ extension ProfileViewController {
 
 extension ProfileViewController{
     func requestProfileFeedLoad(token: String){
-        
         profileFeedDataManager.GetProfileFeed(delegate: self, token: token)
     }
-    func didSuccessLoadFeedProfile(result: [ProfileFeedResult]){
-        //print(result)
-        profileFeedDataModel.setProfile(result: result)
+    func didSuccessProfileFeedLoad(result: [ProfileFeedLookupResult]){
+        profileFeedDataModel.setProfileFeed(result: result)
         ProfileTableView.reloadData()
     }
 }

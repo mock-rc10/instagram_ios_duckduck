@@ -16,7 +16,7 @@ class ProfileDataManager{
                 case .success(let response):
                     // 성공했을 때
                     if response.isSuccess, let result = response.result {
-                        delegate.didSuccessLookupProfile(result: result)
+                        delegate.didSuccessProfileLoad(result: result)
                     }
                     // 실패했을 때
                     else {

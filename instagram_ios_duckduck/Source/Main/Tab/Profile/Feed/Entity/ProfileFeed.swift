@@ -8,9 +8,9 @@
 class SettingProfileFeed{
     static let shared = SettingProfileFeed()
     
-    var profileFeed: [ProfileFeedResult] = []
+    var profileFeed: [ProfileFeedLookupResult] = []
     
-    func setProfile(result: [ProfileFeedResult]) {
+    func setProfileFeed(result: [ProfileFeedLookupResult]) {
         profileFeed = result
     }
 }

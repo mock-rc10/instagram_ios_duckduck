@@ -7,22 +7,23 @@
 
 import UIKit
 
-class ProfileFeedTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class ProfileFeedTableViewCell: UITableViewCell {
     private var profileFeedDataModel: SettingProfileFeed = SettingProfileFeed.shared
-    
+    private var profileFeedLookupResult: [ProfileFeedLookupResult] = []
     static let ProfileFeedTableViewIdentifier = "ProfileFeedTableViewCell"
     @IBOutlet weak var profileFeedCollectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
         registerXib()
         registerDelegate()
       }
-      
+    func getProfileFeed(profile: [ProfileFeedLookupResult]){
+        profileFeedLookupResult = profile
+        profileFeedCollectionView.reloadData()
+        
+    }
       private func registerXib(){
-          print("----------------------")
           let storyNib = UINib(nibName: ProfileFeedCollectionViewCell.profileFeedIdentifier, bundle: nil)
           profileFeedCollectionView.register(storyNib, forCellWithReuseIdentifier: ProfileFeedCollectionViewCell.profileFeedIdentifier)
       }
@@ -37,17 +38,21 @@ class ProfileFeedTableViewCell: UITableViewCell, UICollectionViewDataSource, UIC
 
         // Configure the view for the selected state
     }
+    
+}
+
+extension ProfileFeedTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return profileFeedDataModel.profileFeed.count
+        return profileFeedLookupResult.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileFeedCollectionViewCell.profileFeedIdentifier, for: indexPath) as? ProfileFeedCollectionViewCell else{
+        guard let cell = profileFeedCollectionView.dequeueReusableCell(withReuseIdentifier: ProfileFeedCollectionViewCell.profileFeedIdentifier, for: indexPath) as? ProfileFeedCollectionViewCell else{
             return UICollectionViewCell()
         }
-        
-        cell.getProfileFeed(profileImgURL: profileFeedDataModel.profileFeed[indexPath.row].imgUrls[0])
-        print( profileFeedDataModel.profileFeed[indexPath.row].imgUrls[0])
+        cell.setProfileFeedCollectionViewCell(profileImgURL: profileFeedLookupResult[indexPath.row].imgUrls[0])
+       
         return cell
     }
 }

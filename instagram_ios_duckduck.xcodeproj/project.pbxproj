@@ -15,7 +15,7 @@
 		C755293E290CDE5F008B370A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C755293D290CDE5F008B370A /* Assets.xcassets */; };
 		C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C755293F290CDE5F008B370A /* LaunchScreen.storyboard */; };
 		C7552954290EEE03008B370A /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C7552952290EEE03008B370A /* facebook_logo.png */; };
-		C7552957290EEECF008B370A /* Instagram_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C7552956290EEECF008B370A /* Instagram_logo.png */; };
+		C7552957290EEECF008B370A /* instagram_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C7552956290EEECF008B370A /* instagram_logo.png */; };
 		C75FEE8029111D4B00CDEE37 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75FEE7F29111D4B00CDEE37 /* SignInStoryboard.storyboard */; };
 		C75FEE842911224800CDEE37 /* SignupDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75FEE832911224800CDEE37 /* SignupDataManager.swift */; };
 		C75FEE86291122DD00CDEE37 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75FEE85291122DD00CDEE37 /* SignUpRequest.swift */; };
@@ -35,7 +35,7 @@
 		C783E8EA290F0DD100503A6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8E9290F0DD100503A6F /* BaseViewController.swift */; };
 		C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8EB290F0E6800503A6F /* IndicatorView.swift */; };
 		C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8ED290F16BA00503A6F /* meta_logo.png */; };
-		C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8EE290F16BA00503A6F /* istagram_logo.png */; };
+		C783E8F0290F16BA00503A6F /* istagram_logoImg.png in Resources */ = {isa = PBXBuildFile; fileRef = C783E8EE290F16BA00503A6F /* istagram_logoImg.png */; };
 		C783E8F2290F189500503A6F /* SignUpEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8F1290F189500503A6F /* SignUpEmailViewController.swift */; };
 		C783E8F5290F1A6200503A6F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E8F4290F1A6200503A6F /* SignInViewController.swift */; };
 		C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7955DDF29114D7200C58366 /* SignUpStoryboard.storyboard */; };
@@ -80,7 +80,7 @@
 		C7552940290CDE5F008B370A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7552942290CDE5F008B370A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7552952290EEE03008B370A /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_logo.png; sourceTree = "<group>"; };
-		C7552956290EEECF008B370A /* Instagram_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instagram_logo.png; sourceTree = "<group>"; };
+		C7552956290EEECF008B370A /* instagram_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram_logo.png; sourceTree = "<group>"; };
 		C75FEE7F29111D4B00CDEE37 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		C75FEE832911224800CDEE37 /* SignupDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDataManager.swift; sourceTree = "<group>"; };
 		C75FEE85291122DD00CDEE37 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		C783E8E9290F0DD100503A6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C783E8EB290F0E6800503A6F /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		C783E8ED290F16BA00503A6F /* meta_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_logo.png; sourceTree = "<group>"; };
-		C783E8EE290F16BA00503A6F /* istagram_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = istagram_logo.png; sourceTree = "<group>"; };
+		C783E8EE290F16BA00503A6F /* istagram_logoImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = istagram_logoImg.png; sourceTree = "<group>"; };
 		C783E8F1290F189500503A6F /* SignUpEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailViewController.swift; sourceTree = "<group>"; };
 		C783E8F4290F1A6200503A6F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C7955DDF29114D7200C58366 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
@@ -276,10 +276,10 @@
 		C7552950290EEDF5008B370A /* Logo */ = {
 			isa = PBXGroup;
 			children = (
-				C783E8EE290F16BA00503A6F /* istagram_logo.png */,
+				C783E8EE290F16BA00503A6F /* istagram_logoImg.png */,
 				C783E8ED290F16BA00503A6F /* meta_logo.png */,
 				C7552952290EEE03008B370A /* facebook_logo.png */,
-				C7552956290EEECF008B370A /* Instagram_logo.png */,
+				C7552956290EEECF008B370A /* instagram_logo.png */,
 			);
 			path = Logo;
 			sourceTree = "<group>";
@@ -523,8 +523,8 @@
 				C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */,
 				C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
-				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
-				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
+				C7552957290EEECF008B370A /* instagram_logo.png in Resources */,
+				C783E8F0290F16BA00503A6F /* istagram_logoImg.png in Resources */,
 				C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */,
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
