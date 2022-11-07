@@ -59,8 +59,13 @@
 		C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */; };
 		C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D50291775FF00C72CE9 /* profileListBtn.png */; };
 		C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */; };
-		C7F06D5B29178D0900C72CE9 /* ProfileFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D5929178D0900C72CE9 /* ProfileFeedTableViewCell.swift */; };
-		C7F06D5D29178F6C00C72CE9 /* ProfileFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D5A29178D0900C72CE9 /* ProfileFeedTableViewCell.xib */; };
+		C7F06D602919327600C72CE9 /* ProfileFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D5F2919327600C72CE9 /* ProfileFeedResponse.swift */; };
+		C7F06D622919328C00C72CE9 /* ProfileFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D612919328C00C72CE9 /* ProfileFeed.swift */; };
+		C7F06D64291932E500C72CE9 /* ProfileFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D63291932E500C72CE9 /* ProfileFeedDataManager.swift */; };
+		C7F06D692919336B00C72CE9 /* ProfileFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D672919336B00C72CE9 /* ProfileFeedCollectionViewCell.swift */; };
+		C7F06D6A2919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D682919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib */; };
+		C7F06D6D29193CD400C72CE9 /* ProfileFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D6B29193CD400C72CE9 /* ProfileFeedTableViewCell.swift */; };
+		C7F06D6E29193CD400C72CE9 /* ProfileFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,8 +124,13 @@
 		C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileAddBtn.png; path = ../../../../../../Downloads/profileAddBtn.png; sourceTree = "<group>"; };
 		C7F06D50291775FF00C72CE9 /* profileListBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileListBtn.png; path = ../../../../../../Downloads/profileListBtn.png; sourceTree = "<group>"; };
 		C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileFriendBtn.png; path = ../../../../../../Downloads/profileFriendBtn.png; sourceTree = "<group>"; };
-		C7F06D5929178D0900C72CE9 /* ProfileFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedTableViewCell.swift; sourceTree = "<group>"; };
-		C7F06D5A29178D0900C72CE9 /* ProfileFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedTableViewCell.xib; sourceTree = "<group>"; };
+		C7F06D5F2919327600C72CE9 /* ProfileFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedResponse.swift; sourceTree = "<group>"; };
+		C7F06D612919328C00C72CE9 /* ProfileFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeed.swift; sourceTree = "<group>"; };
+		C7F06D63291932E500C72CE9 /* ProfileFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedDataManager.swift; sourceTree = "<group>"; };
+		C7F06D672919336B00C72CE9 /* ProfileFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7F06D682919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedCollectionViewCell.xib; sourceTree = "<group>"; };
+		C7F06D6B29193CD400C72CE9 /* ProfileFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedTableViewCell.xib; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -391,8 +401,12 @@
 		C7F06D35291675C100C72CE9 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				C7F06D5929178D0900C72CE9 /* ProfileFeedTableViewCell.swift */,
-				C7F06D5A29178D0900C72CE9 /* ProfileFeedTableViewCell.xib */,
+				C7F06D5E2919324500C72CE9 /* Entity */,
+				C7F06D63291932E500C72CE9 /* ProfileFeedDataManager.swift */,
+				C7F06D672919336B00C72CE9 /* ProfileFeedCollectionViewCell.swift */,
+				C7F06D682919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib */,
+				C7F06D6B29193CD400C72CE9 /* ProfileFeedTableViewCell.swift */,
+				C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -423,6 +437,15 @@
 				C7F06D50291775FF00C72CE9 /* profileListBtn.png */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		C7F06D5E2919324500C72CE9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06D5F2919327600C72CE9 /* ProfileFeedResponse.swift */,
+				C7F06D612919328C00C72CE9 /* ProfileFeed.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C75FEE8029111D4B00CDEE37 /* SignInStoryboard.storyboard in Resources */,
+				C7F06D6E29193CD400C72CE9 /* ProfileFeedTableViewCell.xib in Resources */,
 				C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */,
 				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
@@ -501,10 +525,10 @@
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* Instagram_logo.png in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logo.png in Resources */,
-				C7F06D5D29178F6C00C72CE9 /* ProfileFeedTableViewCell.xib in Resources */,
 				C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */,
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
+				C7F06D6A2919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib in Resources */,
 				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
 				C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
@@ -563,8 +587,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76506CB2910E3E700C1C21D /* SignUpUniqueNameViewController.swift in Sources */,
+				C7F06D64291932E500C72CE9 /* ProfileFeedDataManager.swift in Sources */,
 				C76506D72911030F00C1C21D /* SignInRequest.swift in Sources */,
 				C76506DC291104B600C1C21D /* Contant.swift in Sources */,
+				C7F06D622919328C00C72CE9 /* ProfileFeed.swift in Sources */,
 				C783E8EA290F0DD100503A6F /* BaseViewController.swift in Sources */,
 				C783E8F2290F189500503A6F /* SignUpEmailViewController.swift in Sources */,
 				C76506D5291102B300C1C21D /* SignInDataManager.swift in Sources */,
@@ -572,6 +598,7 @@
 				C7F06D2E29165C0B00C72CE9 /* StoryListResponse.swift in Sources */,
 				C76506CD2910E42000C1C21D /* SignUpCompleteViewController.swift in Sources */,
 				C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */,
+				C7F06D692919336B00C72CE9 /* ProfileFeedCollectionViewCell.swift in Sources */,
 				C7F06D322916607500C72CE9 /* Stories.swift in Sources */,
 				C76506D92911033A00C1C21D /* SignInResponse.swift in Sources */,
 				C7F06D3029165D8700C72CE9 /* StoryDataManager.swift in Sources */,
@@ -580,9 +607,10 @@
 				C7552935290CDE5C008B370A /* AppDelegate.swift in Sources */,
 				C76506D32910EBB200C1C21D /* User.swift in Sources */,
 				C783E8F5290F1A6200503A6F /* SignInViewController.swift in Sources */,
+				C7F06D602919327600C72CE9 /* ProfileFeedResponse.swift in Sources */,
 				C7F06D3E29167D6600C72CE9 /* ProfileDataManager.swift in Sources */,
 				C76506DE29110CD500C1C21D /* UIColor.swift in Sources */,
-				C7F06D5B29178D0900C72CE9 /* ProfileFeedTableViewCell.swift in Sources */,
+				C7F06D6D29193CD400C72CE9 /* ProfileFeedTableViewCell.swift in Sources */,
 				C7F06D382916760700C72CE9 /* ProfileViewController.swift in Sources */,
 				C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */,
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,

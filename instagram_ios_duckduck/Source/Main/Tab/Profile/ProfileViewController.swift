@@ -9,7 +9,7 @@ import UIKit
 import Pageboy
 import Tabman
 
-class ProfileViewController: TabmanViewController {
+class ProfileViewController: BaseViewController {
 
     
     @IBOutlet weak var profileUniqueName: UIBarButtonItem!
@@ -17,11 +17,15 @@ class ProfileViewController: TabmanViewController {
     var accessToken: String? = ""
     lazy var profileDataManager: ProfileDataManager = ProfileDataManager()
     private var profileDataModel: SettingProfile = SettingProfile.shared
+    
+    lazy var profileFeedDataManager: ProfileFeedDataManager = ProfileFeedDataManager()
+    private var profileFeedDataModel: SettingProfileFeed = SettingProfileFeed.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        requestProfileDisplay(token: accessToken!)
+        requestProfileLoad(token: accessToken!)
+        requestProfileFeedLoad(token: accessToken!)
         registerXib()
         registerDelegate()
         // Do any additional setup after loading the view.
@@ -57,24 +61,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             
             return cell
         case 1:
-            guard let cell =
-                    self.dataSource = self
-                    let bar = TMBar.ButtonBar()
-                    bar.backgroundView.style = .blur(style: .light)
-                    bar.layout.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-                    bar.buttons.customize{(button) in
-                        button.tintColor = .systemGray
-                        button.selectedTintColor = .black
-                        
-                    }
-                    bar.indicator.weight = .custom(value: 2)
-                    bar.indicator.tintColor = .orange
-                    addBar(bar, dataSource: self, at: .custom(view: tabView, layout: nil))
-            ProfileTableView.dequeueReusableCell(withIdentifier: ProfileFeedTableViewCell.profileFeedIdentifier, for: indexPath) as? ProfileFeedTableViewCell
+            guard let cell = ProfileTableView.dequeueReusableCell(withIdentifier: ProfileFeedTableViewCell.ProfileFeedTableViewIdentifier, for: indexPath) as? ProfileFeedTableViewCell
             else {
                 return UITableViewCell()
             }
-            
+            //print(cell)
             return cell
         default:
             return UITableViewCell()
@@ -86,7 +77,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension ProfileViewController {
-    func requestProfileDisplay(token: String){
+    func requestProfileLoad(token: String){
         profileDataManager.GetProfile(delegate: self, token: token)
         
     }
@@ -103,8 +94,8 @@ extension ProfileViewController {
     private func registerXib(){
         let profileCell = UINib(nibName: ProfileTableViewCell.profileIdentifier, bundle: nil)
         ProfileTableView.register(profileCell, forCellReuseIdentifier: ProfileTableViewCell.profileIdentifier)
-        let profileFeedCell = UINib(nibName: "ProfileFeedTableViewCell", bundle: ProfileFeedTableViewCell.bundle)
-        ProfileTableView.register(profileFeedCell, forCellReuseIdentifier: ProfileFeedTableViewCell.profileFeedIdentifier)
+        let profileFeedCell = UINib(nibName: ProfileFeedTableViewCell.ProfileFeedTableViewIdentifier, bundle: nil)
+        ProfileTableView.register(profileFeedCell, forCellReuseIdentifier: ProfileFeedTableViewCell.ProfileFeedTableViewIdentifier)
         }
     private func registerDelegate(){
         ProfileTableView.delegate = self
@@ -112,30 +103,14 @@ extension ProfileViewController {
     }
 }
 
-extension TabViewController: PageboyViewControllerDataSource, TMBarDataSource{
-    func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
-        switch index{
-        case 0:
-            return TMBarItem(title: "경기도")
-        case 1:
-            return TMBarItem(title: "부산")
-        case 2:
-            return TMBarItem(title: "전남")
-        default:
-            let title = "Page \(index)"
-            return TMBarItem(title: title)
-        }
+extension ProfileViewController{
+    func requestProfileFeedLoad(token: String){
+        
+        profileFeedDataManager.GetProfileFeed(delegate: self, token: token)
     }
-    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
-        return viewControllers.count
-    }
-    
-    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
-        print(index)
-        return viewControllers[index]
-    }
-    
-    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
-        return .at(index: 0)
+    func didSuccessLoadFeedProfile(result: [ProfileFeedResult]){
+        //print(result)
+        profileFeedDataModel.setProfile(result: result)
+        ProfileTableView.reloadData()
     }
 }

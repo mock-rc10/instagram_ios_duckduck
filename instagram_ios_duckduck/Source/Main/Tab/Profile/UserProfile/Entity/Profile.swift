@@ -15,10 +15,11 @@ class SettingProfile{
         userProfile = result
     }
 }
-        
+  
+/*
 struct Profile{
     let uniqueName, name, imgURL: String
     let postCount, followingCount, followerCount: Int
-
    
 }
+*/
