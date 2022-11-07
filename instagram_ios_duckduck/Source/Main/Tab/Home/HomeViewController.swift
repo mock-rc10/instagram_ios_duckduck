@@ -17,15 +17,19 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        requestStoriesDisplay(token: accessToken!)
+        requestStoriesLoad(token: accessToken!)
         // Do any additional setup after loading the view.
+        registerXib()
+        registerDelegate()
     }
     
 
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 110 : 500
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -44,6 +48,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             guard let cell = homeTableView.dequeueReusableCell(withIdentifier: StoryTableViewCell.storyIdentifier, for: indexPath) as? StoryTableViewCell else {
                 return UITableViewCell()
             }
+            let cellData = storyUserDataModel.StoryList
+            cell.setStories(stories: cellData)
             return cell
         default:
             return UITableViewCell()
@@ -55,24 +61,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension HomeViewController {
-    func requestStoriesDisplay(token: String){
+    func requestStoriesLoad(token: String){
         storyDataManager.GetStories(delegate: self, token: token)
         
     }
-    func didSuccessStoriesDisplay(result: [StoryListResult]){
+    func didSuccessStoriesDisplay(result: StoryListResult){
         //스토리 화면 보여주기
-        print("----------------")
         print(result)
-        storyUserDataModel.addStory(result: result)
-        registerXib()
+        storyUserDataModel.setStoriesData(result: result)
+        homeTableView.reloadData()
+        
     }
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
     }
+    
     private func registerXib(){
         let storyCell = UINib(nibName: StoryTableViewCell.storyIdentifier, bundle: nil)
         homeTableView.register(storyCell, forCellReuseIdentifier: StoryTableViewCell.storyIdentifier)
         }
+    
+    private func registerDelegate(){
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+    }
     
 }

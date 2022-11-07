@@ -11,24 +11,29 @@ class StoryTableViewCell: UITableViewCell{
    
 
     static let storyIdentifier = "StoryTableViewCell"
-    @IBOutlet weak var storyCollection: UICollectionView!
+    @IBOutlet weak var storyCollectionView: UICollectionView!
     private var storyUserDataModel: Stories = Stories.shared
-    
+    private var storyListResult: StoryListResult = []
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         registerXib()
         registerDelegate()
+        
     }
     
+    func setStories(stories: StoryListResult){
+        storyListResult = stories
+        storyCollectionView.reloadData()
+    }
     private func registerXib(){
         let storyNib = UINib(nibName: StoryUserCollectionViewCell.storyUserIdentifier, bundle: nil)
-        storyCollection.register(storyNib, forCellWithReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier)
+        storyCollectionView.register(storyNib, forCellWithReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier)
     }
     
     private func registerDelegate(){
-        storyCollection.delegate = self
-        storyCollection.dataSource = self
+        storyCollectionView.delegate = self
+        storyCollectionView.dataSource = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,12 +47,14 @@ class StoryTableViewCell: UITableViewCell{
 extension StoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //내가 팔로우한 사람 수
-        return (storyUserDataModel.StoryList as AnyObject).count
+        print(storyListResult.storyList?.count)
+        return storyListResult.storyList!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = storyCollection.dequeueReusableCell(withReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier, for: indexPath) as? StoryUserCollectionViewCell else { return UICollectionViewCell()}
-        cell.setStory(story: storyUserDataModel.StoryList[indexPath.row])
+        guard let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier, for: indexPath) as? StoryUserCollectionViewCell else { return UICollectionViewCell()}
+        cell.setStory(story: storyListResult)
+        print(storyListResult)
         return cell
     }
     

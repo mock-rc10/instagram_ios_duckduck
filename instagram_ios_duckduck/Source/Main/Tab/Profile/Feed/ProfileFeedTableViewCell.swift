@@ -18,7 +18,7 @@ class ProfileFeedTableViewCell: UITableViewCell {
         registerXib()
         registerDelegate()
       }
-    func getProfileFeed(profile: [ProfileFeedLookupResult]){
+    func setProfileFeed(profile: [ProfileFeedLookupResult]){
         profileFeedLookupResult = profile
         profileFeedCollectionView.reloadData()
         

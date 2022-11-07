@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wH0-LV-wrU">
                                 <rect key="frame" x="0.0" y="222.66666666666663" width="390" height="399"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tej-GF-lZS">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tej-GF-lZS">
                                         <rect key="frame" x="108" y="0.0" width="174" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="bbn-E4-fJf"/>
@@ -224,8 +224,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Instagram_logo.png" width="174" height="54"/>
         <image name="facebook_logo.png" width="24" height="24"/>
+        <image name="instagram_logo.png" width="174" height="54"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

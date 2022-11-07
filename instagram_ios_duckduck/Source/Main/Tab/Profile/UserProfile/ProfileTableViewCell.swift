@@ -27,7 +27,7 @@ class ProfileTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func getProfile(profile: ProfileLookupResult){
+    func setProfile(profile: ProfileLookupResult){
         feedCount.text = String(profile.postCount)
         followerCount.text = String(profile.followerCount)
         followingCount.text = String(profile.followingCount)

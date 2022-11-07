@@ -10,13 +10,19 @@ struct StoryListResponse: Codable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: [StoryListResult]?
+    let result: StoryListResult?
 }
 
 // MARK: - Result
 struct StoryListResult: Codable {
-    let userID: Int
-    let uniqueName, profileImgURL: String
+    let profile: Profile?
+    let storyList: [Profile]?
+
+   
+}
+// MARK: - Profile
+struct Profile: Codable {
+    let userID, uniqueName, profileImgURL: String
 
     enum CodingKeys: String, CodingKey {
         case userID = "userId"

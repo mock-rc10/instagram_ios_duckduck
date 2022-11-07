@@ -22,6 +22,6 @@ class StoryUserCollectionViewCell: UICollectionViewCell {
     
     func setStory(story: StoryListResult){
         //storyUserProfile.text = story.profileImgURL
-        storyUserUniqueName.text = story.uniqueName
+        storyUserUniqueName.text = story.profile?.uniqueName
     }
 }

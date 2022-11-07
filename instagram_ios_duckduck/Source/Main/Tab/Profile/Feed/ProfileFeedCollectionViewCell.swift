@@ -17,7 +17,6 @@ class ProfileFeedCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func setProfileFeedCollectionViewCell(profileImgURL: String){
-        print("%%%%%%%%")
         let url = URL(string: profileImgURL)
         profileFeedImageView.load(url: url!)
     }

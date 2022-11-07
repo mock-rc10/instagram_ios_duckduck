@@ -10,14 +10,14 @@ import Foundation
 class Stories{
     static let shared = Stories()
     
-    var count: Int {self.StoryList.count}
-    var StoryList: [StoryListResult] = []
+    //var count: Int {self.StoryList.count}
+    var StoryList: StoryListResult = StoryListResult(profile: Profile(userID: "", uniqueName: "", profileImgURL: ""), storyList: [Profile(userID: "", uniqueName: "", profileImgURL: "")])
 
-    public func addStory(result: [StoryListResult]){
+    public func setStoriesData(result: StoryListResult){
         StoryList = result
     }
 }
-        
+/*
 struct Story{
     let userID: Int
     let uniqueName, profileImgURL: String
@@ -29,3 +29,5 @@ struct Story{
     }
      */
 }
+
+*/

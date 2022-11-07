@@ -66,7 +66,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
             let cellData = profileDataModel.userProfile
-            cell.getProfile(profile: cellData)
+            cell.setProfile(profile: cellData)
             
             return cell
         case 1:
@@ -77,7 +77,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             let cellData = profileFeedDataModel.profileFeed
             //print("*******")
             //print(cellData)
-            cell.getProfileFeed(profile: cellData)
+            cell.setProfileFeed(profile: cellData)
             return cell
         default:
             return UITableViewCell()
