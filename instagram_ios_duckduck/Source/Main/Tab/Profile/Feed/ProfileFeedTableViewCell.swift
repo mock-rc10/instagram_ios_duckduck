@@ -12,7 +12,7 @@ class ProfileFeedTableViewCell: UITableViewCell {
     private var profileFeedLookupResult: [ProfileFeedLookupResult] = []
     static let ProfileFeedTableViewIdentifier = "ProfileFeedTableViewCell"
     @IBOutlet weak var profileFeedCollectionView: UICollectionView!
-    
+    let sectionInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
     override func awakeFromNib() {
         super.awakeFromNib()
         registerXib()
@@ -41,7 +41,7 @@ class ProfileFeedTableViewCell: UITableViewCell {
     
 }
 
-extension ProfileFeedTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate{
+extension ProfileFeedTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return profileFeedLookupResult.count
@@ -54,5 +54,14 @@ extension ProfileFeedTableViewCell:UICollectionViewDataSource, UICollectionViewD
         cell.setProfileFeedCollectionViewCell(profileImgURL: profileFeedLookupResult[indexPath.row].imgUrls[0])
        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width
+        let height = collectionView.frame.height
+        let itemsPerRow: CGFloat = 3
+        let widthPadding = sectionInsets.left * (itemsPerRow + 1)
+        let cellWidth = (width - widthPadding) / itemsPerRow
+        return CGSize(width: cellWidth, height: cellWidth)
     }
 }

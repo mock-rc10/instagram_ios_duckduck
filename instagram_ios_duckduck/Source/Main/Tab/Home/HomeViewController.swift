@@ -22,9 +22,21 @@ class HomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
         registerXib()
         registerDelegate()
+        initNavigationBar()
     }
     
-
+    private func initNavigationBar(){
+        self.navigationController?.setBackgroundColor()
+        let logoButton = self.navigationItem.makeSFSymbolLogoButton(self, symbolName: "instagram_logo.png")
+        let addPostButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "profileAddBtn.png")
+        let likeButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "likeBtn.png")
+        let dmButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "DMBtn.png")
+        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action:nil)
+        spacer.width = 15
+        self.navigationItem.leftBarButtonItem = logoButton
+        self.navigationItem.rightBarButtonItems = [dmButton,spacer, likeButton,spacer,addPostButton]
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{

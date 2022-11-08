@@ -19,8 +19,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storyProfile.png" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-V9-WNw">
                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="2Rp-xu-vsn"/>
-                            <constraint firstAttribute="width" constant="60" id="nSp-hV-oBG"/>
+                            <constraint firstAttribute="height" constant="60" id="fge-oU-X0h"/>
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storyProfileBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-1z-3OE">
@@ -43,7 +42,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="IE7-V9-WNw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Hqn-kT-Jcp"/>
+                <constraint firstItem="IE7-V9-WNw" firstAttribute="top" secondItem="fB5-1z-3OE" secondAttribute="top" id="Hqn-kT-Jcp"/>
                 <constraint firstItem="gpI-RG-TFN" firstAttribute="top" secondItem="fB5-1z-3OE" secondAttribute="bottom" id="M3Y-ND-wsR"/>
                 <constraint firstAttribute="trailing" secondItem="IE7-V9-WNw" secondAttribute="trailing" id="NuZ-js-HY8"/>
                 <constraint firstItem="fB5-1z-3OE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OP1-RY-rNr"/>

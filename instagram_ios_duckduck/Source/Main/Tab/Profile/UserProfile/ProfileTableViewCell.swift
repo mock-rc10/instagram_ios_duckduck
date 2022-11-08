@@ -15,6 +15,8 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var feedCount: UILabel!
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var followingCount: UILabel!
+    @IBOutlet weak var profileUserName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,8 +33,9 @@ class ProfileTableViewCell: UITableViewCell {
         feedCount.text = String(profile.postCount)
         followerCount.text = String(profile.followerCount)
         followingCount.text = String(profile.followingCount)
+        profileUserName.text = String(profile.name)
         if profile.imgURL == "" {
-            profileImage.image = UIImage(named: "ProfileEmpty.PNG")
+            profileImage.image = UIImage(named: "ProfileEmpty.png")
         }else{
             let url = URL(string: profile.imgURL)
             profileImage.load(url: url!)

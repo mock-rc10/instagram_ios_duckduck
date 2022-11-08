@@ -60,28 +60,15 @@
         <scene sceneID="Odf-y2-e8y">
             <objects>
                 <viewController id="B9x-ha-fZ2" customClass="ProfileViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GMK-wy-5Pd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GMK-wy-5Pd">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RPo-BQ-Ppn">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Ndh-1r-FMk">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="profileListBtn.png" id="FSx-9J-ul2">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="profileAddBtn.png" id="Kd5-sj-AxH">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="RPo-BQ-Ppn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ProfileTableView" destination="GMK-wy-5Pd" id="UwY-BK-lNT"/>
-                        <outlet property="profileUniqueName" destination="Ndh-1r-FMk" id="lr3-h0-A7D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jf-gb-ALj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,16 +98,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="VlC-0v-hDU">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="instagram_logo.png" id="ZdL-AY-cz8">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" id="7ci-v0-sw5"/>
-                            <barButtonItem title="Item" id="w9q-An-FDx"/>
-                            <barButtonItem title="Item" id="6BV-MF-fpR"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="VlC-0v-hDU"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeTableView" destination="Rg3-Rm-bUX" id="hUZ-4J-ZdD"/>
@@ -191,9 +169,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="instagram_logo.png" width="174" height="54"/>
-        <image name="profileAddBtn.png" width="62" height="62"/>
-        <image name="profileListBtn.png" width="62" height="62"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

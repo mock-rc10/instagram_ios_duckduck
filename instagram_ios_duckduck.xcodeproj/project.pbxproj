@@ -54,8 +54,6 @@
 		C7F06D3E29167D6600C72CE9 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D3D29167D6600C72CE9 /* ProfileDataManager.swift */; };
 		C7F06D4029167DED00C72CE9 /* ProfileLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */; };
 		C7F06D42291680CB00C72CE9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D41291680CB00C72CE9 /* Profile.swift */; };
-		C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D442916A56200C72CE9 /* ProfilImgBack.png */; };
-		C7F06D4729176EC200C72CE9 /* ProfileEmpty.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */; };
 		C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */; };
 		C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D50291775FF00C72CE9 /* profileListBtn.png */; };
 		C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */; };
@@ -68,6 +66,12 @@
 		C7F06D6E29193CD400C72CE9 /* ProfileFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */; };
 		C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D6F291A341500C72CE9 /* storyProfileBack.png */; };
 		C7F06D72291A341600C72CE9 /* storyProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D70291A341500C72CE9 /* storyProfile.png */; };
+		C7F06D7C291A53BE00C72CE9 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D7B291A53BE00C72CE9 /* UINavigationController.swift */; };
+		C7F06D7E291A62E200C72CE9 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D7D291A62E200C72CE9 /* UINavigationItem.swift */; };
+		C7F06D81291A69C800C72CE9 /* DMBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D7F291A69C800C72CE9 /* DMBtn.png */; };
+		C7F06D82291A69C800C72CE9 /* likeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D80291A69C800C72CE9 /* likeBtn.png */; };
+		C7F06D85291A9FF000C72CE9 /* ProfileBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D83291A9FF000C72CE9 /* ProfileBack.png */; };
+		C7F06D86291A9FF000C72CE9 /* ProfileEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D84291A9FF000C72CE9 /* ProfileEmpty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,8 +125,6 @@
 		C7F06D3D29167D6600C72CE9 /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
 		C7F06D3F29167DED00C72CE9 /* ProfileLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLookupResponse.swift; sourceTree = "<group>"; };
 		C7F06D41291680CB00C72CE9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		C7F06D442916A56200C72CE9 /* ProfilImgBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfilImgBack.png; sourceTree = "<group>"; };
-		C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileEmpty.PNG; sourceTree = "<group>"; };
 		C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileAddBtn.png; path = ../../../../../../Downloads/profileAddBtn.png; sourceTree = "<group>"; };
 		C7F06D50291775FF00C72CE9 /* profileListBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileListBtn.png; path = ../../../../../../Downloads/profileListBtn.png; sourceTree = "<group>"; };
 		C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileFriendBtn.png; path = ../../../../../../Downloads/profileFriendBtn.png; sourceTree = "<group>"; };
@@ -135,6 +137,12 @@
 		C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedTableViewCell.xib; sourceTree = "<group>"; };
 		C7F06D6F291A341500C72CE9 /* storyProfileBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storyProfileBack.png; sourceTree = "<group>"; };
 		C7F06D70291A341500C72CE9 /* storyProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storyProfile.png; sourceTree = "<group>"; };
+		C7F06D7B291A53BE00C72CE9 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		C7F06D7D291A62E200C72CE9 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
+		C7F06D7F291A69C800C72CE9 /* DMBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DMBtn.png; sourceTree = "<group>"; };
+		C7F06D80291A69C800C72CE9 /* likeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likeBtn.png; sourceTree = "<group>"; };
+		C7F06D83291A9FF000C72CE9 /* ProfileBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileBack.png; sourceTree = "<group>"; };
+		C7F06D84291A9FF000C72CE9 /* ProfileEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileEmpty.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -310,6 +318,8 @@
 			children = (
 				C783E8E7290F0D4600503A6F /* UIVIewController.swift */,
 				C76506DD29110CD500C1C21D /* UIColor.swift */,
+				C7F06D7B291A53BE00C72CE9 /* UINavigationController.swift */,
+				C7F06D7D291A62E200C72CE9 /* UINavigationItem.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -355,6 +365,7 @@
 			children = (
 				C7955DEA291515EF00C58366 /* HomeViewController.swift */,
 				C7F06D2929165B9800C72CE9 /* Story */,
+				C7F06D87291AB0D200C72CE9 /* Feed */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -429,8 +440,8 @@
 			children = (
 				C7F06D70291A341500C72CE9 /* storyProfile.png */,
 				C7F06D6F291A341500C72CE9 /* storyProfileBack.png */,
-				C7F06D442916A56200C72CE9 /* ProfilImgBack.png */,
-				C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */,
+				C7F06D83291A9FF000C72CE9 /* ProfileBack.png */,
+				C7F06D84291A9FF000C72CE9 /* ProfileEmpty.png */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -438,6 +449,8 @@
 		C7F06D48291774F100C72CE9 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06D7F291A69C800C72CE9 /* DMBtn.png */,
+				C7F06D80291A69C800C72CE9 /* likeBtn.png */,
 				C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */,
 				C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */,
 				C7F06D50291775FF00C72CE9 /* profileListBtn.png */,
@@ -452,6 +465,13 @@
 				C7F06D612919328C00C72CE9 /* ProfileFeed.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		C7F06D87291AB0D200C72CE9 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,19 +545,21 @@
 				C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */,
 				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
-				C7F06D4729176EC200C72CE9 /* ProfileEmpty.PNG in Resources */,
 				C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */,
 				C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */,
 				C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* instagram_logo.png in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logoImg.png in Resources */,
+				C7F06D86291A9FF000C72CE9 /* ProfileEmpty.png in Resources */,
 				C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */,
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
+				C7F06D81291A69C800C72CE9 /* DMBtn.png in Resources */,
+				C7F06D82291A69C800C72CE9 /* likeBtn.png in Resources */,
+				C7F06D85291A9FF000C72CE9 /* ProfileBack.png in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C7F06D6A2919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib in Resources */,
 				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
-				C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 				C7F06D72291A341600C72CE9 /* storyProfile.png in Resources */,
 				C76506BE290FD17000C1C21D /* TabBarStoryboard.storyboard in Resources */,
@@ -617,12 +639,14 @@
 				C783E8F5290F1A6200503A6F /* SignInViewController.swift in Sources */,
 				C7F06D602919327600C72CE9 /* ProfileFeedResponse.swift in Sources */,
 				C7F06D3E29167D6600C72CE9 /* ProfileDataManager.swift in Sources */,
+				C7F06D7C291A53BE00C72CE9 /* UINavigationController.swift in Sources */,
 				C76506DE29110CD500C1C21D /* UIColor.swift in Sources */,
 				C7F06D6D29193CD400C72CE9 /* ProfileFeedTableViewCell.swift in Sources */,
 				C7F06D382916760700C72CE9 /* ProfileViewController.swift in Sources */,
 				C783E8E8290F0D4600503A6F /* UIVIewController.swift in Sources */,
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,
 				C7F06D2729164EB200C72CE9 /* StoryUserCollectionViewCell.swift in Sources */,
+				C7F06D7E291A62E200C72CE9 /* UINavigationItem.swift in Sources */,
 				C7F06D3B2916770800C72CE9 /* ProfileTableViewCell.swift in Sources */,
 				C7F06D42291680CB00C72CE9 /* Profile.swift in Sources */,
 				C75FEE88291122EC00CDEE37 /* SignUpResponse.swift in Sources */,

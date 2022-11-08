@@ -11,10 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="instagram_ios_duckduck">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32N-HA-SPK">
@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="130" id="MBo-P8-b0g"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilImgBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="9VV-m7-ok9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="9VV-m7-ok9">
                                 <rect key="frame" x="10" y="0.0" width="100" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="4Qv-5u-EGD"/>
@@ -129,21 +129,29 @@
                                     <constraint firstItem="jJD-qZ-M6H" firstAttribute="centerY" secondItem="31m-0v-nWK" secondAttribute="centerY" id="iLp-25-aNN"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiH-l0-PIr">
+                                <rect key="frame" x="11" y="114.33333333333333" width="34" height="15.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="31m-0v-nWK" firstAttribute="top" secondItem="32N-HA-SPK" secondAttribute="top" id="34u-6e-C1L"/>
                             <constraint firstAttribute="trailing" secondItem="31m-0v-nWK" secondAttribute="trailing" constant="10" id="7RI-hK-H6o"/>
+                            <constraint firstItem="SiH-l0-PIr" firstAttribute="leading" secondItem="32N-HA-SPK" secondAttribute="leading" constant="11" id="Bh2-Ch-7zJ"/>
                             <constraint firstAttribute="height" constant="130" id="DuL-Oc-oTB"/>
                             <constraint firstItem="jXq-3r-3ft" firstAttribute="top" secondItem="32N-HA-SPK" secondAttribute="top" id="IF9-qj-vgI"/>
                             <constraint firstItem="jXq-3r-3ft" firstAttribute="leading" secondItem="32N-HA-SPK" secondAttribute="leading" constant="10" id="XSP-sx-243"/>
                             <constraint firstItem="9VV-m7-ok9" firstAttribute="leading" secondItem="32N-HA-SPK" secondAttribute="leading" constant="10" id="bAw-eF-uST"/>
                             <constraint firstItem="31m-0v-nWK" firstAttribute="leading" secondItem="jXq-3r-3ft" secondAttribute="trailing" id="int-cU-oHT"/>
+                            <constraint firstAttribute="bottom" secondItem="SiH-l0-PIr" secondAttribute="bottom" id="lS7-6T-Mhy"/>
                             <constraint firstItem="9VV-m7-ok9" firstAttribute="top" secondItem="32N-HA-SPK" secondAttribute="top" id="xLu-42-YJg"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FL1-H7-0fe">
-                        <rect key="frame" x="10" y="130" width="300" height="50"/>
+                        <rect key="frame" x="10" y="135" width="300" height="50"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i5S-Ea-rtg">
                                 <rect key="frame" x="0.0" y="10" width="300" height="30"/>
@@ -204,12 +212,13 @@
                 <outlet property="followerCount" destination="v8z-PF-Rmg" id="E8E-TK-fcD"/>
                 <outlet property="followingCount" destination="Cfe-7m-IXW" id="zUb-ul-Mxb"/>
                 <outlet property="profileImage" destination="jXq-3r-3ft" id="N0H-eT-HVP"/>
+                <outlet property="profileUserName" destination="SiH-l0-PIr" id="Kxz-py-mpC"/>
             </connections>
             <point key="canvasLocation" x="4.615384615384615" y="14.928909952606634"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ProfilImgBack.png" width="200" height="260"/>
+        <image name="ProfileBack.png" width="200" height="260"/>
         <image name="profileFriendBtn.png" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

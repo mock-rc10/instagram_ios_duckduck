@@ -27,7 +27,7 @@ class StoryUserCollectionViewCell: UICollectionViewCell {
             storyUserProfile.load(url: url!)
         }
         if user == 0{
-            storyUserUniqueName.test = "내 스토리"
+            storyUserUniqueName.text = "내 스토리"
         }else{
             storyUserUniqueName.text = story.uniqueName
         }

@@ -12,7 +12,7 @@ import Tabman
 class ProfileViewController: BaseViewController {
 
     
-    @IBOutlet weak var profileUniqueName: UIBarButtonItem!
+    //@IBOutlet weak var profileUniqueName: UIBarButtonItem!
     @IBOutlet var ProfileTableView: UITableView!
     var accessToken: String? = ""
     lazy var profileDataManager: ProfileDataManager = ProfileDataManager()
@@ -20,6 +20,8 @@ class ProfileViewController: BaseViewController {
     
     lazy var profileFeedDataManager: ProfileFeedDataManager = ProfileFeedDataManager()
     private var profileFeedDataModel: SettingProfileFeed = SettingProfileFeed.shared
+    
+    private var profileLookupResult: ProfileLookupResult = ProfileLookupResult(uniqueName: "", name: "", imgURL: "", postCount: 0, followingCount: 0, followerCount: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +29,12 @@ class ProfileViewController: BaseViewController {
         
         requestProfile {
             self.setup()
+            self.initNavigationBar()
         }
         
         // Do any additional setup after loading the view.
     }
+    
     func requestProfile(complition: @escaping() -> ()){
         requestProfileLoad(token: accessToken!)
         requestProfileFeedLoad(token: accessToken!)
@@ -40,7 +44,19 @@ class ProfileViewController: BaseViewController {
         registerXib()
         registerDelegate()
     }
-
+    
+    private func initNavigationBar(){
+        self.navigationController?.setBackgroundColor()
+        print(profileLookupResult.uniqueName)
+        
+        
+        let addPostButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "profileAddBtn.png")
+        let ListButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "profileListBtn.png")
+        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action:nil)
+        spacer.width = 15
+        self.navigationItem.rightBarButtonItems = [ListButton,spacer,addPostButton]
+    }
+    
 }
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     
@@ -95,7 +111,10 @@ extension ProfileViewController {
     }
     func didSuccessProfileLoad(result: ProfileLookupResult){
         profileDataModel.setProfile(result: result)
-        profileUniqueName.title = result.uniqueName
+        let uniqueName = self.navigationItem.makeLabel( title: result.uniqueName)
+        self.navigationItem.leftBarButtonItem = uniqueName
+        print(profileLookupResult.uniqueName)
+        //profileUniqueName.title = result.uniqueName
         ProfileTableView.reloadData()
         
     }
