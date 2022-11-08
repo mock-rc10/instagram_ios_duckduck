@@ -13,7 +13,7 @@ class StoryTableViewCell: UITableViewCell{
     static let storyIdentifier = "StoryTableViewCell"
     @IBOutlet weak var storyCollectionView: UICollectionView!
     private var storyUserDataModel: Stories = Stories.shared
-    private var storyListResult: StoryListResult = []
+    private var storyListResult: StoryListResult = StoryListResult(profile: Profile(userId: 0, uniqueName: "", profileImgURL: ""), storyList: [Profile(userId: 0, uniqueName: "", profileImgURL: "")])
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,18 +44,26 @@ class StoryTableViewCell: UITableViewCell{
     
 }
 
-extension StoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate{
+extension StoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //내가 팔로우한 사람 수
-        print(storyListResult.storyList?.count)
-        return storyListResult.storyList!.count
+        return storyListResult.storyList!.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier, for: indexPath) as? StoryUserCollectionViewCell else { return UICollectionViewCell()}
-        cell.setStory(story: storyListResult)
-        print(storyListResult)
-        return cell
+        let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: StoryUserCollectionViewCell.storyUserIdentifier, for: indexPath) as? StoryUserCollectionViewCell
+        switch indexPath.row{
+        case 0:
+            cell?.setStory(story: storyListResult.profile!, user: 0)
+            return cell!
+        default:
+            cell?.setStory(story: storyListResult.storyList![indexPath.row - 1], user: 1)
+            return cell!
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 65, height: 80)
     }
     
 }

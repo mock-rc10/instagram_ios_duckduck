@@ -17,6 +17,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
+        print(accessToken)
         requestStoriesLoad(token: accessToken!)
         // Do any additional setup after loading the view.
         registerXib()
@@ -27,9 +28,16 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 110 : 500
+        switch indexPath.row{
+        case 0:
+            return 80
+        default:
+            return 0
+        }
     }
+     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -67,7 +75,6 @@ extension HomeViewController {
     }
     func didSuccessStoriesDisplay(result: StoryListResult){
         //스토리 화면 보여주기
-        print(result)
         storyUserDataModel.setStoriesData(result: result)
         homeTableView.reloadData()
         

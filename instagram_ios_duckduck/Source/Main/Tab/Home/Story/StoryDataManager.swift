@@ -30,7 +30,7 @@ class StoryDataManager{
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-                    //delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
                 }
             }
     }

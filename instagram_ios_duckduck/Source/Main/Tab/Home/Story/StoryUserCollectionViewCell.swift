@@ -20,8 +20,16 @@ class StoryUserCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setStory(story: StoryListResult){
+    func setStory(story: Profile, user: Int){
         //storyUserProfile.text = story.profileImgURL
-        storyUserUniqueName.text = story.profile?.uniqueName
+        if story.profileImgURL != ""{
+            let url = URL(string: story.profileImgURL)
+            storyUserProfile.load(url: url!)
+        }
+        if user == 0{
+            storyUserUniqueName.test = "내 스토리"
+        }else{
+            storyUserUniqueName.text = story.uniqueName
+        }
     }
 }

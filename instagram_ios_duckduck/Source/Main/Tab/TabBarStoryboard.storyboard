@@ -65,15 +65,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
-                    <navigationItem key="navigationItem" id="42M-zr-dQh">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="P4m-0e-fc4">
+                    <navigationItem key="navigationItem" id="RPo-BQ-Ppn">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Ndh-1r-FMk">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="profileListBtn.png" id="gg5-zM-o9U">
+                            <barButtonItem title="Item" image="profileListBtn.png" id="FSx-9J-ul2">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="profileAddBtn.png" id="9eZ-Rf-7p2">
+                            <barButtonItem title="Item" image="profileAddBtn.png" id="Kd5-sj-AxH">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -81,7 +81,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ProfileTableView" destination="GMK-wy-5Pd" id="UwY-BK-lNT"/>
-                        <outlet property="profileUniqueName" destination="P4m-0e-fc4" id="su1-SQ-eev"/>
+                        <outlet property="profileUniqueName" destination="Ndh-1r-FMk" id="lr3-h0-A7D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jf-gb-ALj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +112,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VlC-0v-hDU">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="Instagram_logo.png" id="ZdL-AY-cz8">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="instagram_logo.png" id="ZdL-AY-cz8">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -191,7 +191,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Instagram_logo.png" width="174" height="54"/>
+        <image name="instagram_logo.png" width="174" height="54"/>
         <image name="profileAddBtn.png" width="62" height="62"/>
         <image name="profileListBtn.png" width="62" height="62"/>
         <systemColor name="systemBackgroundColor">

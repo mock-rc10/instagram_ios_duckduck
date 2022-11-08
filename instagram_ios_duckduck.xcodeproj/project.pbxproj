@@ -66,6 +66,8 @@
 		C7F06D6A2919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D682919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib */; };
 		C7F06D6D29193CD400C72CE9 /* ProfileFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D6B29193CD400C72CE9 /* ProfileFeedTableViewCell.swift */; };
 		C7F06D6E29193CD400C72CE9 /* ProfileFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */; };
+		C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D6F291A341500C72CE9 /* storyProfileBack.png */; };
+		C7F06D72291A341600C72CE9 /* storyProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D70291A341500C72CE9 /* storyProfile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +133,8 @@
 		C7F06D682919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedCollectionViewCell.xib; sourceTree = "<group>"; };
 		C7F06D6B29193CD400C72CE9 /* ProfileFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedTableViewCell.swift; sourceTree = "<group>"; };
 		C7F06D6C29193CD400C72CE9 /* ProfileFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFeedTableViewCell.xib; sourceTree = "<group>"; };
+		C7F06D6F291A341500C72CE9 /* storyProfileBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storyProfileBack.png; sourceTree = "<group>"; };
+		C7F06D70291A341500C72CE9 /* storyProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storyProfile.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -423,6 +427,8 @@
 		C7F06D432916A54600C72CE9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06D70291A341500C72CE9 /* storyProfile.png */,
+				C7F06D6F291A341500C72CE9 /* storyProfileBack.png */,
 				C7F06D442916A56200C72CE9 /* ProfilImgBack.png */,
 				C7F06D4629176EC200C72CE9 /* ProfileEmpty.PNG */,
 			);
@@ -522,6 +528,7 @@
 				C7F06D4729176EC200C72CE9 /* ProfileEmpty.PNG in Resources */,
 				C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */,
 				C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */,
+				C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* instagram_logo.png in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logoImg.png in Resources */,
@@ -532,6 +539,7 @@
 				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
 				C7F06D452916A56200C72CE9 /* ProfilImgBack.png in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
+				C7F06D72291A341600C72CE9 /* storyProfile.png in Resources */,
 				C76506BE290FD17000C1C21D /* TabBarStoryboard.storyboard in Resources */,
 				C7F06D2829164EB200C72CE9 /* StoryUserCollectionViewCell.xib in Resources */,
 			);

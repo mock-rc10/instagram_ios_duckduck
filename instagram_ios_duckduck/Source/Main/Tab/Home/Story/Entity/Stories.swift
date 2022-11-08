@@ -11,10 +11,11 @@ class Stories{
     static let shared = Stories()
     
     //var count: Int {self.StoryList.count}
-    var StoryList: StoryListResult = StoryListResult(profile: Profile(userID: "", uniqueName: "", profileImgURL: ""), storyList: [Profile(userID: "", uniqueName: "", profileImgURL: "")])
+    var StoryList: StoryListResult = StoryListResult(profile: Profile(userId: 0, uniqueName: "", profileImgURL: ""), storyList: [Profile(userId: 0, uniqueName: "", profileImgURL: "")])
 
     public func setStoriesData(result: StoryListResult){
         StoryList = result
+        print(StoryList)
     }
 }
 /*

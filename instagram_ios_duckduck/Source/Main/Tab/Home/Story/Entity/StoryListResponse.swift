@@ -22,10 +22,11 @@ struct StoryListResult: Codable {
 }
 // MARK: - Profile
 struct Profile: Codable {
-    let userID, uniqueName, profileImgURL: String
+    let userId: Int
+    let uniqueName, profileImgURL: String
 
     enum CodingKeys: String, CodingKey {
-        case userID = "userId"
+        case userId = "userId"
         case uniqueName
         case profileImgURL = "profileImgUrl"
     }
