@@ -40,10 +40,14 @@ class HomeFeedCollectionViewCell: UICollectionViewCell {
             feedImg.load(url: feedUrl!)
         }
         userUniqueName.text = feed.uniqueName
-        if(feed.postLikeCount != 0){
-            likeUserLabel.text = "\(feed.postLikeUsernames[0])님 외 \(feed.postLikeCount)명이 좋아합니다"
+        if(feed.postLikeCount == 1){
+            likeUserLabel.text = "\(feed.postLikeUsernames[0])님이 좋아합니다"
+        } else if(feed.postLikeCount > 1){
+            likeUserLabel.text = "\(feed.postLikeUsernames[0])님 외 \(feed.postLikeCount - 1)명이 좋아합니다"
         }
-        uniqueNameAndPostLabel.text = "\(feed.uniqueName) \(feed.content)"
+        if feed.content != ""{
+            uniqueNameAndPostLabel.text = "\(feed.uniqueName) \(feed.content)"
+        }
         if feed.comments.isEmpty != true {
             uniqueNameAndCommentsLabel.text = "\(feed.comments[0].comment.name) \(feed.comments[0].comment.content)"
         }
