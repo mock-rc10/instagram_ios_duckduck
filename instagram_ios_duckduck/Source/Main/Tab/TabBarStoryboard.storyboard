@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="vwD-gN-ur3">
             <objects>
                 <viewController id="tgz-8q-C4K" sceneMemberID="viewController">
@@ -18,13 +18,15 @@
                         <viewLayoutGuide key="safeArea" id="bhz-Y6-eG8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ggZ-25-owC"/>
+                    <tabBarItem key="tabBarItem" title="" image="search.png" id="ggZ-25-owC">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpi-4G-cHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3380" y="271.56398104265401"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="YOb-NP-bY0">
             <objects>
                 <viewController id="xYE-4s-06T" sceneMemberID="viewController">
@@ -34,13 +36,15 @@
                         <viewLayoutGuide key="safeArea" id="444-3w-tkq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="c6f-8b-f41"/>
+                    <tabBarItem key="tabBarItem" title="" image="reels.png" id="c6f-8b-f41">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVl-rW-ldH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4269.2307692307695" y="271.56398104265401"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="wIG-uK-cc6">
             <objects>
                 <viewController id="e1I-Rc-VO2" sceneMemberID="viewController">
@@ -50,7 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="PXj-pJ-89g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mhh-Vj-SkJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="shop.png" id="mhh-Vj-SkJ">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTM-io-Ixt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,11 +135,13 @@
             </objects>
             <point key="canvasLocation" x="2764" y="-522"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="YXI-7A-CKi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="opF-NS-y7Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="dxt-WT-cN7"/>
+                    <tabBarItem key="tabBarItem" title="" image="home.png" id="dxt-WT-cN7">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NrS-aw-Nhl">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -148,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="1556.9230769230769" y="271.56398104265401"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="mHh-hp-pce">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OFM-Jh-XGw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="axp-fN-CpD"/>
+                    <tabBarItem key="tabBarItem" title="" id="axp-fN-CpD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lKd-Sj-xaP">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -169,6 +177,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home.png" width="25" height="25"/>
+        <image name="reels.png" width="25" height="25"/>
+        <image name="search.png" width="25" height="25"/>
+        <image name="shop.png" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

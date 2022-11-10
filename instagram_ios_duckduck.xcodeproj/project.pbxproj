@@ -93,6 +93,15 @@
 		C7F06DB4291D935300C72CE9 /* changeUrlDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DB3291D935300C72CE9 /* changeUrlDataManager.swift */; };
 		C7F06DB6291D940600C72CE9 /* PostImageUrlResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DB5291D940600C72CE9 /* PostImageUrlResponse.swift */; };
 		C7F06DB8291D956F00C72CE9 /* PostImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DB7291D956F00C72CE9 /* PostImageUrl.swift */; };
+		C7F06DBA291DAE6200C72CE9 /* checkImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DB9291DAE6200C72CE9 /* checkImg.PNG */; };
+		C7F06DBC291DB03000C72CE9 /* miniProfileBack.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DBB291DB03000C72CE9 /* miniProfileBack.png */; };
+		C7F06DBF291DB12500C72CE9 /* bookmarkBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DBD291DB12500C72CE9 /* bookmarkBtn.png */; };
+		C7F06DC0291DB12500C72CE9 /* commentBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DBE291DB12500C72CE9 /* commentBtn.png */; };
+		C7F06DC2291DB17300C72CE9 /* option.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DC1291DB17300C72CE9 /* option.PNG */; };
+		C7F06DD0291DB3AC00C72CE9 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DCC291DB3AC00C72CE9 /* shop.png */; };
+		C7F06DD1291DB3AC00C72CE9 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DCD291DB3AC00C72CE9 /* search.png */; };
+		C7F06DD2291DB3AC00C72CE9 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DCE291DB3AC00C72CE9 /* home.png */; };
+		C7F06DD3291DB3AC00C72CE9 /* reels.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DCF291DB3AC00C72CE9 /* reels.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +194,15 @@
 		C7F06DB3291D935300C72CE9 /* changeUrlDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changeUrlDataManager.swift; sourceTree = "<group>"; };
 		C7F06DB5291D940600C72CE9 /* PostImageUrlResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageUrlResponse.swift; sourceTree = "<group>"; };
 		C7F06DB7291D956F00C72CE9 /* PostImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageUrl.swift; sourceTree = "<group>"; };
+		C7F06DB9291DAE6200C72CE9 /* checkImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkImg.PNG; sourceTree = "<group>"; };
+		C7F06DBB291DB03000C72CE9 /* miniProfileBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miniProfileBack.png; sourceTree = "<group>"; };
+		C7F06DBD291DB12500C72CE9 /* bookmarkBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarkBtn.png; sourceTree = "<group>"; };
+		C7F06DBE291DB12500C72CE9 /* commentBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commentBtn.png; sourceTree = "<group>"; };
+		C7F06DC1291DB17300C72CE9 /* option.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = option.PNG; sourceTree = "<group>"; };
+		C7F06DCC291DB3AC00C72CE9 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
+		C7F06DCD291DB3AC00C72CE9 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		C7F06DCE291DB3AC00C72CE9 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		C7F06DCF291DB3AC00C72CE9 /* reels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reels.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -320,6 +338,7 @@
 		C755294F290EEDD8008B370A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06DC3291DB31F00C72CE9 /* ltems */,
 				C7F06D48291774F100C72CE9 /* Button */,
 				C7F06D432916A54600C72CE9 /* Profile */,
 				C7552950290EEDF5008B370A /* Logo */,
@@ -485,6 +504,7 @@
 				C7F06D6F291A341500C72CE9 /* storyProfileBack.png */,
 				C7F06D83291A9FF000C72CE9 /* ProfileBack.png */,
 				C7F06D84291A9FF000C72CE9 /* ProfileEmpty.png */,
+				C7F06DBB291DB03000C72CE9 /* miniProfileBack.png */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -497,6 +517,10 @@
 				C7F06D4F291775FF00C72CE9 /* profileAddBtn.png */,
 				C7F06D51291775FF00C72CE9 /* profileFriendBtn.png */,
 				C7F06D50291775FF00C72CE9 /* profileListBtn.png */,
+				C7F06DB9291DAE6200C72CE9 /* checkImg.PNG */,
+				C7F06DBD291DB12500C72CE9 /* bookmarkBtn.png */,
+				C7F06DBE291DB12500C72CE9 /* commentBtn.png */,
+				C7F06DC1291DB17300C72CE9 /* option.PNG */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -559,6 +583,17 @@
 				C7F06DB7291D956F00C72CE9 /* PostImageUrl.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		C7F06DC3291DB31F00C72CE9 /* ltems */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06DCE291DB3AC00C72CE9 /* home.png */,
+				C7F06DCF291DB3AC00C72CE9 /* reels.png */,
+				C7F06DCD291DB3AC00C72CE9 /* search.png */,
+				C7F06DCC291DB3AC00C72CE9 /* shop.png */,
+			);
+			path = ltems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,13 +663,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C75FEE8029111D4B00CDEE37 /* SignInStoryboard.storyboard in Resources */,
+				C7F06DD0291DB3AC00C72CE9 /* shop.png in Resources */,
 				C7F06D6E29193CD400C72CE9 /* ProfileFeedTableViewCell.xib in Resources */,
 				C7F06D8C291B976800C72CE9 /* HomeFeedTableViewCell.xib in Resources */,
 				C7955DE029114D7200C58366 /* SignUpStoryboard.storyboard in Resources */,
 				C7552954290EEE03008B370A /* facebook_logo.png in Resources */,
 				C7552941290CDE5F008B370A /* LaunchScreen.storyboard in Resources */,
+				C7F06DD1291DB3AC00C72CE9 /* search.png in Resources */,
+				C7F06DC0291DB12500C72CE9 /* commentBtn.png in Resources */,
 				C7F06D54291775FF00C72CE9 /* profileFriendBtn.png in Resources */,
 				C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */,
+				C7F06DBF291DB12500C72CE9 /* bookmarkBtn.png in Resources */,
 				C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* instagram_logo.png in Resources */,
@@ -646,13 +685,18 @@
 				C7F06D52291775FF00C72CE9 /* profileAddBtn.png in Resources */,
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C7F06D81291A69C800C72CE9 /* DMBtn.png in Resources */,
+				C7F06DD3291DB3AC00C72CE9 /* reels.png in Resources */,
+				C7F06DD2291DB3AC00C72CE9 /* home.png in Resources */,
 				C7F06D82291A69C800C72CE9 /* likeBtn.png in Resources */,
+				C7F06DC2291DB17300C72CE9 /* option.PNG in Resources */,
 				C7F06DA3291D72D000C72CE9 /* PostContentCollectionViewCell.xib in Resources */,
 				C7F06D85291A9FF000C72CE9 /* ProfileBack.png in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
+				C7F06DBC291DB03000C72CE9 /* miniProfileBack.png in Resources */,
 				C7F06D6A2919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib in Resources */,
 				C7F06D99291D199E00C72CE9 /* PostStoryboard.storyboard in Resources */,
 				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
+				C7F06DBA291DAE6200C72CE9 /* checkImg.PNG in Resources */,
 				C7F06DB2291D867E00C72CE9 /* snsSwitchTableViewCell.xib in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 				C7F06D72291A341600C72CE9 /* storyProfile.png in Resources */,

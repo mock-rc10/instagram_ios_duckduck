@@ -15,4 +15,5 @@ struct SignUpResponse: Codable {
 // MARK: - Result
 struct SignUpResult: Codable {
     let accessToken: String
+    let name: String
 }

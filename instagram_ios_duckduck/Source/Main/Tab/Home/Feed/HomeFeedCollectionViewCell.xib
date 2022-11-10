@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="width" constant="40" id="r6E-BB-BEL"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="99z-F1-phu" userLabel="userProfileBackImg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniProfileBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="99z-F1-phu" userLabel="userProfileBackImg">
                                 <rect key="frame" x="8" y="10" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Y8U-Jn-Ayk"/>
@@ -40,7 +40,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCz-Wg-x4r" userLabel="optionBtn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="zCz-Wg-x4r" userLabel="optionBtn">
                                 <rect key="frame" x="262" y="15" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hjb-UC-qri"/>
@@ -54,28 +54,28 @@
                                     <constraint firstAttribute="width" constant="300" id="fAx-0x-G53"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATH-bw-oDW" userLabel="commentBtn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commentBtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="ATH-bw-oDW" userLabel="commentBtn">
                                 <rect key="frame" x="46" y="368" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="eqR-9K-s1J"/>
                                     <constraint firstAttribute="height" constant="30" id="srz-0B-WHt"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4in-MJ-sAs" userLabel="likeBtn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likeBtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="4in-MJ-sAs" userLabel="likeBtn">
                                 <rect key="frame" x="8" y="368" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="7z3-zV-M2j"/>
                                     <constraint firstAttribute="height" constant="30" id="Aym-tF-Lgk"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WeW-rA-14x" userLabel="bookMarkBtn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmarkBtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="WeW-rA-14x" userLabel="bookMarkBtn">
                                 <rect key="frame" x="262" y="368" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="kKs-5F-QYW"/>
                                     <constraint firstAttribute="width" constant="30" id="t70-gw-SPQ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a8J-aw-Run" userLabel="dmBtn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DMBtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="a8J-aw-Run" userLabel="dmBtn">
                                 <rect key="frame" x="84" y="368" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="15g-K5-7G4"/>
@@ -97,16 +97,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toR-AH-oNt">
-                                        <rect key="frame" x="0.0" y="62" width="284" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-6y-Y3U">
-                                        <rect key="frame" x="0.0" y="118" width="284" height="50"/>
+                                        <rect key="frame" x="0.0" y="62" width="284" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toR-AH-oNt">
+                                        <rect key="frame" x="0.0" y="118" width="284" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -135,7 +135,7 @@
                             <constraint firstItem="9rW-km-1uG" firstAttribute="leading" secondItem="hmp-se-Iy8" secondAttribute="leading" constant="8" id="q6t-Nk-vFt"/>
                             <constraint firstItem="a8J-aw-Run" firstAttribute="top" secondItem="mNz-SY-1AH" secondAttribute="bottom" constant="8" id="sxW-h3-2Ca"/>
                             <constraint firstItem="PtO-e8-p9l" firstAttribute="centerY" secondItem="9rW-km-1uG" secondAttribute="centerY" id="tdj-z8-8Yn"/>
-                            <constraint firstItem="4in-MJ-sAs" firstAttribute="leading" secondItem="zCz-Wg-x4r" secondAttribute="leading" constant="-254" id="wXz-y6-hi5"/>
+                            <constraint firstItem="4in-MJ-sAs" firstAttribute="leading" secondItem="hmp-se-Iy8" secondAttribute="leading" constant="8" id="wXz-y6-hi5"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -165,6 +165,12 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="DMBtn.png" width="62" height="62"/>
+        <image name="bookmarkBtn.png" width="62" height="62"/>
+        <image name="commentBtn.png" width="62" height="62"/>
+        <image name="likeBtn.png" width="62" height="62"/>
+        <image name="miniProfileBack.png" width="77" height="77"/>
+        <image name="option.PNG" width="62" height="62"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -269,15 +269,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AZd-0y-VUY">
                                 <rect key="frame" x="50" y="241" width="80" height="20"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vk-BH-DKK">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkImg.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="lnn-cY-EVd">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="FXg-fU-Enp"/>
-                                            <constraint firstAttribute="width" constant="20" id="aJ4-S4-Ep5"/>
+                                            <constraint firstAttribute="width" constant="20" id="IAw-Dz-F6q"/>
+                                            <constraint firstAttribute="height" constant="20" id="ult-l8-ok8"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
-                                    </button>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 저장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-VY-Rpj">
                                         <rect key="frame" x="25" y="0.0" width="55" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -569,7 +567,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="checkImg.PNG" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

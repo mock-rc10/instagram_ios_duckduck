@@ -27,7 +27,7 @@ class SignUpCompleteViewController: BaseViewController {
         self.showIndicator()
         let signUpInput = SignUpRequest(facebook: false, email: user.email, password: user.password, name: user.name, uniqueName: user.uniqueName)
         print(signUpInput)
-        //signUpDataManager.postSignUp(signUpInput, delegate: self)
+        signUpDataManager.postSignUp(signUpInput, delegate: self)
     }
     
     @IBAction func SignInButtonTouchUpInside_SignUpComplete(_ sender: UIButton) {
