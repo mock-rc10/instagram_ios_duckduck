@@ -9,10 +9,10 @@ import UIKit
 
 extension UINavigationItem{
 
-    func makeSFSymbolButton(_ target: Any?, symbolName: String) -> UIBarButtonItem{
+    func makeSFSymbolButton(_ target: Any?, action: Selector, symbolName: String) -> UIBarButtonItem{
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: symbolName), for: .normal)
-        //button.addTarget(target, for: .touchUpInside)
+        button.addTarget(target, action: action, for: .touchUpInside)
         button.tintColor = .black
         
         let barButtonItem = UIBarButtonItem(customView: button)
@@ -22,10 +22,10 @@ extension UINavigationItem{
         
         return barButtonItem
     }
-    func makeSFSymbolLogoButton(_ target: Any?, symbolName: String) -> UIBarButtonItem{
+    func makeSFSymbolLogoButton(_ target: Any?,action: Selector, symbolName: String) -> UIBarButtonItem{
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: symbolName), for: .normal)
-        //button.addTarget(target, for: .touchUpInside)
+        button.addTarget(target, action:action, for: .touchUpInside)
         button.tintColor = .black
         
         let barButtonItem = UIBarButtonItem(customView: button)

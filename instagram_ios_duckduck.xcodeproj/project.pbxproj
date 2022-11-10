@@ -79,6 +79,17 @@
 		C7F06D92291B97AE00C72CE9 /* HomeFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D91291B97AE00C72CE9 /* HomeFeedResponse.swift */; };
 		C7F06D94291B97BC00C72CE9 /* HomeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D93291B97BC00C72CE9 /* HomeFeed.swift */; };
 		C7F06D96291B983100C72CE9 /* HomeFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D95291B983100C72CE9 /* HomeFeedDataManager.swift */; };
+		C7F06D99291D199E00C72CE9 /* PostStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D98291D199E00C72CE9 /* PostStoryboard.storyboard */; };
+		C7F06D9B291D530400C72CE9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D9A291D530400C72CE9 /* PostViewController.swift */; };
+		C7F06D9E291D71C500C72CE9 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06D9C291D71C500C72CE9 /* PostTableViewCell.swift */; };
+		C7F06D9F291D71C500C72CE9 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06D9D291D71C500C72CE9 /* PostTableViewCell.xib */; };
+		C7F06DA2291D72D000C72CE9 /* PostContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DA0291D72D000C72CE9 /* PostContentCollectionViewCell.swift */; };
+		C7F06DA3291D72D000C72CE9 /* PostContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DA1291D72D000C72CE9 /* PostContentCollectionViewCell.xib */; };
+		C7F06DA6291D7A3600C72CE9 /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DA5291D7A3600C72CE9 /* PostContent.swift */; };
+		C7F06DAD291D813000C72CE9 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DAB291D813000C72CE9 /* BasicTableViewCell.swift */; };
+		C7F06DAE291D813000C72CE9 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DAC291D813000C72CE9 /* BasicTableViewCell.xib */; };
+		C7F06DB1291D867E00C72CE9 /* snsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DAF291D867E00C72CE9 /* snsSwitchTableViewCell.swift */; };
+		C7F06DB2291D867E00C72CE9 /* snsSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DB0291D867E00C72CE9 /* snsSwitchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +168,17 @@
 		C7F06D91291B97AE00C72CE9 /* HomeFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedResponse.swift; sourceTree = "<group>"; };
 		C7F06D93291B97BC00C72CE9 /* HomeFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeed.swift; sourceTree = "<group>"; };
 		C7F06D95291B983100C72CE9 /* HomeFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedDataManager.swift; sourceTree = "<group>"; };
+		C7F06D98291D199E00C72CE9 /* PostStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostStoryboard.storyboard; sourceTree = "<group>"; };
+		C7F06D9A291D530400C72CE9 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		C7F06D9C291D71C500C72CE9 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06D9D291D71C500C72CE9 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		C7F06DA0291D72D000C72CE9 /* PostContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7F06DA1291D72D000C72CE9 /* PostContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		C7F06DA5291D7A3600C72CE9 /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContent.swift; sourceTree = "<group>"; };
+		C7F06DAB291D813000C72CE9 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06DAC291D813000C72CE9 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
+		C7F06DAF291D867E00C72CE9 /* snsSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snsSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		C7F06DB0291D867E00C72CE9 /* snsSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = snsSwitchTableViewCell.xib; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -378,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				C7955DEA291515EF00C58366 /* HomeViewController.swift */,
+				C7F06D97291D190D00C72CE9 /* Post */,
 				C7F06D2929165B9800C72CE9 /* Story */,
 				C7F06D87291AB0D200C72CE9 /* Feed */,
 			);
@@ -503,6 +526,32 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		C7F06D97291D190D00C72CE9 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06DA4291D7A2200C72CE9 /* Entity */,
+				C7F06D98291D199E00C72CE9 /* PostStoryboard.storyboard */,
+				C7F06D9A291D530400C72CE9 /* PostViewController.swift */,
+				C7F06D9C291D71C500C72CE9 /* PostTableViewCell.swift */,
+				C7F06DAB291D813000C72CE9 /* BasicTableViewCell.swift */,
+				C7F06DAC291D813000C72CE9 /* BasicTableViewCell.xib */,
+				C7F06D9D291D71C500C72CE9 /* PostTableViewCell.xib */,
+				C7F06DA0291D72D000C72CE9 /* PostContentCollectionViewCell.swift */,
+				C7F06DA1291D72D000C72CE9 /* PostContentCollectionViewCell.xib */,
+				C7F06DAF291D867E00C72CE9 /* snsSwitchTableViewCell.swift */,
+				C7F06DB0291D867E00C72CE9 /* snsSwitchTableViewCell.xib */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		C7F06DA4291D7A2200C72CE9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06DA5291D7A3600C72CE9 /* PostContent.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,6 +629,8 @@
 				C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* instagram_logo.png in Resources */,
+				C7F06D9F291D71C500C72CE9 /* PostTableViewCell.xib in Resources */,
+				C7F06DAE291D813000C72CE9 /* BasicTableViewCell.xib in Resources */,
 				C7F06D90291B978700C72CE9 /* HomeFeedCollectionViewCell.xib in Resources */,
 				C783E8F0290F16BA00503A6F /* istagram_logoImg.png in Resources */,
 				C7F06D86291A9FF000C72CE9 /* ProfileEmpty.png in Resources */,
@@ -587,10 +638,13 @@
 				C7F06D2229164E2600C72CE9 /* StoryTableViewCell.xib in Resources */,
 				C7F06D81291A69C800C72CE9 /* DMBtn.png in Resources */,
 				C7F06D82291A69C800C72CE9 /* likeBtn.png in Resources */,
+				C7F06DA3291D72D000C72CE9 /* PostContentCollectionViewCell.xib in Resources */,
 				C7F06D85291A9FF000C72CE9 /* ProfileBack.png in Resources */,
 				C755293E290CDE5F008B370A /* Assets.xcassets in Resources */,
 				C7F06D6A2919336B00C72CE9 /* ProfileFeedCollectionViewCell.xib in Resources */,
+				C7F06D99291D199E00C72CE9 /* PostStoryboard.storyboard in Resources */,
 				C7F06D3C2916770800C72CE9 /* ProfileTableViewCell.xib in Resources */,
+				C7F06DB2291D867E00C72CE9 /* snsSwitchTableViewCell.xib in Resources */,
 				C755293C290CDE5C008B370A /* Main.storyboard in Resources */,
 				C7F06D72291A341600C72CE9 /* storyProfile.png in Resources */,
 				C76506BE290FD17000C1C21D /* TabBarStoryboard.storyboard in Resources */,
@@ -656,9 +710,11 @@
 				C783E8F2290F189500503A6F /* SignUpEmailViewController.swift in Sources */,
 				C76506D5291102B300C1C21D /* SignInDataManager.swift in Sources */,
 				C7F06D4029167DED00C72CE9 /* ProfileLookupResponse.swift in Sources */,
+				C7F06D9B291D530400C72CE9 /* PostViewController.swift in Sources */,
 				C7F06D2E29165C0B00C72CE9 /* StoryListResponse.swift in Sources */,
 				C76506CD2910E42000C1C21D /* SignUpCompleteViewController.swift in Sources */,
 				C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */,
+				C7F06DA2291D72D000C72CE9 /* PostContentCollectionViewCell.swift in Sources */,
 				C7F06D692919336B00C72CE9 /* ProfileFeedCollectionViewCell.swift in Sources */,
 				C7F06D322916607500C72CE9 /* Stories.swift in Sources */,
 				C76506D92911033A00C1C21D /* SignInResponse.swift in Sources */,
@@ -681,14 +737,18 @@
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,
 				C7F06D2729164EB200C72CE9 /* StoryUserCollectionViewCell.swift in Sources */,
 				C7F06D8B291B976800C72CE9 /* HomeFeedTableViewCell.swift in Sources */,
+				C7F06DB1291D867E00C72CE9 /* snsSwitchTableViewCell.swift in Sources */,
 				C7F06D8F291B978700C72CE9 /* HomeFeedCollectionViewCell.swift in Sources */,
 				C7F06D7E291A62E200C72CE9 /* UINavigationItem.swift in Sources */,
+				C7F06D9E291D71C500C72CE9 /* PostTableViewCell.swift in Sources */,
 				C7F06D3B2916770800C72CE9 /* ProfileTableViewCell.swift in Sources */,
 				C7F06D42291680CB00C72CE9 /* Profile.swift in Sources */,
+				C7F06DAD291D813000C72CE9 /* BasicTableViewCell.swift in Sources */,
 				C75FEE88291122EC00CDEE37 /* SignUpResponse.swift in Sources */,
 				C783E8EC290F0E6800503A6F /* IndicatorView.swift in Sources */,
 				C75FEE86291122DD00CDEE37 /* SignUpRequest.swift in Sources */,
 				C75FEE842911224800CDEE37 /* SignupDataManager.swift in Sources */,
+				C7F06DA6291D7A3600C72CE9 /* PostContent.swift in Sources */,
 				C7552937290CDE5C008B370A /* SceneDelegate.swift in Sources */,
 				C7F06D2129164E2600C72CE9 /* StoryTableViewCell.swift in Sources */,
 			);

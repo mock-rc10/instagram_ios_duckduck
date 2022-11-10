@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class HomeViewController: BaseViewController {
 
@@ -15,6 +16,7 @@ class HomeViewController: BaseViewController {
     lazy var homeFeedDataManager: HomeFeedDataManager = HomeFeedDataManager()
     private var storyUserDataModel: Stories = Stories.shared
     private var homeFeedDataModel: HomeFeed = HomeFeed.shared
+    var pickedImages: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +31,61 @@ class HomeViewController: BaseViewController {
     }
     
     private func initNavigationBar(){
-        self.navigationController?.setBackgroundColor()
-        let logoButton = self.navigationItem.makeSFSymbolLogoButton(self, symbolName: "instagram_logo.png")
-        let addPostButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "profileAddBtn.png")
-        let likeButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "likeBtn.png")
-        let dmButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "DMBtn.png")
+        //self.navigationController?.setBackgroundColor()
+        let selector = #selector(newPost)
+        let logoButton = self.navigationItem.makeSFSymbolLogoButton(self, action: selector, symbolName: "instagram_logo.png")
+        let addPostButton = self.navigationItem.makeSFSymbolButton(self, action: selector, symbolName: "profileAddBtn.png")
+        let likeButton = self.navigationItem.makeSFSymbolButton(self, action: selector, symbolName: "likeBtn.png")
+        let dmButton = self.navigationItem.makeSFSymbolButton(self, action: selector, symbolName: "DMBtn.png")
         let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action:nil)
         spacer.width = 15
         self.navigationItem.leftBarButtonItem = logoButton
         self.navigationItem.rightBarButtonItems = [dmButton,spacer, likeButton,spacer,addPostButton]
     }
-    
+    @objc fileprivate func newPost(){
+        
+        
+        var config = YPImagePickerConfiguration()
+        config.screens = [.library]
+        config.library.maxNumberOfItems = 10
+        config.library.mediaType = .photo
+        config.wordings.libraryTitle = "최근 항목"
+        config.wordings.next = "다음"
+        config.wordings.cancel = "X"
+        config.wordings.filter = "필터"
+        
+        let picker = YPImagePicker(configuration: config)
+        
+        picker.didFinishPicking{ [self, unowned picker] items, _ in
+            for item in items{
+                switch item{
+                case .photo(let p):
+                    self.pickedImages.append(p.image)
+                default:
+                    print("")
+                }
+            }
+            /*
+            if let photo = items.singlePhoto{
+                print(photo.fromCamera)
+                print(photo.image)
+                print(photo.originalImage)
+                print(photo.modifiedImage)
+                print(photo.exifMeta)
+            }
+             */
+            let PostViewController = UIStoryboard(name: "PostStoryboard", bundle: nil).instantiateViewController(withIdentifier: "PostVC") as? PostViewController
+            PostViewController?.data = pickedImages
+            let backBarButtonItem = UIBarButtonItem(title: "", style: .bordered, target: self,action: nil)
+            backBarButtonItem.tintColor =  .black
+            self.navigationItem.backBarButtonItem = backBarButtonItem
+            
+            self.navigationController?.pushViewController(PostViewController!, animated: true)
+            picker.dismiss(animated: true, completion: nil)
+            
+        }
+        present(picker, animated: true, completion: nil)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{

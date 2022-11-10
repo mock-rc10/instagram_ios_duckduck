@@ -8,5 +8,6 @@ target 'instagram_ios_duckduck' do
   # Pods for instagram_ios_duckduck
 pod 'Alamofire'
 pod 'Tabman', '~> 3.0'
+pod 'YPImagePicker'
 
 end

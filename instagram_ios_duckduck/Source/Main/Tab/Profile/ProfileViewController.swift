@@ -49,14 +49,17 @@ class ProfileViewController: BaseViewController {
         self.navigationController?.setBackgroundColor()
         print(profileLookupResult.uniqueName)
         
-        
-        let addPostButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "profileAddBtn.png")
-        let ListButton = self.navigationItem.makeSFSymbolButton(self, symbolName: "profileListBtn.png")
+        let selector = #selector(test)
+        let addPostButton = self.navigationItem.makeSFSymbolButton(self, action: selector, symbolName: "profileAddBtn.png")
+        let ListButton = self.navigationItem.makeSFSymbolButton(self, action: selector, symbolName: "profileListBtn.png")
         let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action:nil)
         spacer.width = 15
         self.navigationItem.rightBarButtonItems = [ListButton,spacer,addPostButton]
     }
     
+    @objc func test(){
+        
+    }
 }
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     
