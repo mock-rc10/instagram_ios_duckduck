@@ -11,6 +11,8 @@ import YPImagePicker
 class PostViewController: UIViewController {
     var data : [UIImage] = []
     private var postContentDataModel: PostContent = PostContent()
+    lazy var changeUrlDataManager: changeUrl = changeUrl()
+    private var urlDataModel: ImageUrl = ImageUrl()
     @IBOutlet weak var postTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,8 +25,12 @@ class PostViewController: UIViewController {
     }
     func initNavigationBar(){
         self.navigationItem.title = "새 게시물"
-        let rightBarButtonItem = UIBarButtonItem(title: "공유", style: .done, target: self, action: nil)
+        let rightBarButtonItem = UIBarButtonItem(title: "공유", style: .done, target: self, action: selector)
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    let selector = #selector(newPost)
+    @objc func newPost(){
+        requestChangeUrl(images: data)
     }
 }
 
@@ -100,14 +106,30 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource{
     
     func registerXib(){
         let ContentCell = UINib(nibName: PostTableViewCell.identifier, bundle: nil)
-        postTableView.register(ContentCell, forCellReuseIdentifier: PostTableViewCell.identifier)
+        postTableView?.register(ContentCell, forCellReuseIdentifier: PostTableViewCell.identifier)
         let BasicCell = UINib(nibName: BasicTableViewCell.identifier, bundle: nil)
-        postTableView.register(BasicCell, forCellReuseIdentifier: BasicTableViewCell.identifier)
+        postTableView?.register(BasicCell, forCellReuseIdentifier: BasicTableViewCell.identifier)
         let switchCell = UINib(nibName: snsSwitchTableViewCell.identifier, bundle: nil)
-        postTableView.register(switchCell, forCellReuseIdentifier: snsSwitchTableViewCell.identifier)
+        postTableView?.register(switchCell, forCellReuseIdentifier: snsSwitchTableViewCell.identifier)
     }
     func registerDelegate(){
-        postTableView.delegate = self
-        postTableView.dataSource = self
+        postTableView?.delegate = self
+        postTableView?.dataSource = self
+    }
+}
+
+extension PostViewController{
+    func requestChangeUrl(images: [UIImage]){
+        changeUrlDataManager.ChangeUrl(data)
+        
+    }
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
+    func didSuccessChangeUrl(result: [String]){
+        print("*********")
+        print(result)
+        urlDataModel.setUrlListData(result: result)
+        
     }
 }
