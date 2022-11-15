@@ -9,16 +9,24 @@ import UIKit
 import YPImagePicker
 
 class PostViewController: UIViewController {
+    var accessToken: String = ""
     var data : [UIImage] = []
-    private var postContentDataModel: PostContent = PostContent()
-    lazy var changeUrlDataManager: changeUrl = changeUrl()
-    private var urlDataModel: ImageUrl = ImageUrl()
+    var pickedImageUrls: [String] = []
+    private var postContentDataModel: PostContent = PostContent.shared
+    lazy var postDataManager: postContent = postContent()
+    var content: Content = Content(content: "", imgUrls: [""])
+    var postInput = PostRequest(content: "", imgUrls: [""], hashtags: [""])
     @IBOutlet weak var postTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        accessToken = UserDefaults.standard.string(forKey: "accessToken")!
         initNavigationBar()
-        postContentDataModel.setContentData(result: data)
+        //print(data)
+        //print(pickedImageUrls)
+        //postContentDataModel.setContentImage(result: )
+        //postContentDataModel.setContentData(result: postContentDataModel.contentUrls)
+        print(postContentDataModel.contentUrls)
         registerXib()
         registerDelegate()
         // Do any additional setup after loading the view.
@@ -30,7 +38,9 @@ class PostViewController: UIViewController {
     }
     let selector = #selector(newPost)
     @objc func newPost(){
-        requestChangeUrl(images: data)
+        requestNewPost{
+            self.postDataManager.postContent(token: self.accessToken, parameters: self.postInput)
+        }
     }
 }
 
@@ -119,17 +129,20 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension PostViewController{
-    func requestChangeUrl(images: [UIImage]){
-        changeUrlDataManager.ChangeUrl(data)
+    func requestNewPost(complition: @escaping() -> ()){
+        content = postContentDataModel.getContentData()
+        postInput = PostRequest(content: content.content, imgUrls: content.imgUrls, hashtags: [""])
+        print("!!!!!\(postInput)")
+        complition()
         
     }
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
     }
+    /*
     func didSuccessChangeUrl(result: [String]){
-        print("*********")
-        print(result)
         urlDataModel.setUrlListData(result: result)
         
     }
+     */
 }

@@ -10,6 +10,7 @@ import UIKit
 class PostContentCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var contentTextView: UITextView!
+    private var postContentDataModel: PostContent = PostContent.shared
     
     static let identifier = "PostContentCollectionViewCell"
     let textViewPlaceHolder = "문구 입력..."
@@ -38,5 +39,10 @@ class PostContentCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
             textView.text = textViewPlaceHolder
             textView.textColor = .lightGray
         }
+        postContentDataModel.setContent(content: textView.text)
     }
+    func textViewDidChange(_ textView: UITextView) {
+        postContentDataModel.setContent(content: textView.text)
+    }
+    
 }

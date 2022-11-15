@@ -26,7 +26,7 @@ class SignUpCompleteViewController: BaseViewController {
     
         self.showIndicator()
         let signUpInput = SignUpRequest(facebook: false, email: user.email, password: user.password, name: user.name, uniqueName: user.uniqueName)
-        print(signUpInput)
+        //print(signUpInput)
         signUpDataManager.postSignUp(signUpInput, delegate: self)
     }
     

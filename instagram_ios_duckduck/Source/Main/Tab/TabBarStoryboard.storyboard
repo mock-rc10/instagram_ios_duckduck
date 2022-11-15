@@ -5,24 +5,75 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21501.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="vwD-gN-ur3">
             <objects>
-                <viewController id="tgz-8q-C4K" sceneMemberID="viewController">
+                <viewController id="tgz-8q-C4K" customClass="SearchViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cfH-fS-Kc4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qLB-ur-Cj7">
+                                <rect key="frame" x="0.0" y="47" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tgz-8q-C4K" id="ZTP-S6-gSf"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="si2-lu-mX0">
+                                <rect key="frame" x="0.0" y="103" width="390" height="658"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fUQ-7X-1iX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SID-b9-DNp">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cYN-ux-6NN">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bhz-Y6-eG8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="si2-lu-mX0" firstAttribute="leading" secondItem="bhz-Y6-eG8" secondAttribute="leading" id="1g6-Hh-xiO"/>
+                            <constraint firstItem="qLB-ur-Cj7" firstAttribute="top" secondItem="bhz-Y6-eG8" secondAttribute="top" id="5VJ-re-zge"/>
+                            <constraint firstItem="bhz-Y6-eG8" firstAttribute="bottom" secondItem="si2-lu-mX0" secondAttribute="bottom" id="9em-3D-EJo"/>
+                            <constraint firstItem="qLB-ur-Cj7" firstAttribute="leading" secondItem="bhz-Y6-eG8" secondAttribute="leading" id="Aes-XA-DAM"/>
+                            <constraint firstItem="qLB-ur-Cj7" firstAttribute="trailing" secondItem="bhz-Y6-eG8" secondAttribute="trailing" id="EXi-4i-P0G"/>
+                            <constraint firstItem="bhz-Y6-eG8" firstAttribute="trailing" secondItem="si2-lu-mX0" secondAttribute="trailing" id="IjN-yb-6Cg"/>
+                            <constraint firstItem="si2-lu-mX0" firstAttribute="top" secondItem="qLB-ur-Cj7" secondAttribute="bottom" id="QLm-gU-dz6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="search.png" id="ggZ-25-owC">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="zMJ-dL-XP1" id="8iI-nR-27a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpi-4G-cHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="zMJ-dL-XP1">
+                    <connections>
+                        <outlet property="delegate" destination="tgz-8q-C4K" id="bJO-a7-35F"/>
+                        <outlet property="searchBar" destination="qLB-ur-Cj7" id="FZa-Ee-7Zg"/>
+                        <outlet property="searchContentsController" destination="tgz-8q-C4K" id="hvL-7m-nfh"/>
+                        <outlet property="searchResultsDataSource" destination="tgz-8q-C4K" id="3ar-ZQ-m3X"/>
+                        <outlet property="searchResultsDelegate" destination="tgz-8q-C4K" id="kZF-Nn-LW6"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3380" y="271.56398104265401"/>
         </scene>

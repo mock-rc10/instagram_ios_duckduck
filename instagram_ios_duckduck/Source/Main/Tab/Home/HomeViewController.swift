@@ -7,6 +7,7 @@
 
 import UIKit
 import YPImagePicker
+import Alamofire
 
 class HomeViewController: BaseViewController {
 
@@ -16,12 +17,13 @@ class HomeViewController: BaseViewController {
     lazy var homeFeedDataManager: HomeFeedDataManager = HomeFeedDataManager()
     private var storyUserDataModel: Stories = Stories.shared
     private var homeFeedDataModel: HomeFeed = HomeFeed.shared
-    var pickedImages: [UIImage] = []
-    
+    private var postContentDataModel: PostContent = PostContent.shared
+    var pickedImages: [String] = []
+    var FirstImage: [UIImage] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        print(accessToken)
+        //print(accessToken)
         requestStoriesLoad(token: accessToken!)
         requestHomeFeedLoad(token: accessToken!)
         // Do any additional setup after loading the view.
@@ -57,10 +59,12 @@ class HomeViewController: BaseViewController {
         let picker = YPImagePicker(configuration: config)
         
         picker.didFinishPicking{ [self, unowned picker] items, _ in
+            
             for item in items{
                 switch item{
                 case .photo(let p):
-                    self.pickedImages.append(p.image)
+                    self.FirstImage.append(p.image)
+                    postContentDataModel.setContentImage(result: FirstImage)
                 default:
                     print("")
                 }
@@ -74,14 +78,51 @@ class HomeViewController: BaseViewController {
                 print(photo.exifMeta)
             }
              */
-            let PostViewController = UIStoryboard(name: "PostStoryboard", bundle: nil).instantiateViewController(withIdentifier: "PostVC") as? PostViewController
-            PostViewController?.data = pickedImages
+            let url = "\(Constant.BASE_URL)/api/uploadFiles"
+            let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
+            for item2 in items{
+                switch item2{
+                case .photo(let p):
+                    let imageData = p.image.pngData()!
+                    AF.upload(multipartFormData: { multiPart in
+                        multiPart.append(imageData, withName: "fileList", fileName: "p.png", mimeType: "image/png")
+                    }, to: url, method: .post, headers: headers).validate().responseDecodable(of: PostImageUrlResponse.self) { response in
+                        switch response.result {
+                           
+                        case .success(let response):
+                            // 성공했을 때
+                            //print(response)
+                            if response.isSuccess, let result = response.result {
+                                self.pickedImages.append(contentsOf: result)
+                                self.postContentDataModel.setContentData(result: self.pickedImages)
+                               // self.postContentDataModel.contentUrls = self.pickedImages
+                            }
+                            // 실패했을 때
+                            else {
+                                print("실패 코드에 따라 나누기")
+                            }
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                            print("실패")
+                        }
+                         
+                    }
+                default:
+                    print("")
+                }
+            }
+            
             let backBarButtonItem = UIBarButtonItem(title: "", style: .bordered, target: self,action: nil)
             backBarButtonItem.tintColor =  .black
             self.navigationItem.backBarButtonItem = backBarButtonItem
             
-            self.navigationController?.pushViewController(PostViewController!, animated: true)
-            picker.dismiss(animated: true, completion: nil)
+            
+            picker.dismiss(animated: true){
+                let PostViewController = UIStoryboard(name: "PostStoryboard", bundle: nil).instantiateViewController(withIdentifier: "PostVC") as? PostViewController
+                //PostViewController?.data = FirstImage
+                //PostViewController?.pickedImageUrls = pickedImages
+                self.navigationController?.pushViewController(PostViewController!, animated: true)
+            }
             
         }
         present(picker, animated: true, completion: nil)
