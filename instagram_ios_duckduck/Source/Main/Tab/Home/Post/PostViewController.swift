@@ -8,7 +8,7 @@
 import UIKit
 import YPImagePicker
 
-class PostViewController: UIViewController {
+class PostViewController: BaseViewController {
     var accessToken: String = ""
     var data : [UIImage] = []
     var pickedImageUrls: [String] = []
@@ -22,10 +22,6 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")!
         initNavigationBar()
-        //print(data)
-        //print(pickedImageUrls)
-        //postContentDataModel.setContentImage(result: )
-        //postContentDataModel.setContentData(result: postContentDataModel.contentUrls)
         print(postContentDataModel.contentUrls)
         registerXib()
         registerDelegate()
@@ -132,17 +128,16 @@ extension PostViewController{
     func requestNewPost(complition: @escaping() -> ()){
         content = postContentDataModel.getContentData()
         postInput = PostRequest(content: content.content, imgUrls: content.imgUrls, hashtags: [""])
-        print("!!!!!\(postInput)")
+        //print("!!!!!\(postInput)")
         complition()
         
     }
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
     }
-    /*
-    func didSuccessChangeUrl(result: [String]){
-        urlDataModel.setUrlListData(result: result)
-        
+    
+    func didSuccessPostFeed(){
+        let homeViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(identifier: "homeVC")
+        changeRootViewController(homeViewController)
     }
-     */
 }

@@ -94,7 +94,11 @@ class HomeViewController: BaseViewController {
                             //print(response)
                             if response.isSuccess, let result = response.result {
                                 self.pickedImages.append(contentsOf: result)
-                                self.postContentDataModel.setContentData(result: self.pickedImages)
+                                for i in 0...result.count-1{
+                                    self.postContentDataModel.setContentUrl(result: result[i])
+                                }
+                               
+                                //self.postContentDataModel.setContentData(result: self.pickedImages)
                                // self.postContentDataModel.contentUrls = self.pickedImages
                             }
                             // 실패했을 때

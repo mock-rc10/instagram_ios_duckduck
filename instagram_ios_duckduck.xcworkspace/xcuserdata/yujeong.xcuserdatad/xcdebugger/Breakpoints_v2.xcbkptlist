@@ -14,8 +14,8 @@
             filePath = "instagram_ios_duckduck/Source/Main/Tab/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>

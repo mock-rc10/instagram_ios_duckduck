@@ -180,7 +180,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YXI-7A-CKi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="opF-NS-y7Y" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeVC" automaticallyAdjustsScrollViewInsets="NO" id="opF-NS-y7Y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home.png" id="dxt-WT-cN7">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>

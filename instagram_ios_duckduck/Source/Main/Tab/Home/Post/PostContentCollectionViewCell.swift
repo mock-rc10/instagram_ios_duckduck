@@ -40,6 +40,11 @@ class PostContentCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
             textView.textColor = .lightGray
         }
         postContentDataModel.setContent(content: textView.text)
+        print(textView.text)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.contentTextView.resignFirstResponder()
+    
     }
     func textViewDidChange(_ textView: UITextView) {
         postContentDataModel.setContent(content: textView.text)

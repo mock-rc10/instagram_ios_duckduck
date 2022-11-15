@@ -5,8 +5,10 @@
 //  Created by 권유정 on 2022/11/14.
 //
 
-struct PostRequest: Encodable{
-    var content: String
-    var imgUrls: [String]
-    var hashtags: [String]
+struct PostRequest: Codable{
+    let content: String
+    let imgUrls: [String]
+    let hashtags: [String]
+    
 }
+

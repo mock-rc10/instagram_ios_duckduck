@@ -19,17 +19,21 @@ class PostContent{
     public func setContentImage(result: [UIImage]){
         contentImages = result
     }
+    public func setContentUrl(result: String){
+        self.contentUrls.append(result)
+    }
     public func setContent(content: String){
         self.content = content
     }
     public func setContentData(result: [String]){
-        print(result)
+        print("!!!!!!!!")
         //contentUrls = result
         contentData = Content(content: self.content, imgUrls: result, hashtags: [""])
         print(contentData)
     }
     public func getContentData() -> Content{
-        return self.contentData
+        contentData = Content(content: self.content, imgUrls: self.contentUrls, hashtags: [""])
+        return contentData
     }
 }
 
