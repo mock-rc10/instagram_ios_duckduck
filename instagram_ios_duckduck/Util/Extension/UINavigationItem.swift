@@ -35,6 +35,19 @@ extension UINavigationItem{
         
         return barButtonItem
     }
+    func makeSFSymbolWhiteButton(_ target: Any?,action: Selector, symbolName: String) -> UIBarButtonItem{
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: symbolName), for: .normal)
+        button.addTarget(target, action:action, for: .touchUpInside)
+        button.tintColor = .white
+        
+        let barButtonItem = UIBarButtonItem(customView: button)
+        barButtonItem.customView?.translatesAutoresizingMaskIntoConstraints = false
+        barButtonItem.customView?.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        barButtonItem.customView?.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        return barButtonItem
+    }
     func makeLabel(title: String) -> UIBarButtonItem {
         let titleLabel = UILabel()
         titleLabel.textColor = UIColor.black
@@ -43,5 +56,12 @@ extension UINavigationItem{
         let barButtonItem = UIBarButtonItem.init(customView: titleLabel)
         return barButtonItem
     }
-    
+    func makeWhiteLabel(title: String) -> UIBarButtonItem {
+        let titleLabel = UILabel()
+        titleLabel.textColor = UIColor.white
+        titleLabel.text = title
+        titleLabel.font = UIFont.systemFont(ofSize: 23, weight: .bold)
+        let barButtonItem = UIBarButtonItem.init(customView: titleLabel)
+        return barButtonItem
+    }
 }

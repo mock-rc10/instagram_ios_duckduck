@@ -14,25 +14,28 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var searchFeedCollectionView: UICollectionView!
     
     var accessToken: String? = ""
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        print(accessToken)
+        //print(accessToken)
         requestSearchFeed {
-            setup()
+            self.setup()
         }
-        func requestSearchFeed(complition: @escaping() -> ()){
-            searchFeedDataManager.GetSearchFeed(delegate: self, token: accessToken!)
-            complition()
-        }
-        func setup(){
-            registerXib()
-            registerDelegate()
-        }
+       
         
-        // Do any additional setup after loading the view.
     }
-    
+    func requestSearchFeed(complition: @escaping() -> ()){
+        searchFeedDataManager.GetSearchFeed(delegate: self, token: accessToken!)
+        complition()
+    }
+    func setup(){
+        registerXib()
+        registerDelegate()
+    }
 
 }
 

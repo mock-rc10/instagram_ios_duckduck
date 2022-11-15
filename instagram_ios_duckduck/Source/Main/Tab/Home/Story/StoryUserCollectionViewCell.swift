@@ -22,7 +22,9 @@ class StoryUserCollectionViewCell: UICollectionViewCell {
     
     func setStory(story: Profile, user: Int){
         //storyUserProfile.text = story.profileImgURL
-        if story.profileImgURL != ""{
+        if story.profileImgURL == "" {
+            storyUserProfile.image = UIImage(named: "feedProfileEmpty")
+        }else{
             let url = URL(string: story.profileImgURL)
             storyUserProfile.load(url: url!)
         }

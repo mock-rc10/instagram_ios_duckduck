@@ -15,5 +15,10 @@ extension UINavigationController{
         //navigationBar.isTranslucent = false
     }
     
-    
+    func setBackgroundEmptyImage(){
+        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = true
+        view.backgroundColor = .clear
+    }
 }
