@@ -115,23 +115,77 @@
             </objects>
             <point key="canvasLocation" x="5198.4615384615381" y="271.56398104265401"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop View Controller-->
         <scene sceneID="wIG-uK-cc6">
             <objects>
-                <viewController id="e1I-Rc-VO2" sceneMemberID="viewController">
+                <viewController id="e1I-Rc-VO2" customClass="ShopViewController" customModule="instagram_ios_duckduck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7u6-ik-FYc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-0s-djB">
+                                <rect key="frame" x="0.0" y="91" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="e1I-Rc-VO2" id="Jqy-aq-ziQ"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBv-d4-FDI">
+                                <rect key="frame" x="8" y="147" width="374" height="28.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="동영상">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="gray" title="동영상">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-xQ-y8N">
+                                <rect key="frame" x="0.0" y="183.33333333333331" width="390" height="577.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wXw-p2-WaL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="veo-bz-mGu">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="W7T-EN-yo0">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PXj-pJ-89g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VBv-d4-FDI" firstAttribute="leading" secondItem="PXj-pJ-89g" secondAttribute="leading" constant="8" id="1FR-6b-ekg"/>
+                            <constraint firstItem="VaX-xQ-y8N" firstAttribute="top" secondItem="VBv-d4-FDI" secondAttribute="bottom" constant="8" id="1Ll-jh-LWx"/>
+                            <constraint firstItem="ycq-0s-djB" firstAttribute="leading" secondItem="PXj-pJ-89g" secondAttribute="leading" id="7eJ-Oc-ZWt"/>
+                            <constraint firstItem="ycq-0s-djB" firstAttribute="top" secondItem="PXj-pJ-89g" secondAttribute="top" id="WV5-3u-8OO"/>
+                            <constraint firstItem="VBv-d4-FDI" firstAttribute="top" secondItem="ycq-0s-djB" secondAttribute="bottom" id="XhN-yx-vtA"/>
+                            <constraint firstItem="VaX-xQ-y8N" firstAttribute="leading" secondItem="PXj-pJ-89g" secondAttribute="leading" id="YF2-Ws-reW"/>
+                            <constraint firstItem="PXj-pJ-89g" firstAttribute="trailing" secondItem="VaX-xQ-y8N" secondAttribute="trailing" id="ecU-Qf-ooy"/>
+                            <constraint firstItem="PXj-pJ-89g" firstAttribute="trailing" secondItem="VBv-d4-FDI" secondAttribute="trailing" constant="8" id="mZ9-sh-6fJ"/>
+                            <constraint firstItem="PXj-pJ-89g" firstAttribute="bottom" secondItem="VaX-xQ-y8N" secondAttribute="bottom" id="wbP-CW-UfJ"/>
+                            <constraint firstItem="ycq-0s-djB" firstAttribute="trailing" secondItem="PXj-pJ-89g" secondAttribute="trailing" id="zql-iI-Lvg"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="shop.png" id="mhh-Vj-SkJ">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="4EA-57-5Mo"/>
+                    <connections>
+                        <outlet property="shopCollectionView" destination="VaX-xQ-y8N" id="20Z-mB-BxO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTM-io-Ixt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5955.3846153846152" y="276.54028436018956"/>
+            <point key="canvasLocation" x="6884.6153846153848" y="276.54028436018956"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Odf-y2-e8y">
@@ -150,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jf-gb-ALj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7675.3846153846152" y="276.54028436018956"/>
+            <point key="canvasLocation" x="8604.6153846153848" y="276.54028436018956"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="jzm-0g-Elv">
@@ -198,7 +252,7 @@
                         <segue destination="opF-NS-y7Y" kind="relationship" relationship="viewControllers" id="ofC-Fg-Vnq"/>
                         <segue destination="tgz-8q-C4K" kind="relationship" relationship="viewControllers" id="iTW-vo-RB0"/>
                         <segue destination="2xp-zu-K5Z" kind="relationship" relationship="viewControllers" id="1CS-ol-5bu"/>
-                        <segue destination="e1I-Rc-VO2" kind="relationship" relationship="viewControllers" id="IsB-1b-2IG"/>
+                        <segue destination="GFA-rw-cRs" kind="relationship" relationship="viewControllers" id="IsB-1b-2IG"/>
                         <segue destination="OFM-Jh-XGw" kind="relationship" relationship="viewControllers" id="Gkr-QI-oKS"/>
                     </connections>
                 </tabBarController>
@@ -244,7 +298,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKe-fW-9e7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6746.1538461538457" y="276.54028436018956"/>
+            <point key="canvasLocation" x="7675.3846153846152" y="276.54028436018956"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cnk-O6-mj3">
@@ -266,6 +320,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEJ-XF-ALF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4269.2307692307695" y="271.56398104265401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Xu-xH-zSZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GFA-rw-cRs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="shop.png" id="mhh-Vj-SkJ">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CsG-r1-UD6">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e1I-Rc-VO2" kind="relationship" relationship="rootViewController" id="cey-Ty-Jcb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9U-gS-D3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5955.3846153846152" y="276.54028436018956"/>
         </scene>
     </scenes>
     <resources>
