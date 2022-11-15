@@ -19,10 +19,11 @@ class HomeFeedTableViewCell: UITableViewCell {
         super.awakeFromNib()
         registerXib()
         registerDelegate()
+        HomeFeedCollectionView.reloadData()
     }
     
     func setFeeds(feeds: [HomeFeedResult]){
-        homeFeedResult = feeds
+        self.homeFeedResult = feeds
         HomeFeedCollectionView.reloadData()
     }
     private func registerXib(){
@@ -52,6 +53,7 @@ extension HomeFeedTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = HomeFeedCollectionView.dequeueReusableCell(withReuseIdentifier: HomeFeedCollectionViewCell.identifier, for: indexPath) as? HomeFeedCollectionViewCell
         cell?.setFeed(feed: homeFeedResult[indexPath.row])
+        print(homeFeedResult[indexPath.row])
             return cell!
         }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

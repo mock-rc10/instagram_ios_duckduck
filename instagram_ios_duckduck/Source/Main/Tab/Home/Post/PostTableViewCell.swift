@@ -12,7 +12,7 @@ class PostTableViewCell: UITableViewCell{
 
     static let identifier = "PostTableViewCell"
     @IBOutlet weak var postCollectionView: UICollectionView!
-    var contentImages: [UIImage] = []
+    var contentImages: UIImage?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,7 +35,7 @@ class PostTableViewCell: UITableViewCell{
         postCollectionView.dataSource = self
     }
     
-    func setContentCell(data: [UIImage]){
+    func setContentCell(data: UIImage){
         contentImages = data
         
     }
@@ -48,7 +48,7 @@ extension PostTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = postCollectionView.dequeueReusableCell(withReuseIdentifier: PostContentCollectionViewCell.identifier, for: indexPath) as? PostContentCollectionViewCell
-        cell?.setCell(image: contentImages[0])
+        cell?.setCell(image: contentImages!)
         return cell!
     }
     

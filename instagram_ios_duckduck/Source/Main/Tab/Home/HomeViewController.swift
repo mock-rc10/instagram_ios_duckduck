@@ -64,7 +64,7 @@ class HomeViewController: BaseViewController {
                 switch item{
                 case .photo(let p):
                     self.FirstImage.append(p.image)
-                    postContentDataModel.setContentImage(result: FirstImage)
+                    postContentDataModel.setContentImage(result: p.image)
                 default:
                     print("")
                 }
@@ -103,7 +103,7 @@ class HomeViewController: BaseViewController {
                             }
                             // 실패했을 때
                             else {
-                                print("실패 코드에 따라 나누기")
+                                print("url 받아오기 실패")
                             }
                         case .failure(let error):
                             print(error.localizedDescription)
@@ -164,7 +164,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             guard let cell = homeTableView.dequeueReusableCell(withIdentifier: HomeFeedTableViewCell.identifier, for: indexPath) as? HomeFeedTableViewCell else {
                 return UITableViewCell()
             }
-            let cellData = homeFeedDataModel.homeFeedList
+            let cellData = homeFeedDataModel.getHomeFeedData()
             cell.setFeeds(feeds: cellData)
             return cell
         default:

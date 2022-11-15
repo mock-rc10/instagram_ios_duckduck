@@ -25,12 +25,48 @@ class HomeFeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var uniqueNameAndCommentsLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var imagePageControl: UIPageControl!
+    
+    var images: [String] = [""]
     override func awakeFromNib() {
         super.awakeFromNib()
+        //imagePageControl.numberOfPages = images.count
+        imagePageControl.currentPage = 0
+        imagePageControl.pageIndicatorTintColor = UIColor.lightGray
+        imagePageControl.currentPageIndicatorTintColor = UIColor.black
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(_:)))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(_:)))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        self.addGestureRecognizer(swipeRight)
         // Initialization code
     }
-    
+    @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizer.Direction.left:
+                if (imagePageControl.currentPage<imagePageControl.numberOfPages-1) {
+                    imagePageControl.currentPage = imagePageControl.currentPage + 1
+                }
+                print("Swiped Left")
+            case UISwipeGestureRecognizer.Direction.right:
+                if (imagePageControl.currentPage>0) {
+                    imagePageControl.currentPage = imagePageControl.currentPage - 1
+                }
+                print("Swiped Right")
+            default:
+                break
+            }
+            let feedUrl = URL(string: images[imagePageControl.currentPage])
+            feedImg.load(url: feedUrl!)
+        }
+    }
     func setFeed(feed: HomeFeedResult){
+        print("!!!!!!!\(feed)")
+        self.images = feed.imgUrls
+        imagePageControl.numberOfPages = feed.imgUrls.count
         if(feed.profileImg != ""){
             let profileUrl = URL(string: feed.profileImg)
             userProfileImg.load(url: profileUrl!)
@@ -53,5 +89,10 @@ class HomeFeedCollectionViewCell: UICollectionViewCell {
         }
         dateLabel.text = "\(feed.date)"
         
+    }
+    
+    @IBAction func imageChange(_ sender: UIPageControl) {
+        let feedUrl = URL(string: images[imagePageControl.currentPage])
+        feedImg.load(url: feedUrl!)
     }
 }

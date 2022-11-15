@@ -82,6 +82,12 @@
                                     <constraint firstAttribute="height" constant="30" id="XHC-Gj-Pbl"/>
                                 </constraints>
                             </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5j9-G4-TWd">
+                                <rect key="frame" x="92.333333333333314" y="370" width="115.66666666666669" height="26"/>
+                                <connections>
+                                    <action selector="imageChange:" destination="gTV-IL-0wX" eventType="valueChanged" id="VDy-Sd-Hn9"/>
+                                </connections>
+                            </pageControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="THq-pB-03s">
                                 <rect key="frame" x="8" y="406" width="284" height="168"/>
                                 <subviews>
@@ -114,11 +120,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5j9-G4-TWd" firstAttribute="centerY" secondItem="a8J-aw-Run" secondAttribute="centerY" id="1bI-S3-1lz"/>
                             <constraint firstItem="PtO-e8-p9l" firstAttribute="leading" secondItem="9rW-km-1uG" secondAttribute="trailing" constant="8" id="1wv-Dk-2Ph"/>
                             <constraint firstItem="zCz-Wg-x4r" firstAttribute="centerY" secondItem="9rW-km-1uG" secondAttribute="centerY" id="3wS-lE-rdx"/>
                             <constraint firstItem="THq-pB-03s" firstAttribute="leading" secondItem="hmp-se-Iy8" secondAttribute="leading" constant="8" id="8nd-uu-Nvf"/>
                             <constraint firstItem="a8J-aw-Run" firstAttribute="leading" secondItem="ATH-bw-oDW" secondAttribute="trailing" constant="8" id="CQa-0z-MfI"/>
                             <constraint firstAttribute="trailing" secondItem="mNz-SY-1AH" secondAttribute="trailing" id="Fvg-b9-L9t"/>
+                            <constraint firstItem="5j9-G4-TWd" firstAttribute="centerX" secondItem="hmp-se-Iy8" secondAttribute="centerX" id="Iiz-82-xtT"/>
                             <constraint firstItem="ATH-bw-oDW" firstAttribute="leading" secondItem="4in-MJ-sAs" secondAttribute="trailing" constant="8" id="LiW-R3-Bpe"/>
                             <constraint firstItem="9rW-km-1uG" firstAttribute="top" secondItem="hmp-se-Iy8" secondAttribute="top" constant="10" id="Nyt-2U-pXd"/>
                             <constraint firstItem="WeW-rA-14x" firstAttribute="top" secondItem="mNz-SY-1AH" secondAttribute="bottom" constant="8" id="OOf-Fx-Tzd"/>
@@ -153,6 +161,7 @@
                 <outlet property="dateLabel" destination="toR-AH-oNt" id="6nX-aM-Exv"/>
                 <outlet property="dmBtn" destination="a8J-aw-Run" id="dzk-55-U4J"/>
                 <outlet property="feedImg" destination="mNz-SY-1AH" id="m7S-x5-J3L"/>
+                <outlet property="imagePageControl" destination="5j9-G4-TWd" id="PJk-fG-EQ6"/>
                 <outlet property="likeBtn" destination="4in-MJ-sAs" id="Wxb-Il-EVM"/>
                 <outlet property="likeUserLabel" destination="w8I-wz-oo0" id="bEa-8p-zcw"/>
                 <outlet property="optionBtn" destination="zCz-Wg-x4r" id="iVS-0t-2RI"/>

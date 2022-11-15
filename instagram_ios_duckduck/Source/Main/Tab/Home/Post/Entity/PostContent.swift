@@ -16,17 +16,20 @@ class PostContent{
     var content: String = ""
     var contentData: Content = Content(content: "", imgUrls: [""], hashtags: [""])
     
-    public func setContentImage(result: [UIImage]){
-        contentImages = result
+    public func setContentImage(result: UIImage){
+        self.contentImages.append(result)
+    }
+    public func getContentImage() -> UIImage{
+        return self.contentImages[0]
     }
     public func setContentUrl(result: String){
         self.contentUrls.append(result)
+        print(contentUrls)
     }
     public func setContent(content: String){
         self.content = content
     }
     public func setContentData(result: [String]){
-        print("!!!!!!!!")
         //contentUrls = result
         contentData = Content(content: self.content, imgUrls: result, hashtags: [""])
         print(contentData)

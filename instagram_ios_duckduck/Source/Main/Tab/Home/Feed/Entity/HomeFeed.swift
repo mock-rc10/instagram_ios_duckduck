@@ -15,4 +15,7 @@ class HomeFeed{
     public func setHomeFeedData(result: [HomeFeedResult]){
         homeFeedList = result
     }
+    public func getHomeFeedData() -> [HomeFeedResult]{
+        return homeFeedList
+    }
 }

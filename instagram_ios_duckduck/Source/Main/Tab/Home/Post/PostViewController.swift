@@ -73,7 +73,7 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource{
             guard let cell = postTableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as? PostTableViewCell else {
                 return UITableViewCell()
             }
-            let cellData = postContentDataModel.contentImages
+            let cellData = postContentDataModel.getContentImage()
             cell.setContentCell(data: cellData)
             return cell
         case 1:
@@ -137,7 +137,8 @@ extension PostViewController{
     }
     
     func didSuccessPostFeed(){
-        let homeViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(identifier: "homeVC")
+        let homeViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(identifier: "TabVC")
+        //self.navigationController?.popViewController(animated: true)
         changeRootViewController(homeViewController)
     }
 }
