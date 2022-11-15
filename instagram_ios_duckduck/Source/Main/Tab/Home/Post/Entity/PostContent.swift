@@ -14,7 +14,7 @@ class PostContent{
     var contentImages: [UIImage] = []
     var contentUrls: [String] = []
     var content: String = ""
-    var contentData: Content = Content(content: "", imgUrls: [""])
+    var contentData: Content = Content(content: "", imgUrls: [""], hashtags: [""])
     
     public func setContentImage(result: [UIImage]){
         contentImages = result
@@ -25,7 +25,7 @@ class PostContent{
     public func setContentData(result: [String]){
         print(result)
         //contentUrls = result
-        contentData = Content(content: self.content, imgUrls: result)
+        contentData = Content(content: self.content, imgUrls: result, hashtags: [""])
         print(contentData)
     }
     public func getContentData() -> Content{
@@ -36,4 +36,5 @@ class PostContent{
 struct Content{
     var content: String
     var imgUrls: [String]
+    var hashtags: [String]
 }

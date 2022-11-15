@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="to0-eb-Y2O">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="to0-eb-Y2O">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     </imageView>
                 </subviews>
@@ -28,6 +28,9 @@
                 <constraint firstAttribute="trailing" secondItem="to0-eb-Y2O" secondAttribute="trailing" id="fU1-KZ-fgU"/>
                 <constraint firstAttribute="bottom" secondItem="to0-eb-Y2O" secondAttribute="bottom" id="tzy-vP-ltb"/>
             </constraints>
+            <connections>
+                <outlet property="searchFeedImage" destination="to0-eb-Y2O" id="zqd-3R-hd0"/>
+            </connections>
             <point key="canvasLocation" x="138" y="21"/>
         </collectionViewCell>
     </objects>

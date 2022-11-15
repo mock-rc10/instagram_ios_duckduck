@@ -47,7 +47,7 @@ class ProfileViewController: BaseViewController {
     
     private func initNavigationBar(){
         self.navigationController?.setBackgroundColor()
-        print(profileLookupResult.uniqueName)
+        //print(profileLookupResult.uniqueName)
         
         let selector = #selector(test)
         let addPostButton = self.navigationItem.makeSFSymbolButton(self, action: selector, symbolName: "profileAddBtn.png")

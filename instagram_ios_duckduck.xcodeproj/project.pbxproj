@@ -107,6 +107,9 @@
 		C7F06DDA292355D100C72CE9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DD9292355D100C72CE9 /* SearchViewController.swift */; };
 		C7F06DDD2923563C00C72CE9 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DDB2923563C00C72CE9 /* SearchCollectionViewCell.swift */; };
 		C7F06DDE2923563C00C72CE9 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DDC2923563C00C72CE9 /* SearchCollectionViewCell.xib */; };
+		C7F06DE12923599200C72CE9 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DE02923599200C72CE9 /* SearchResponse.swift */; };
+		C7F06DE3292359C000C72CE9 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DE2292359C000C72CE9 /* SearchDataManager.swift */; };
+		C7F06DE529235A9000C72CE9 /* SearchFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DE429235A9000C72CE9 /* SearchFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +216,9 @@
 		C7F06DD9292355D100C72CE9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C7F06DDB2923563C00C72CE9 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7F06DDC2923563C00C72CE9 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		C7F06DE02923599200C72CE9 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		C7F06DE2292359C000C72CE9 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
+		C7F06DE429235A9000C72CE9 /* SearchFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeed.swift; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -612,11 +618,22 @@
 		C7F06DD8292355B100C72CE9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06DDF2923582900C72CE9 /* Entity */,
 				C7F06DD9292355D100C72CE9 /* SearchViewController.swift */,
 				C7F06DDB2923563C00C72CE9 /* SearchCollectionViewCell.swift */,
 				C7F06DDC2923563C00C72CE9 /* SearchCollectionViewCell.xib */,
+				C7F06DE2292359C000C72CE9 /* SearchDataManager.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		C7F06DDF2923582900C72CE9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C7F06DE02923599200C72CE9 /* SearchResponse.swift */,
+				C7F06DE429235A9000C72CE9 /* SearchFeed.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -782,6 +799,7 @@
 				C7F06D64291932E500C72CE9 /* ProfileFeedDataManager.swift in Sources */,
 				C7F06DD5292287B900C72CE9 /* postResponse.swift in Sources */,
 				C76506D72911030F00C1C21D /* SignInRequest.swift in Sources */,
+				C7F06DE12923599200C72CE9 /* SearchResponse.swift in Sources */,
 				C76506DC291104B600C1C21D /* Contant.swift in Sources */,
 				C7F06D622919328C00C72CE9 /* ProfileFeed.swift in Sources */,
 				C783E8EA290F0DD100503A6F /* BaseViewController.swift in Sources */,
@@ -790,6 +808,7 @@
 				C7F06D4029167DED00C72CE9 /* ProfileLookupResponse.swift in Sources */,
 				C7F06D9B291D530400C72CE9 /* PostViewController.swift in Sources */,
 				C7F06D2E29165C0B00C72CE9 /* StoryListResponse.swift in Sources */,
+				C7F06DE529235A9000C72CE9 /* SearchFeed.swift in Sources */,
 				C7F06DD729228DAE00C72CE9 /* PostRequest.swift in Sources */,
 				C76506CD2910E42000C1C21D /* SignUpCompleteViewController.swift in Sources */,
 				C7955DEB291515EF00C58366 /* HomeViewController.swift in Sources */,
@@ -817,6 +836,7 @@
 				C7F06D96291B983100C72CE9 /* HomeFeedDataManager.swift in Sources */,
 				C76506C92910E3A900C1C21D /* SignUpPasswordViewController.swift in Sources */,
 				C7F06D2729164EB200C72CE9 /* StoryUserCollectionViewCell.swift in Sources */,
+				C7F06DE3292359C000C72CE9 /* SearchDataManager.swift in Sources */,
 				C7F06D8B291B976800C72CE9 /* HomeFeedTableViewCell.swift in Sources */,
 				C7F06DB6291D940600C72CE9 /* PostImageUrlResponse.swift in Sources */,
 				C7F06DB1291D867E00C72CE9 /* snsSwitchTableViewCell.swift in Sources */,

@@ -27,7 +27,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="si2-lu-mX0">
                                 <rect key="frame" x="0.0" y="103" width="390" height="658"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fUQ-7X-1iX">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fUQ-7X-1iX">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -61,19 +61,10 @@
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="zMJ-dL-XP1" id="8iI-nR-27a"/>
+                        <outlet property="searchFeedCollectionView" destination="si2-lu-mX0" id="mtA-d8-WEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpi-4G-cHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="zMJ-dL-XP1">
-                    <connections>
-                        <outlet property="delegate" destination="tgz-8q-C4K" id="bJO-a7-35F"/>
-                        <outlet property="searchBar" destination="qLB-ur-Cj7" id="FZa-Ee-7Zg"/>
-                        <outlet property="searchContentsController" destination="tgz-8q-C4K" id="hvL-7m-nfh"/>
-                        <outlet property="searchResultsDataSource" destination="tgz-8q-C4K" id="3ar-ZQ-m3X"/>
-                        <outlet property="searchResultsDelegate" destination="tgz-8q-C4K" id="kZF-Nn-LW6"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3380" y="271.56398104265401"/>
         </scene>

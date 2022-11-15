@@ -14,7 +14,7 @@ class PostViewController: UIViewController {
     var pickedImageUrls: [String] = []
     private var postContentDataModel: PostContent = PostContent.shared
     lazy var postDataManager: postContent = postContent()
-    var content: Content = Content(content: "", imgUrls: [""])
+    var content: Content = Content(content: "", imgUrls: [""], hashtags: [""])
     var postInput = PostRequest(content: "", imgUrls: [""], hashtags: [""])
     @IBOutlet weak var postTableView: UITableView!
     
