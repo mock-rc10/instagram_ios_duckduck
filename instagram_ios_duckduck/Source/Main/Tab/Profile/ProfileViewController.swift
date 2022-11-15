@@ -103,7 +103,15 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0{
+            let followViewController = UIStoryboard(name: "FollowStoryboard", bundle: nil).instantiateViewController(withIdentifier: "followVC") as? followViewController
+            followViewController?.followerCount = String( profileDataModel.userProfile.followerCount)
+            followViewController?.followingCount = String( profileDataModel.userProfile.followingCount)
+            self.navigationController?.pushViewController(followViewController!, animated: true)
+            
+        }
+    }
     
 }
 

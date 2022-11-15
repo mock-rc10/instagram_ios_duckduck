@@ -76,6 +76,7 @@ extension SignInViewController {
     func didSuccessSignIn(_ result: SignInResult){
         //self.presentAlert(title: "로그인에 성공하였습니다", message: result.accessToken)
         UserDefaults.standard.set(result.accessToken, forKey: "accessToken")
+        UserDefaults.standard.set(result.name, forKey: "name")
         let TabViewController = UIStoryboard(name: "TabBarStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabVC")
         self.navigationController?.pushViewController(TabViewController, animated: true)
         self.dismissIndicator()

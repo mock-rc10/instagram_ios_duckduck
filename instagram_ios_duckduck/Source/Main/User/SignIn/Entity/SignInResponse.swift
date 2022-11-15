@@ -14,4 +14,5 @@ struct SignInResponse: Codable {
 
 struct SignInResult: Codable {
     let accessToken: String
+    let name: String
 }
