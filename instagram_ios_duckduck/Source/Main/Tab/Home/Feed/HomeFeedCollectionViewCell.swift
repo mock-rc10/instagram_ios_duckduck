@@ -33,7 +33,7 @@ class HomeFeedCollectionViewCell: UICollectionViewCell {
         //imagePageControl.numberOfPages = images.count
         imagePageControl.currentPage = 0
         imagePageControl.pageIndicatorTintColor = UIColor.lightGray
-        imagePageControl.currentPageIndicatorTintColor = UIColor.black
+        imagePageControl.currentPageIndicatorTintColor = UIColor.systemBlue
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(_:)))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.addGestureRecognizer(swipeLeft)
@@ -70,6 +70,8 @@ class HomeFeedCollectionViewCell: UICollectionViewCell {
         if(feed.profileImg != ""){
             let profileUrl = URL(string: feed.profileImg)
             userProfileImg.load(url: profileUrl!)
+        }else{
+            userProfileImg.image = UIImage(named: "feedProfileEmpty.png")
         }
         if feed.imgUrls[0] != ""{
             let feedUrl = URL(string: feed.imgUrls[0])

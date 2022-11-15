@@ -110,6 +110,7 @@
 		C7F06DE12923599200C72CE9 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DE02923599200C72CE9 /* SearchResponse.swift */; };
 		C7F06DE3292359C000C72CE9 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DE2292359C000C72CE9 /* SearchDataManager.swift */; };
 		C7F06DE529235A9000C72CE9 /* SearchFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F06DE429235A9000C72CE9 /* SearchFeed.swift */; };
+		C7F06DE72923B2B500C72CE9 /* feedProfileEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F06DE62923B2B500C72CE9 /* feedProfileEmpty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +220,7 @@
 		C7F06DE02923599200C72CE9 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		C7F06DE2292359C000C72CE9 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		C7F06DE429235A9000C72CE9 /* SearchFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeed.swift; sourceTree = "<group>"; };
+		C7F06DE62923B2B500C72CE9 /* feedProfileEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedProfileEmpty.png; sourceTree = "<group>"; };
 		E682E41E4624A67CA8390655 /* Pods_instagram_ios_duckduck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_duckduck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -517,6 +519,7 @@
 		C7F06D432916A54600C72CE9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C7F06DE62923B2B500C72CE9 /* feedProfileEmpty.png */,
 				C7F06D70291A341500C72CE9 /* storyProfile.png */,
 				C7F06D6F291A341500C72CE9 /* storyProfileBack.png */,
 				C7F06D83291A9FF000C72CE9 /* ProfileBack.png */,
@@ -715,6 +718,7 @@
 				C7F06D53291775FF00C72CE9 /* profileListBtn.png in Resources */,
 				C7F06DBF291DB12500C72CE9 /* bookmarkBtn.png in Resources */,
 				C7F06D71291A341600C72CE9 /* storyProfileBack.png in Resources */,
+				C7F06DE72923B2B500C72CE9 /* feedProfileEmpty.png in Resources */,
 				C783E8EF290F16BA00503A6F /* meta_logo.png in Resources */,
 				C7552957290EEECF008B370A /* instagram_logo.png in Resources */,
 				C7F06D9F291D71C500C72CE9 /* PostTableViewCell.xib in Resources */,
