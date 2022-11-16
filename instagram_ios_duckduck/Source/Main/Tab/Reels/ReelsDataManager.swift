@@ -10,7 +10,7 @@ import Alamofire
 
 class ReelsDataManager{
     func GetReels(delegate: ReelsViewController, token: String?) {
-        AF.request("\(Constant.BASE_URL)/api/reels?size=3&page=0", method: .get,parameters: nil,headers:  ["X-ACCESS-TOKEN": token!])
+        AF.request("\(Constant.BASE_URL)/api/reels?size=5&page=0", method: .get,parameters: nil,headers:  ["X-ACCESS-TOKEN": token!])
             .responseDecodable(of: ReelsResponse.self) { response in
                 switch response.result {
                 case .success(let response):
