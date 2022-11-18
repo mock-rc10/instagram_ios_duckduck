@@ -1,4 +1,7 @@
 # 인스타그램 클론코딩(iOS-덕덕)
+> 시연 영상 링크
+> https://drive.google.com/file/d/1eT-Q2tx0kvPAXw3VLGDyeX813SyqLYI7/view?usp=sharing
+
 > 사용한 API
 >    1. 로그인 API
 >    2. 페이스북 로그인 API
