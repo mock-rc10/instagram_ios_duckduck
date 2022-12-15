@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //스플래시 화면 딜레이 시간
         ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions )//Facebook loing 하기 위해 사용된 코드
 
-        FBSDKCoreKit.Settings.shared.appID = "642967074216304"
+        FBSDKCoreKit.Settings.shared.appID = ""
 
         sleep(1)
         return true

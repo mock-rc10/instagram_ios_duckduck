@@ -7,14 +7,14 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb642967074216304</string>
+				<string></string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>642967074216304</string>
+	<string></string>
 	<key>FacebookClientToken</key>
-	<string>a8c8225b39ab9ad3671a1180b5e46409</string>
+	<string></string>
 	<key>FacebookDisplayName</key>
 	<string>risingTest</string>
 	<key>NSPhotoLibraryUsageDescription</key>
